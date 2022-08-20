@@ -1,0 +1,27 @@
+title: Typeface Projects
+icon: headline
+
+options:
+  changeStatus: false
+  changeSlug: true
+  changeTemplate: false
+  changeTitle: false
+  create: false
+  delete: false
+  duplicate: false
+
+sections:
+  published:
+    status: listed
+    headline: Published Projects
+    type: pages
+    layout: cardlets
+    template: typefaceproject
+  draft:
+    status: draft
+    headline: New Projects (Draft)
+    type: pages
+    template: typefaceproject
+
+
+

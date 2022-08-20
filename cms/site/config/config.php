@@ -1,0 +1,5 @@
+return [
+    'api' => [
+        'basicAuth' => true
+    ]
+];

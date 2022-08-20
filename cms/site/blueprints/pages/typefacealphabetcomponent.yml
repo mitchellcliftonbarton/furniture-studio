@@ -1,0 +1,40 @@
+title: Typeface Alphabet
+
+options:
+  changeStatus: true
+  changeSlug: true
+  changeTemplate: false
+  changeTitle: true
+  create: true
+  delete: true
+  duplicate: true
+
+columns:
+  - width: 1/1
+    sections:
+      page-info:
+        type: fields
+        fields:
+          info:
+            label:
+            type: info
+            text: |
+              This component will add a full typeface alphabet to the webpage
+
+  - width: 1/4
+    sections:
+      default-font-style:
+        type: fields
+        fields:
+          fontStyle:
+            label: Default Font Style
+            type: select
+            options: query
+            query:
+              fetch: page.fontstyle.toStructure
+              text: "{{ structureItem.style }}"
+              value: "{{ structureItem.weight }}"
+
+
+
+

@@ -1,0 +1,12 @@
+title: Brand Projects
+icon: bold
+
+sections:
+  projects:
+    type: pages
+    layout: cards
+    template:
+      - brand-project
+
+
+

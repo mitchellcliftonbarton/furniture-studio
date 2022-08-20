@@ -1,0 +1,71 @@
+title: Typeface Project
+icon: headline
+
+options:
+  changeStatus: true
+  changeSlug: true
+  changeTemplate: false
+  changeTitle: true
+  create: true
+  delete: true
+  duplicate: true
+
+columns:
+  - width: 1/2
+    sections:
+      font-style-list:
+        type: fields
+        fields:
+          fontStyle:
+            label: Font Styles
+            type: structure
+            columns:
+              style:
+                width: 3/4
+              weight:
+                width: 1/4
+            fields:
+              style:
+                label: Style
+                type: text
+                required: true
+              weight:
+                label: Weight
+                type: number
+                required: true
+  - width: 1/2
+    sections:
+      font-description:
+        type: fields
+        fields:
+          fontDescription:
+            label: Font Description
+            type: textarea
+            size: small
+            buttons: false
+
+
+  - width: 1/1
+    sections:
+      published-web-components:
+        label: Live Webpage Components
+        type: pages
+        status: listed
+        templates:
+          - typefacetestercomponent
+          - typefaceoverviewcomponent
+          - typefaceimagecomponent
+          - typefacealphabetcomponent
+      draft-web-components:
+        label: New Page Components (Draft)
+        status: draft
+        type: pages
+        templates:
+          - typefacetestercomponent
+          - typefaceoverviewcomponent
+          - typefaceimagecomponent
+          - typefacealphabetcomponent
+
+
+
+

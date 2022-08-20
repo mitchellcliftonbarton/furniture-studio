@@ -1,0 +1,61 @@
+title: Typeface Overview
+
+options:
+  changeStatus: true
+  changeSlug: true
+  changeTemplate: false
+  changeTitle: true
+  create: true
+  delete: true
+  duplicate: true
+
+columns:
+  - width: 1/1
+    sections:
+      page-info:
+        type: fields
+        fields:
+          info:
+            label:
+            type: info
+            text: |
+              This component will use the font information (that has already been setup) and display it on the page
+
+  - width: 1/2
+    sections:
+      font-description:
+        type: fields
+        fields:
+          fontDescription:
+            label: Font Description
+            type: textarea
+            buttons: false
+            size: medium
+            disabled: true
+
+  - width: 1/2
+    sections:
+      font-styles:
+        type: fields
+        fields:
+          fontStyle:
+            label: Font Styles
+            type: structure
+            disabled: true
+            columns:
+              style:
+                width: 3/4
+              weight:
+                width: 1/4
+            fields:
+              style:
+                label: Style
+                type: text
+                required: true
+              weight:
+                label: Weight
+                type: number
+                required: true
+
+
+

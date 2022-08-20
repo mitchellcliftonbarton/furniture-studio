@@ -1,0 +1,36 @@
+title: Typeface Image
+
+options:
+  changeStatus: true
+  changeSlug: true
+  changeTemplate: false
+  changeTitle: true
+  create: true
+  delete: true
+  duplicate: true
+
+columns:
+  - width: 1/2
+    sections:
+      file-upload:
+        type: fields
+        fields:
+          fileUpload:
+            label: Select a file...
+            type: files
+            multiple: false
+            max: 1
+            layout: cards
+
+  - width: 1/2
+    sections:
+      file-description:
+        type: fields
+        fields:
+          fileDescription:
+            label: Image Description
+            type: textarea
+            buttons: false
+            size: small
+
+
