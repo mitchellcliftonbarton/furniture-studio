@@ -1,0 +1,16 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+
+
+# JETBRAINS IDE file: ~/.gitignore_global
+.DS_Store
+.idea
+
+# OS files
+.DS_Store
+
+# npm modules
+/node_modules

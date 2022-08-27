@@ -9,6 +9,14 @@ options:
   delete: true
   duplicate: true
 
+# custom add fields definition
+addFields:
+  title:
+    label: Label
+    type: text
+    required: true
+    icon: title
+
 columns:
   - width: 1/1
     sections:
