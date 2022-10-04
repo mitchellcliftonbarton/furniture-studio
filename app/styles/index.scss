@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nav-height: 54px;
+  --mobile-nav-height: 40x;
+  --curve: cubic-bezier(0, 0.84, 0.24, 1);
+}
+
+@layer base {
+  html {
+    font-size: 10px;
+  }
+}
+
+@import 'global/fonts';
+@import 'global/style-guide';

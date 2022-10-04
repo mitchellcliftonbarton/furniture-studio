@@ -1,0 +1,38 @@
+#nav {
+  height: var(--nav-height);
+  z-index: 500;
+}
+
+.font-button {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
+  background: theme('colors.grey.light');
+  margin: 0 .5rem;
+  position: relative;
+
+  &:first-of-type {
+    margin: 0 .5rem 0 0;
+  }
+
+  &:last-of-type {
+    margin: 0 0 0 .5rem;
+  }
+
+  &.active {
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -3px -3px 4px #FFFFFF;
+
+    &:after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background-color: #323232;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}

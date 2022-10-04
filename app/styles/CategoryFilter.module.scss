@@ -1,0 +1,16 @@
+.filters {
+  height: var(--nav-height);
+
+  li {
+    .checkbox {
+      height: 2rem;
+      width: 2rem;
+      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -3px -3px 4px #FFFFFF;
+      border-radius: 4px;
+
+      svg {
+        width: 1.4rem;
+      }
+    }
+  }
+}
