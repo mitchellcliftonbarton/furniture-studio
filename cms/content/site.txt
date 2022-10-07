@@ -8,14 +8,18 @@ Catalogfooter:
   title: Art Company Mono
   isactive: 'true'
   fontdueslug: art-company-mono
+  link:
+    - TypefaceProjects/art-company-mono
   inactiveemoji: ""
 - 
   title: Bed Times
   isactive: 'false'
   fontdueslug: bedtimes
+  link: [ ]
   inactiveemoji: 🕑
 - 
   title: Laundry Grotesk
   isactive: 'false'
   fontdueslug: laundry-grotesk
+  link: [ ]
   inactiveemoji: ⏳

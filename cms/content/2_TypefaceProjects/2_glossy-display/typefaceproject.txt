@@ -1,0 +1,36 @@
+Title: Glossy Display
+
+----
+
+Homepagesize: small
+
+----
+
+Carouselimages:
+
+- 53_dino-5.jpg
+- 40_pole-1.jpg
+
+----
+
+Shortdescription: This is just a test.
+
+----
+
+Fontdueslug: glossy-display
+
+----
+
+Pagecontent: [{"content":{"placeholder":"Always already the work functions to nonspatial space field of action internal psychology radical pseudo. A level of artifice always already specific objects nonspace at once appealing and disconcerting studium the artist nonspatial space the space of absence subversion metaphysical formal concerns acrylic. Liminal space radical a level of artifice specific objects visuality. The political external reality suggestive but never didactic phenomenological arty conditions of possibility social radical sociality speculative the work functions to objecthood ontological. Parapraxis ubiquitousness enterprise odd tension Baudrillard the realm of everyday life establishment the work transverses the recognizable and repulsive.","alignment":"left","columns":2,"fontsize":80},"id":"d2d2b01c-6d5e-46a5-b517-5e812aee63aa","isHidden":false,"type":"typeTester"},{"content":{"backgroundcolor":"#FFBE8E","slides":[{"character":"R","description":"","weight":"Light Condensed"},{"character":"L","description":"This is a description.","weight":"Regular Condensed Italic"}]},"id":"3b27668d-47c5-4e09-a45e-8b7374bf3874","isHidden":false,"type":"characterCarousel"},{"content":{"text":"Artist-run metonym subverts the space of humanity imbricates alienation objecthood. Proliferation of explores the expectations heterogeneously aporia of fantasy impasto space depth of field anthropomorphism AbEx. Crypto Baudrillard subverts abstraction naive yet complex. NFT anthropomorphism the void visuality dialectics constructs of radically questioned site-specific reality smart contract experiencability. Oeuvre existentialism hybridity ontology.","showweights":"true"},"id":"182b044d-2141-4da3-91aa-9372f124b7bc","isHidden":false,"type":"textSection"},{"content":{"placeholder":"Michael Jackson","alignment":"left","columns":1,"fontsize":150},"id":"a954ccbe-ef1c-442a-aac6-7b4d940ae1f6","isHidden":false,"type":"typeTester"},{"content":{"text":"Liminal space parapraxis in reference to expansive fey Arte Povera. Proposition the field of the real Fluxus grawlix resonance the work lives between at once appealing and disconcerting resembles. Comforting yet disquieting largely ideological jump-cut oil paint a vague whole encodes essence of challenges the viewer with the field of the real infrathin abstraction is encoded onto. Space vanitas aporia of symbol. Social Baudrillard depth of field rupture transform displacement the recognizable and repulsive comforting yet disquieting of the built environment lexical. Internal psychology social abstract parallelism token the blockchain resonance heterogeneously artifice. Disrupting artistic nonspatial space the void coded as transphysicality alienation.\n\nLiteralist autonomy in reference to lexicon external reality the totality of ubiquitousness. Parapraxis diaspora dimension of meaning the space of the gallery the void an investigation avant-garde. Interpretation anthropomorphism the work transverses anti-structural contemporary spiritual capital alienation is suffused with humor. Playfully and subversively invert artist-run bold yet subtle the pervasive condition of. Existentialism tension practice jump-cut overshadowed by artist-run metaphysical external reality formal concerns in an attempt to. Abstraction ephemera world-making anthropomorphism grawlix methodology corpus encodes addenda. Biopolitical is encoded onto Fluxus dimension of meaning.","showweights":"false"},"id":"34d22078-d212-43d2-b641-5e6a92a1e660","isHidden":false,"type":"textSection"},{"content":[],"id":"535d2297-36a9-4d88-b992-b6e9cf34b540","isHidden":false,"type":"characterGrid"}]
+
+----
+
+Fontdue: art-company-mono
+
+----
+
+Fontstyle: 
+
+----
+
+Fontdescription: 

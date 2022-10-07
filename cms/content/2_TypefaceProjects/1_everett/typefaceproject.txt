@@ -1,0 +1,47 @@
+Title: Everett
+
+----
+
+Homepagesize: large
+
+----
+
+Carouselimages:
+
+- finals.jpg
+- dossier-20.jpg
+- buzzer-beaters.mp4
+
+----
+
+Shortdescription: This is a description.
+
+----
+
+Fontdueslug: everett
+
+----
+
+Pagecontent: [{"content":[],"id":"5627749a-9683-44b8-87e8-ebebf4190d61","isHidden":false,"type":"characterGrid"},{"content":{"placeholder":"Everett","alignment":"left","columns":1,"fontsize":50},"id":"845a6b82-7556-4605-9ac5-5e70e13670c4","isHidden":false,"type":"typeTester"},{"content":{"text":"Reality methodology subverts artistic production fantasy the work transverses the recognizable and repulsive imbricates the work is a. Challenges the viewer with objecthood unpacked in the expanded field artistic experiencability parallelism alienation fey ubiquitousness. Place making external reality resonance spatial space spiritual capital subversion platform ontological biopolitical artistic production. Intriguing yet disturbing meta pseudo biopolitical nonspatial the work transverses parapraxis conditions of possibility. Objecthood the canvas conceptualizes antieconomical oeuvre parapraxis constructs of minting subjective construction speculative.","showweights":"true"},"id":"1731311f-7386-49e3-8f9b-714e1d237703","isHidden":false,"type":"textSection"},{"content":{"placeholder":"Aporia of juxtaposition the artist comforting yet disquieting diaspora artifice artist-run of the built environment token enterprise quasi the work functions to Deleuze. Inoperative is radically questioned by the space of humanity expressively speculative pseudo conceptualizes experiencability interrogate nonspatial coded as internal psychology and external reality the canvas. Challenges the viewer with hermeticism speculative alienation minting fey disrupting radically dimension of meaning always already intriguing yet disturbing. An investigation biopolitical artistry while also field of action. Attempting to generate the recognizable and repulsive the realm of everyday life biomorphic an investigation explores hybridity crypto challenges the viewer with painted through the spatial space ontological the field of the real. Artistry establishment heterogeneously ephemera always already the political quasi vanitas. Metonym playfully and subversively invert a level of artifice while also skillful awkwardness jump-cut resembles the work is a subversion corpus aporia of intriguing yet disturbing. Punctum proliferation of the work functions to sociality autonomy new media. Radical the void overshadowed by infrathin the work transforms in the expanded field biopolitical AbEx dialectics. Mode of addenda a level of artifice intriguing yet disturbing objecthood oscillation studium the work is a expressively a vague whole conditions of possibility the space of humanity. Aporia of ontological proliferation of odd tension nonspace coded spiritual capital sociality ontological nature of specific objects resembles speculative. White cube aesthete expectations grawlix artistry skillful awkwardness familiar yet subversive at once appealing and disconcerting Baudrillard punctum space vanitas. The space of absence objecthood Arte Povera symbol proliferation of.","alignment":"left","columns":3,"fontsize":16},"id":"4d309712-d6fd-4f1d-8cac-44a50a23b539","isHidden":false,"type":"typeTester"},{"content":{"backgroundcolor":"#FFBE8E","slides":[{"character":"Y","description":"This says \"Y\"","weight":"Light"},{"character":"v","description":"","weight":"Medium"}]},"id":"5e6477aa-a0c7-48d5-bb97-ec90701fccc4","isHidden":false,"type":"characterCarousel"},{"content":{"image":["dossier-20.jpg"],"caption":"","text":""},"id":"1b0e0876-1b53-4d4d-a706-6d0cdbea092c","isHidden":false,"type":"image"}]
+
+----
+
+Fontdue: art-company-mono
+
+----
+
+Fontstyle:
+
+- 
+  style: light
+  weight: 200
+- 
+  style: medium
+  weight: 500
+- 
+  style: bold
+  weight: 800
+
+----
+
+Fontdescription: Description of the type family. Simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Description of the type family. Simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.

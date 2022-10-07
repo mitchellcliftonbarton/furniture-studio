@@ -134,7 +134,6 @@ export async function getStaticProps(context) {
               alignment: true,
               columns: true,
               fontSize: true,
-              weight: true,
               description: "block.description.markdown",
               backgroundColor: true,
               image: {
@@ -145,6 +144,14 @@ export async function getStaticProps(context) {
                   height: true,
                   alt: true,
                   type: true
+                }
+              },
+              slides: {
+                query: "block.slides.toStructure",
+                select: {
+                  character: true,
+                  description: "structureItem.description.markdown",
+                  weight: true
                 }
               }
             }

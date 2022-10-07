@@ -6,6 +6,6 @@ Activeprojects:
 
 - BrandProjects/retro-stuff
 - TypefaceProjects/art-company-mono
-- BrandProjects/modern
-- TypefaceProjects/poppins
-- TypefaceProjects/merriweather
+- TypefaceProjects/glossy-display
+- TypefaceProjects/everett
+- BrandProjects/Modern

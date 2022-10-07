@@ -1,10 +1,11 @@
 import '../styles/index.scss'
 
 // Lib
-// import { getStaticQuery, fetchGraphql } from '../lib/graphql'
+import fetchGraphql from '../lib/fetchGraphql'
 
 // MyApp
 function MyApp({ Component, pageProps, infoData, catalogData, allFonts }) {
+  // console.log(allFonts)
   const getLayout = Component.getLayout || ((page) => page)
 
   return getLayout(<Component {...pageProps} infoData={infoData} catalogData={catalogData} allFonts={allFonts} />)
@@ -48,7 +49,14 @@ MyApp.getInitialProps = async () => {
                 title: true,
                 isActive: true,
                 fontDueSlug: true,
-                inactiveEmoji: true
+                inactiveEmoji: true,
+                link: {
+                  query: "structureItem.link.toPage",
+                  select: {
+                    slug: true,
+                    template: true
+                  }
+                }
               }
             }
           },
@@ -59,12 +67,36 @@ MyApp.getInitialProps = async () => {
 
 
   // Get data from FontDue
-  // const fontdueQuery = await getStaticQuery('AllFonts.graphql')
-  // const data = await fetchGraphql(fontdueQuery)
+  const data = await fetchGraphql(`
+    query {
+      viewer {
+        fontCollections(first: 50) {
+          edges {
+            node {
+              id
+              name
+              cssUrl
+              slug {
+                name
+                id
+              }
+              fontStyles {
+                name
+                cssFamily
+                cssStyle
+                cssWeight
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
   
   return {
     infoData: infoJson.result,
-    catalogData: catalogJson.result
+    catalogData: catalogJson.result,
+    allFonts: data.viewer.fontCollections.edges
   }
 }
 

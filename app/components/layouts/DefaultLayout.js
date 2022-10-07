@@ -30,7 +30,10 @@ const Layout = ({ children }) => {
         />
         <main role="main">{children}</main>
 
-        <CatalogFooter catalogData={children.props.catalogData}/>
+        <CatalogFooter
+          catalogData={children.props.catalogData}
+          allFonts={children.props.allFonts}
+        />
         <MainFooter infoData={children.props.infoData} />
 
         <StoreModal />

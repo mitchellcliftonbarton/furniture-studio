@@ -1,6 +1,7 @@
 const ENDPOINT = `${process.env.NEXT_PUBLIC_FONTDUE_URL}/graphql`;
 
 const fetchGraphql = async (query, variables) => {
+  // console.log(query)
   const response = await fetch(ENDPOINT, {
     method: 'POST',
     body: JSON.stringify({ query, variables }),

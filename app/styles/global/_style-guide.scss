@@ -277,3 +277,94 @@ body {
     }
   }
 }
+
+/* modal styles */
+.store-modal__container__overlay {
+  .store-modal__container__background {
+    background-color: transparent;
+  }
+
+  .store-modal__container__container {
+    width: 75%;
+    max-width: none;
+    border-left: 1px solid black;
+    background-color: theme('colors.grey.light');
+    animation: none;
+  }
+
+  .store-modal__container__buttons {
+    .icon svg {
+      width: 1.5rem;
+      height: auto;
+    }
+  }
+
+  .store-modal__index-item__button {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid black;
+    border-bottom: none;
+    margin: 0;
+
+    &:last-of-type {
+      border-bottom: 1px solid black;
+    }
+
+    .store-modal__index-item__buy {
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
+      border-radius: 23px;
+      background-color: theme('colors.grey.light');
+      border: none;
+      padding: 1rem 2rem;
+      transition: background-color .3s;
+      color: black;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .store-modal__family__container {
+    background-color: transparent;
+
+    .store-modal__family__family-button {
+      background-color: transparent;
+    }
+  }
+
+  .store-modal__family-button__button {
+    border-top: 1px solid black;
+  }
+
+  .store-modal__family__group {
+    border-top: 1px solid #323232;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+
+    .store-modal__family__style-button {
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    &:last-of-type {
+      border-bottom: 1px solid #323232;
+    }
+  }
+
+  .store-modal__page__sticky-footer {
+    background-color: transparent;
+  }
+
+  .store-modal__product-summary__add-to-cart-button {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
+    border-radius: 23px;
+    background-color: theme('colors.grey.light');
+    border: none;
+    padding: 1rem 2rem;
+    transition: background-color .3s;
+    color: black;
+    border: none;
+    outline: none;
+  }
+}

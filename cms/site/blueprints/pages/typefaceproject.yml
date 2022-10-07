@@ -104,19 +104,27 @@ columns:
                 name: Character Carousel
                 icon: document
                 fields:
-                  description:
-                    label: Description
-                    type: textarea
-                  weight:
-                    label: Weight
-                    type: text
-                    required: true
-                    help: Should be the name of a weight in FontDue
                   backgroundColor:
                     label: Background Color
                     type: text
                     default: "#FFBE8E"
                     help: Should be a hex code, e.g. '#FFFFFF'
+                  slides:
+                    label: Slides
+                    type: structure
+                    fields:
+                      character:
+                        label: Character
+                        type: text
+                        required: true
+                      description:
+                        label: Description
+                        type: textarea
+                      weight:
+                        label: Weight
+                        type: text
+                        required: true
+                        help: Should be the name of a weight in FontDue
               characterGrid:
                 name: Character Grid
                 icon: text

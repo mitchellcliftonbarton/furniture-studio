@@ -137,7 +137,8 @@ const TypeTester = ({ block, font }) => {
           columnCount: currentColumns
         }}
         contentEditable
-      >{block.placeholder}</div>
+        dangerouslySetInnerHTML={{ __html: block.placeholder }}
+      ></div>
     </div>
   )
 }

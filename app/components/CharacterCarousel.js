@@ -11,21 +11,8 @@ import 'swiper/css'
 const CharacterCarousel = ({ block, font }) => {
   const swiperRef = useRef(null)
 
+  const { slides } = block
   const { fontStyles } = font
-  const selectedWeight = fontStyles.find(style => style.name === block.weight)
-
-  if (!selectedWeight) {
-    alert('No weight selected')
-    return
-  }
-
-  const allCharacters = []
-
-  selectedWeight.characterBlocks.forEach(block => {
-    block.characters.forEach(character => {
-      allCharacters.push(character)
-    })
-  })
 
   const handlePrev = () => {
     if (!swiperRef.current) return
@@ -55,11 +42,43 @@ const CharacterCarousel = ({ block, font }) => {
           allowTouchMove={false}
           className={styles['carousel-el']}
         >
-          {allCharacters.map((character, index) => (
-            <SwiperSlide key={index} className={`${styles.slide} flex justify-center items-center`}>
-              {character}
-            </SwiperSlide>
-          ))}
+          {slides.map((slide, index) => {
+            const selectedWeight = fontStyles.find(style => style.name === slide.weight)
+
+            if (!selectedWeight) {
+              alert('No weight selected')
+              return
+            }
+
+            const family = `${selectedWeight.cssFamily} ${selectedWeight.name}`
+
+            return (
+              <SwiperSlide className={`${styles.slide} relative`} key={index}>
+                {slide.description ? (
+                  <div className='flex items-start p-10'>
+                    <div 
+                      className="w-2/3 flex justify-center items-center" 
+                      style={{ fontFamily: family }}
+                    >
+                      {slide.character}
+                    </div>
+
+                    <div 
+                      className="w-1/3 text-md" 
+                      dangerouslySetInnerHTML={{ __html: slide.description }}
+                    ></div>
+                  </div>
+                ): (
+                  <div 
+                    className="flex justify-center items-center w-full h-full p-6" 
+                    style={{ fontFamily: family }}
+                  >
+                    {slide.character}
+                  </div>
+                )}
+              </SwiperSlide>
+            )
+          })}
         </Swiper>
 
         <div className="absolute top-0 left-0 w-full h-full flex z-20">

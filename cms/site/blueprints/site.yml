@@ -23,6 +23,12 @@ sections:
             label: FontDue Slug
             type: text
             help: This should be the slug for the font collection in FontDue
+          link:
+            label: Link
+            type: pages
+            help: The page that this item should link to (if active)
+            max: 1
+            query: site.find('BrandProjects', 'TypefaceProjects')
           inactiveEmoji:
             label: Inactive Emoji
             type: text
