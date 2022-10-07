@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['furniture-panel.local.com', 'furniture-admin.hot-rice.com'],
+    domains: ['furniture-panel.local.com', 'dev-furniture-panel.hot-rice.com'],
   },
 }
 
