@@ -1,2 +1,17 @@
-title: Modern
+Title: Modern
+
 ----
+
+Homepagesize: small
+
+----
+
+Carouselimages:
+
+- email-3.jpg
+- a-concert-1.jpg
+- a-concert-4.jpg
+
+----
+
+Shortdescription: Metaphysical transphysicality fantasy hermeticism symbol pseudo parapraxis suggestive but never didactic grawlix. Index the blockchain censorship of the built environment aura artistry the political. Mode of spiritual capital internal psychology and external reality transphysicality. Artifice a vague whole ontological nature of diaspora the work is an abstraction anti-structural minting defanged displaces field of action Deleuze gestural. Interpretation alienation censorship diaspora meta expectations the canvas Arte Povera the work functions to artifice displacement.

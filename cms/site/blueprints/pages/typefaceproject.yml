@@ -44,8 +44,7 @@ columns:
             size: small
             buttons: false
 
-
-  - width: 1/1
+  - width: 1/2
     sections:
       published-web-components:
         label: Live Webpage Components
@@ -65,7 +64,24 @@ columns:
           - typefaceoverviewcomponent
           - typefaceimagecomponent
           - typefacealphabetcomponent
-
-
-
-
+  - width: 1/2
+    sections:
+      home-page-display:
+        type: fields
+        fields:
+          homePageSize:
+            label: Home Page Size
+            type: select
+            default: large
+            required: true
+            options:
+              small: Small
+              large: Large
+          carouselImages:
+            label: Home Carousel Images
+            type: files
+            layout: cards
+            required: true
+          shortDescription:
+            label: Short Description
+            type: textarea

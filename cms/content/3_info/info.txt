@@ -1,1 +1,40 @@
 Title: Info Page
+
+----
+
+Introtext:
+
+Brand design and typography.
+
+The studio was founded by Regan Johnson, with past and present collaborators: Raphael Wicki, Ruggero Magrì, Evan Chang, Colin Pinegar, Zack Robbins and more.
+
+----
+
+Listitems:
+
+- 
+  text: 'Capabilities: Brand Design, Identity Systems, Type Design, Art Direction'
+- 
+  text: 'Select Clients: Apple, Get Well, Google, Life360, Work & Co'
+- 
+  text: 'Our fonts have been purchased by designers at: Collins, MadeThought, Porto Rocha, Two Times Elliot, OKRM, Spotify, and Nike'
+- 
+  text: >
+    (In typesetting, furniture is a term for
+    pieces of wood that are shorter than the
+    height of the type. These pieces are
+    used to lay out type by blocking out
+    white space in a layout.)
+
+----
+
+Contactlinks:
+
+- 
+  title: 'Email:'
+  link: mailto:hello@furniture.xyz
+  linktext: hello@furniture.xyz
+- 
+  title: 'Instagram:'
+  link: https://www.instagram.com/furniture.xyz/
+  linktext: @furniture.xyz

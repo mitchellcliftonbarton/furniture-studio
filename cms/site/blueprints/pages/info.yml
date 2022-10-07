@@ -1,2 +1,42 @@
 title: Info Page
 icon: italic
+
+columns:
+  - width: 1/2
+    sections:
+      text:
+        type: fields
+        fields:
+          introText:
+            label: Intro Text
+            type: textarea
+            size: large
+            help: This text will show as the first text on the information page.
+          listItems:
+            label: List Items
+            type: structure
+            help: These items will show as pieces of text underneath the intro text.
+            fields:
+              text:
+                label: Text
+                type: textarea
+                size: small
+  - width: 1/2
+    sections:
+      contact:
+        type: fields
+        fields:
+          contactLinks:
+            label: Contact Links
+            type: structure
+            help: These could be social media links, email, etc. They will appear on the right side of the page.
+            fields:
+              title:
+                label: Title
+                type: text
+              link:
+                label: Link
+                type: text
+              linkText:
+                label: Link Text
+                type: text

@@ -1,0 +1,12 @@
+Title: Retro Stuff
+
+----
+
+Homepagesize: large
+
+----
+
+Carouselimages:
+
+- untitled-3.jpg
+- email-9.jpg

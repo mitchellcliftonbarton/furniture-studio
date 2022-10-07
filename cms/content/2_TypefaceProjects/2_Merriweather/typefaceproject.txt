@@ -1,2 +1,13 @@
-title: Merriweather
+Title: Merriweather
+
 ----
+
+Fontstyle: 
+
+----
+
+Fontdescription: 
+
+----
+
+Homepagesize: small

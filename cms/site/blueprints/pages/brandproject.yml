@@ -1,2 +1,34 @@
-Title: Brand Project
+title: Brand Project
+icon: headline
 
+options:
+  changeStatus: true
+  changeSlug: true
+  changeTemplate: false
+  changeTitle: true
+  create: true
+  delete: true
+  duplicate: true
+
+columns:
+  - width: 1/2
+    sections:
+      home-page-display:
+        type: fields
+        fields:
+          homePageSize:
+            label: Home Page Size
+            type: select
+            default: large
+            required: true
+            options:
+              small: Small
+              large: Large
+          carouselImages:
+            label: Home Carousel Images
+            type: files
+            layout: cards
+            required: true
+          shortDescription:
+            label: Short Description
+            type: textarea
