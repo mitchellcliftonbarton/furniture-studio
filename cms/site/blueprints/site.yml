@@ -4,3 +4,26 @@ sections:
   pages:
     type: pages
     status: listed
+  catalogFooterSection:
+    type: fields
+    fields:
+      catalogFooter:
+        type: structure
+        label: Catalog Footer
+        fields:
+          title:
+            label: Title
+            type: text
+          isActive:
+            label: Active?
+            type: toggle
+            default: false
+            help: If inactive, the title will say '(Coming Soon)'
+          fontDueSlug:
+            label: FontDue Slug
+            type: text
+            help: This should be the slug for the font collection in FontDue
+          inactiveEmoji:
+            label: Inactive Emoji
+            type: text
+            help: This should be an emoji that will show up if the item is inactive.

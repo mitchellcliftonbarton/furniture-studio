@@ -14,8 +14,6 @@ import Image from 'next/image'
 import classnames from 'classnames'
 
 const ProjectItem = ({ project }) => {
-  // console.log(project)
-
   const swiperRef = useRef(null)
   const descriptionRef = useRef(null)
 
@@ -32,7 +30,7 @@ const ProjectItem = ({ project }) => {
     }
   )
 
-  const handleSlideChange = (index) => {
+  const handleSlideChange = (index, swiper) => {
     setCarouselIndex(index)
   }
 
@@ -57,11 +55,10 @@ const ProjectItem = ({ project }) => {
     }
 
     setDescriptionOpen(!descriptionOpen)
-    console.log(descriptionHeight)
   }
 
   return (
-    <div className="project-item grid grid-cols-4 gap-4 mb-40">
+    <div className="project-item grid grid-cols-4 gap-4 mb-40 enter-in-1">
       <div
         className={classes}
       >
@@ -74,17 +71,29 @@ const ProjectItem = ({ project }) => {
                 slidesPerView={1}
                 loop={true}
                 allowTouchMove={false}
-                onSlideChange={(swiper) => handleSlideChange(swiper.realIndex + 1)}
+                onSlideChange={(swiper) => handleSlideChange(swiper.realIndex + 1, swiper)}
                 className={styles['carousel-el']}
               >
                 {project.images.map((image, index) => (
                   <SwiperSlide key={index}>
-                    <Image
-                      src={image.url}
-                      layout="fill"
-                      objectFit={image.height > image.width ? 'contain' : 'cover'}
-                      alt={image.alt}
-                    />
+                    {image.type === 'video' ? (
+                      <video 
+                        src={image.url} 
+                        className="object-cover object-center w-full h-full"
+                        autoPlay
+                        muted
+                        playsInline
+                        loop
+                        preload="true"
+                      ></video>
+                    ) : (
+                      <Image
+                        src={image.url}
+                        layout="fill"
+                        objectFit={image.height > image.width ? 'contain' : 'cover'}
+                        alt={image.alt}
+                      />
+                    )}
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -114,7 +123,7 @@ const ProjectItem = ({ project }) => {
                 More info
               </button>
             )}
-            <Link href={`/project/${project.slug}`}>
+            <Link href={project.template === 'brandproject' ? `/projects/${project.slug}` : `/typefaces/${project.slug}`}>
               <a className="text-grey-lighter underline">See full project</a>
             </Link>
           </div>

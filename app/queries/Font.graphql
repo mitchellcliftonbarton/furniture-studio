@@ -1,0 +1,21 @@
+query Font($slug: String!) {
+  viewer {
+    slug(name: $slug) {
+      fontCollection {
+        id
+        name
+        cssUrl
+        fontStyles {
+          name
+          cssFamily
+          cssStyle
+          cssWeight
+          characterBlocks {
+            characters
+            name
+          }
+        }
+      }
+    }
+  }
+}

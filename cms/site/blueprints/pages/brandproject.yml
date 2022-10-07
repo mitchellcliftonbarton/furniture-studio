@@ -21,6 +21,7 @@ columns:
             type: select
             default: large
             required: true
+            help: This will determine how big the project block should be on the home page.
             options:
               small: Small
               large: Large
@@ -28,7 +29,59 @@ columns:
             label: Home Carousel Images
             type: files
             layout: cards
-            required: true
+            help: These are the images that will appear in the carousels on the home page.
           shortDescription:
             label: Short Description
             type: textarea
+            help: This is the short description that will show up under 'More info' on the home page.
+  - width: 1/2
+    sections:
+      page-builder:
+        type: fields
+        fields:
+          preTitle:
+            label: Pretitle
+            type: text
+            help: This text will show up before the title of the project on its detail page. e.g "Brand Identity - Project Title". By default it is "Brand Identity"
+            default: Brand Identity
+          pageContent:
+            label: Page Content
+            type: blocks
+            help: This is the actual content for the projects detail page.
+            fieldsets:
+              fullImage:
+                name: Full Image
+                icon: file-image
+                label: "{{ image.0.filename }}"
+                fields:
+                  image:
+                    label: Image
+                    type: files
+                    max: 1
+                  caption:
+                    label: Caption
+                    type: text
+              threeQuartersImage:
+                name: 3/4 Image
+                icon: file-image
+                label: "{{ image.0.filename }}"
+                fields:
+                  image:
+                    label: Image
+                    type: files
+                    max: 1
+                  description:
+                    label: Description
+                    type: textarea
+              halfImage:
+                name: 1/2 Image
+                icon: file-image
+                label: "{{ image.0.filename }}"
+                fields:
+                  image:
+                    label: Image
+                    type: files
+                    max: 1
+                  description:
+                    label: Description
+                    type: textarea

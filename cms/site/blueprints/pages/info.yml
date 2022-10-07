@@ -40,3 +40,7 @@ columns:
               linkText:
                 label: Link Text
                 type: text
+              showInFooter:
+                label: Show in Footer?
+                type: toggle
+                help: If true, this will show in the global footer

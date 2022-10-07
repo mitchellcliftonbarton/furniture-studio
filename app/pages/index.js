@@ -5,28 +5,63 @@ import DefaultLayout from '../components/layouts/DefaultLayout'
 import CategoryFilter from '../components/CategoryFilter'
 import ProjectItem from '../components/ProjectItem'
 
-export default function Home({ content }) {
-  const { activeprojects } = content
+// React
+import { useRouter } from 'next/router'
+import { useMemo } from 'react'
 
-  console.log(activeprojects)
+// Lib
+import _ from 'lodash'
+
+export default function Home({ projects }) {
+  const router = useRouter()
+
+  const [filteredProjects] = useMemo(() => {
+    let value = projects
+
+    if (_.isEmpty(router.query)) {
+      value = projects
+    }
+
+    if (router.query.filter === 'brand') {
+      value = projects.filter(project => project.template === 'brandproject')
+    }
+
+    if (router.query.filter === 'type') {
+      value = projects.filter(project => project.template === 'typefaceproject')
+    }
+
+    if (router.query.filter === 'none') {
+      value = false
+    }
+
+    return [
+      value
+    ]
+  }, [router.query])
 
   return (
     <div className='push-nav def-x'>
       <Head>
-        <title>Furniture</title>
+        <title>Furniture | Home</title>
         <meta name="description" content="Furniture" />
       </Head>
 
       <CategoryFilter />
       
-      <div className="projects mb-20">
-        {activeprojects.map(project => (
-          <ProjectItem 
-            project={project} 
-            key={project.slug}
-          />
-        ))}
-      </div>
+      {filteredProjects ? (
+        <div className="projects mb-20">
+          {filteredProjects.map(project => (
+            <ProjectItem 
+              project={project} 
+              key={project.slug}
+            />
+          ))}
+        </div>
+      ): (
+        <div className="mb-20">
+          <h2>No projects</h2>  
+        </div>
+      )}
     </div>
   )
 }
@@ -61,7 +96,8 @@ export async function getStaticProps() {
                   url: true,
                   width: true,
                   height: true,
-                  alt: true
+                  alt: true,
+                  type: true
                 }
               },
               shortDescription: "page.shortDescription.markdown"
@@ -73,8 +109,11 @@ export async function getStaticProps() {
 
   const jsonData = await homeData.json()
   const { result } = jsonData
+  
+  // only let projects through that have images
+  const projectsWithImages = result.activeprojects.filter(project => project.images.length > 0)
 
   return {
-    props: {content: result},
+    props: {projects: projectsWithImages},
   }
 }

@@ -1,0 +1,19 @@
+query {
+  viewer {
+    fontCollections(first: 50) {
+      edges {
+        node {
+          id
+          name
+          cssUrl
+          fontStyles {
+            name
+            cssFamily
+            cssStyle
+            cssWeight
+          }
+        }
+      }
+    }
+  }
+}

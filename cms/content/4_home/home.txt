@@ -4,7 +4,8 @@ Title: Home Page
 
 Activeprojects:
 
-- TypefaceProjects/Poppins
-- BrandProjects/Modern
-- TypefaceProjects/Merriweather
 - BrandProjects/retro-stuff
+- TypefaceProjects/art-company-mono
+- BrandProjects/modern
+- TypefaceProjects/poppins
+- TypefaceProjects/merriweather

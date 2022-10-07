@@ -2,12 +2,35 @@ Title: Merriweather
 
 ----
 
+Homepagesize: small
+
+----
+
+Carouselimages:
+
+- 53_dino-5.jpg
+- 40_pole-1.jpg
+
+----
+
+Shortdescription: Another short description.
+
+----
+
+Fontdueslug: art-company-mono
+
+----
+
+Pagecontent: 
+
+----
+
+Fontdue: art-company-mono
+
+----
+
 Fontstyle: 
 
 ----
 
 Fontdescription: 
-
-----
-
-Homepagesize: small

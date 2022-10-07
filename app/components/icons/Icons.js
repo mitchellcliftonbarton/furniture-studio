@@ -12,3 +12,62 @@ export const Check = () => {
     </svg>
   )
 }
+
+export const LeftAlignment = () => {
+  return (
+    <svg className="left-alignment" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="22" height="1" fill="#323232"/>
+    <rect y="6" width="14" height="1" fill="#323232"/>
+    <rect y="12" width="18" height="1" fill="#323232"/>
+    </svg>
+  )
+}
+
+export const CenterAlignment = () => {
+  return (
+    <svg className="center-alignment" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="22" height="1" fill="#323232"/>
+    <rect x="4" y="6" width="14" height="1" fill="#323232"/>
+    <rect x="2" y="12" width="18" height="1" fill="#323232"/>
+    </svg>
+  )
+}
+
+export const OneColumn = () => {
+  return (
+    <svg className="one-column" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="22" height="1" fill="#323232"/>
+    <rect y="12" width="22" height="1" fill="#323232"/>
+    <rect y="6" width="22" height="1" fill="#323232"/>
+    </svg>
+  )
+}
+
+export const TwoColumn = () => {
+  return (
+    <svg className="two-column" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="10" height="1" fill="#323232"/>
+    <rect x="12" width="10" height="1" fill="#323232"/>
+    <rect y="12" width="10" height="1" fill="#323232"/>
+    <rect x="12" y="12" width="10" height="1" fill="#323232"/>
+    <rect y="6" width="10" height="1" fill="#323232"/>
+    <rect x="12" y="6" width="10" height="1" fill="#323232"/>
+    </svg>
+  )
+}
+
+export const ThreeColumn = () => {
+  return (
+    <svg className="three-column" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="6" height="1" fill="#323232"/>
+    <rect y="6" width="6" height="1" fill="#323232"/>
+    <rect y="12" width="6" height="1" fill="#323232"/>
+    <rect x="8" width="6" height="1" fill="#323232"/>
+    <rect x="8" y="6" width="6" height="1" fill="#323232"/>
+    <rect x="8" y="12" width="6" height="1" fill="#323232"/>
+    <rect x="16" width="6" height="1" fill="#323232"/>
+    <rect x="16" y="6" width="6" height="1" fill="#323232"/>
+    <rect x="16" y="12" width="6" height="1" fill="#323232"/>
+    </svg>
+  )
+}

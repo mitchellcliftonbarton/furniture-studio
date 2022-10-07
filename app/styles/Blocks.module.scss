@@ -1,0 +1,142 @@
+.full-image,
+.three-quarters-image,
+.half-image {
+  .image {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+
+.download {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
+  border-radius: 23px;
+  background-color: theme('colors.grey.light');
+  border: none;
+  padding: 1rem 2rem;
+  transition: background-color .3s;
+  color: black;
+
+  &:hover {
+    background-color: theme('colors.grey.med');
+  }
+}
+
+.type-image {
+  .image {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+
+.select {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
+  border-radius: 23px;
+  background-color: theme('colors.grey.light');
+  border: none;
+  padding: .5rem 2rem;
+  transition: background-color .3s;
+  color: black;
+  appearance: none;
+  outline: none;
+  border: none;
+  background-image: url('../public/down-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+.character {
+  width: 4%;
+}
+
+.carousel {
+  padding-bottom: 65%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.carousel .carousel-el {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  font-size: 50rem;
+}
+
+.left-button {
+  cursor: url('../public/left-arrow.png') 4 12, auto;
+}
+
+.right-button {
+  cursor: url('../public/right-arrow.png') 4 12, auto;
+}
+
+.range {
+  appearance: none;
+  background-color: transparent;
+  cursor: grab;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  &::-webkit-slider-runnable-track {
+    appearance: none;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -3px -3px 4px #FFFFFF;
+    background: #F8F9F8;
+    border-radius: 23px;
+    padding: 1rem;
+  }
+}
+
+.alignment,
+.columns {
+  button {
+    margin-right: 1.5rem;
+    opacity: .25;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    height: 1.3rem;
+  }
+}
+
+.catalog-item {
+  
+
+  &.active {
+    .inner {
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
+      background: #F3F5F3;
+    }
+  }
+
+  .inner {
+    min-height: 500px;
+    background: #F8F9F8;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -3px -3px 4px #FFFFFF;
+    border-radius: 20px;
+  }
+
+  .emoji {
+    font-size: 15rem;
+  }
+}
+
+.textarea {
+  outline: none;
+  border: none;
+}

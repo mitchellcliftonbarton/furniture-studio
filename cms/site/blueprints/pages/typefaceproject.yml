@@ -13,59 +13,6 @@ options:
 columns:
   - width: 1/2
     sections:
-      font-style-list:
-        type: fields
-        fields:
-          fontStyle:
-            label: Font Styles
-            type: structure
-            columns:
-              style:
-                width: 3/4
-              weight:
-                width: 1/4
-            fields:
-              style:
-                label: Style
-                type: text
-                required: true
-              weight:
-                label: Weight
-                type: number
-                required: true
-  - width: 1/2
-    sections:
-      font-description:
-        type: fields
-        fields:
-          fontDescription:
-            label: Font Description
-            type: textarea
-            size: small
-            buttons: false
-
-  - width: 1/2
-    sections:
-      published-web-components:
-        label: Live Webpage Components
-        type: pages
-        status: listed
-        templates:
-          - typefacetestercomponent
-          - typefaceoverviewcomponent
-          - typefaceimagecomponent
-          - typefacealphabetcomponent
-      draft-web-components:
-        label: New Page Components (Draft)
-        status: draft
-        type: pages
-        templates:
-          - typefacetestercomponent
-          - typefaceoverviewcomponent
-          - typefaceimagecomponent
-          - typefacealphabetcomponent
-  - width: 1/2
-    sections:
       home-page-display:
         type: fields
         fields:
@@ -74,6 +21,7 @@ columns:
             type: select
             default: large
             required: true
+            help: This will determine how big the project block should be on the home page.
             options:
               small: Small
               large: Large
@@ -81,7 +29,94 @@ columns:
             label: Home Carousel Images
             type: files
             layout: cards
-            required: true
+            help: These are the images that will appear in the carousels on the home page.
           shortDescription:
             label: Short Description
             type: textarea
+            help: This is the short description that will show up under 'More info' on the home page.
+  - width: 1/2
+    sections:
+      page-builder:
+        type: fields
+        fields:
+          fontDueSlug:
+            label: FontDue Collection Slug
+            type: text
+            help: Should be the 'collection slug' for this typeface. This is required in order to pull in the right info from FontDue.
+            required: true
+          pageContent:
+            label: Page Content
+            type: blocks
+            help: This is the actual content for the typefaces detail page.
+            fieldsets:
+              image:
+                name: Image
+                icon: file-image
+                label: "{{ image.0.filename }}"
+                fields:
+                  image:
+                    label: Image
+                    type: files
+                    max: 1
+                  caption:
+                    label: Caption
+                    type: text
+                  text:
+                    label: Text
+                    type: textarea
+                    help: If not empty, this text will show up on the right side of the image.
+              textSection:
+                name: Text Section
+                icon: headline
+                fields:
+                  text:
+                    label: Text
+                    type: textarea
+                  showWeights:
+                    label: Show Weights?
+                    type: toggle
+                    help: If true, the weights of the typeface will be listed in this section.
+              typeTester:
+                name: Type Tester
+                icon: text
+                fields:
+                  placeholder:
+                    label: Placeholder
+                    type: textarea
+                  alignment:
+                    label: Alignment
+                    type: select
+                    options:
+                      left: Left
+                      center: Center
+                  columns:
+                    label: Columns
+                    type: number
+                    min: 1
+                    max: 3
+                  fontSize:
+                    label: Font Size
+                    type: number
+                    min: 10
+                    max: 300
+                    help: A value between 10 and 300
+              characterCarousel:
+                name: Character Carousel
+                icon: document
+                fields:
+                  description:
+                    label: Description
+                    type: textarea
+                  weight:
+                    label: Weight
+                    type: text
+                    required: true
+                    help: Should be the name of a weight in FontDue
+                  backgroundColor:
+                    label: Background Color
+                    type: text
+                    default: "#FFBE8E"
+                    help: Should be a hex code, e.g. '#FFFFFF'
+              characterGrid:
+                name: Character Grid
+                icon: text

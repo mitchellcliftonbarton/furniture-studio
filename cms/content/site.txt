@@ -1,1 +1,21 @@
 Title: Furniture
+
+----
+
+Catalogfooter:
+
+- 
+  title: Art Company Mono
+  isactive: 'true'
+  fontdueslug: art-company-mono
+  inactiveemoji: ""
+- 
+  title: Bed Times
+  isactive: 'false'
+  fontdueslug: bedtimes
+  inactiveemoji: 🕑
+- 
+  title: Laundry Grotesk
+  isactive: 'false'
+  fontdueslug: laundry-grotesk
+  inactiveemoji: ⏳

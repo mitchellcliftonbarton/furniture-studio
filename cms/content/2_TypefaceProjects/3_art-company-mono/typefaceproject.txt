@@ -1,0 +1,36 @@
+Title: Art Company Mono
+
+----
+
+Homepagesize: large
+
+----
+
+Carouselimages:
+
+- a-concert-1.jpg
+- a-concert-4.jpg
+
+----
+
+Shortdescription: 
+
+----
+
+Fontdueslug: art-company-mono
+
+----
+
+Pagecontent: [{"content":{"placeholder":"Added words and misspellings add to the enjoyment.","alignment":"left","columns":1,"fontsize":20},"id":"cba4cec0-8b0e-4287-bb35-c0386fac814b","isHidden":false,"type":"typeTester"},{"content":{"text":"Description of the type family. Simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Description of the type family. Simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.","showweights":"true"},"id":"1fe76ff6-29ac-46e9-a631-74eee1e9acc2","isHidden":false,"type":"textSection"},{"content":{"image":["a-concert-1.jpg"],"caption":"This is a caption.","text":""},"id":"5be1bd65-b554-4148-9e2f-60286c68fafb","isHidden":false,"type":"image"},{"content":{"placeholder":"Simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Simply dummy text of the printing and typesetting industry. It has survived not only centuries, but also the leap into electronic typesetting, remaining. Simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Simply dummy text of the printing and typesetting industry. It has survived not only centuries, but also the leap into electronic typesetting, remaining. Typesetting, remaining essentially unchanged. Simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Simply dummy text of the printing and typesetting industry. It has survived not only five centuries.","alignment":"left","columns":3,"fontsize":10},"id":"734c46af-016e-4e32-84f3-09c793a1dc98","isHidden":false,"type":"typeTester"},{"content":{"placeholder":"Laminator","alignment":"left","columns":1,"fontsize":60},"id":"1bfc2598-6461-46d5-b977-eeb5f788bded","isHidden":false,"type":"typeTester"},{"content":{"description":"Description of the type family. Simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.","weight":"Regular","backgroundcolor":"#FFBE8E"},"id":"7d9c82e5-3971-48c0-a00f-ca8334d3fbff","isHidden":false,"type":"characterCarousel"},{"content":[],"id":"a346342f-359a-44fe-97d1-78ce8e19e816","isHidden":false,"type":"characterGrid"},{"content":{"image":["a-concert-4.jpg"],"caption":"","text":"Description of the type family. Simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."},"id":"7b580e61-97c4-454c-a3d6-1801f72ebf90","isHidden":false,"type":"image"},{"content":{"placeholder":"Simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Simply dummy text of the printing and typesetting industry. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Simply dummy text of the printing and typesetting industry. Simply dummy text of the typesetting industry.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.","alignment":"left","columns":2,"fontsize":30},"id":"b4b5f4d1-f0b8-4ea3-8bd3-323de18d7fb9","isHidden":false,"type":"typeTester"}]
+
+----
+
+Fontdue: art-company-mono
+
+----
+
+Fontstyle: 
+
+----
+
+Fontdescription: 

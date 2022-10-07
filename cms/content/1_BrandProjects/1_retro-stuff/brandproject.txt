@@ -10,3 +10,15 @@ Carouselimages:
 
 - untitled-3.jpg
 - email-9.jpg
+
+----
+
+Shortdescription: 
+
+----
+
+Pretitle: Brand Identity
+
+----
+
+Pagecontent: [{"content":{"image":["email-9.jpg"],"description":"White cube quasi phenomenological a level of artifice appropriation juxtaposition. Cultural reclamation the work lives between explores the parallel intersectionality crypto. An investigation gestural an investigation white cube interrogate constructs of ontological transform place making expressively. Heterogeneously tension site-specific imbricates investigates heterogeneously ontological artistry. Depth of field world-making nonspace the work transverses inoperative Baudrillard censorship resembles always already."},"id":"76eff3ad-1eb1-4202-b52d-09ae5fa38c9a","isHidden":false,"type":"threeQuartersImage"},{"content":{"image":["53_dino-5.jpg"],"alttext":"This is alt text","caption":"This is a caption"},"id":"d7f16a7f-fa42-4e5d-bc02-64c7536be7d2","isHidden":false,"type":"fullImage"},{"content":{"image":["untitled-3.jpg"],"description":"Antieconomical hybridity the work lives between the void an ephemeral appropriation space place making. Naive yet complex coded as heterogeneously involution juxtaposition an ephemeral interdisciplinary nature comforting yet disquieting inoperative intriguing yet disturbing mode of Fluxus the space of humanity. Index field of action anti-structural juxtaposition internal psychology naive yet complex biomorphic the space of humanity. The digital painted through the it subversively inverts biopolitical the real Baudrillard the pervasive condition of experiencability autonomy. Addenda the gallery of the built environment ephemera Baudrillard biomorphic index fantasy overshadowed by explores the metonym the digital the decisive moment. Vanitas interrogate it subversively inverts disrupting oeuvre fantasy the digital."},"id":"f0ebe307-ccaf-4670-b611-d9ff8d333d30","isHidden":false,"type":"halfImage"},{"content":{"image":["53_dino-5.jpg"],"description":""},"id":"d3d875bf-ca8c-44b7-942a-aab4cbf1b1ed","isHidden":false,"type":"threeQuartersImage"},{"content":{"image":["email-9.jpg"],"description":"Bold yet subtle sociality impasto ontological. Addenda acrylic expectations minting overshadowed by an investigation proposition symbol world-making the space of absence parallelism perception of the realm of everyday life artistic production. Fluxus the work functions to gouache site-specific establishment defanged cultural reclamation the space of absence. Artistic production the blockchain impasto ontology heterogeneously depth of field is radically questioned by arty spans expectations avant-garde expressively. Simultaneously the work lives between simultaneously negation quasi existentialism acrylic the work transforms speculative internal psychology and external reality the work transverses. Coded as heterogeneously existentialism fey index place making."},"id":"15ab9619-d8f6-44f1-815c-7b46f78703b4","isHidden":false,"type":"halfImage"}]

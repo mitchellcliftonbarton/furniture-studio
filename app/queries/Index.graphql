@@ -1,0 +1,15 @@
+query Index {
+  viewer {
+    fontCollections(onlyRoots: true, first: 10) {
+      edges {
+        node {
+          id
+          name
+          slug {
+            name
+          }
+        }
+      }
+    }
+  }
+}

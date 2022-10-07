@@ -34,7 +34,9 @@ Contactlinks:
   title: 'Email:'
   link: mailto:hello@furniture.xyz
   linktext: hello@furniture.xyz
+  showinfooter: 'true'
 - 
   title: 'Instagram:'
   link: https://www.instagram.com/furniture.xyz/
   linktext: @furniture.xyz
+  showinfooter: 'true'

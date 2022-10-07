@@ -1,9 +1,24 @@
 title: Brand Projects
 icon: bold
 
+options:
+  changeStatus: false
+  changeSlug: true
+  changeTemplate: false
+  changeTitle: false
+  create: false
+  delete: false
+  duplicate: false
+
 sections:
-  projects:
+  published:
+    status: listed
+    headline: Published Brand Projects
     type: pages
-    layout: cards
-    template:
-      - brand-project
+    layout: cardlets
+    template: brandproject
+  draft:
+    status: draft
+    headline: New Brand Projects (Draft)
+    type: pages
+    template: brandproject
