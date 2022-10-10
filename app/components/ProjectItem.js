@@ -24,9 +24,9 @@ const ProjectItem = ({ project }) => {
   const classes = classnames(
     'project-item-inner',
     {
-      'col-span-3': project.size === 'large',
-      'col-span-2': project.size === 'small',
-      'col-start-2': project.template === 'typefaceproject'
+      'col-span-4 lg:col-span-3': project.size === 'large',
+      'col-span-4 lg:col-span-2': project.size === 'small',
+      'lg:col-start-2': project.template === 'typefaceproject'
     }
   )
 

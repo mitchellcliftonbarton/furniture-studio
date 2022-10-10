@@ -18,7 +18,7 @@ export default function CatalogItem({ item, allFonts }) {
   }
 
   return (
-    <div className={`${styles['catalog-item']} ${isActive ? styles.active : null} col-span-1`}>
+    <div className={`${styles['catalog-item']} ${isActive ? styles.active : null} col-span-3 lg:col-span-1`}>
       <link rel="stylesheet" href={selectedFont.cssUrl} />
 
       {isActive ? (

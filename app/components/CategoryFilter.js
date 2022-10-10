@@ -96,7 +96,7 @@ const CategoryFilter = () => {
   }, [router.query])
 
   return (
-    <nav className={`${styles.filters} mb-40`}>
+    <nav className={`${styles.filters} mb-40 hidden lg:block`}>
       <ul className="flex h-full items-center">
         <li className="w-1/4">
           <Link href={brandLink}>
