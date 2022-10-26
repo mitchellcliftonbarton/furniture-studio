@@ -12,6 +12,13 @@ Catalogfooter:
     - TypefaceProjects/art-company-mono
   inactiveemoji: ""
 - 
+  title: Glossy Display
+  isactive: 'false'
+  fontdueslug: glossy-display
+  link:
+    - TypefaceProjects/glossy-display
+  inactiveemoji: 🕑
+- 
   title: Bed Times
   isactive: 'false'
   fontdueslug: bedtimes

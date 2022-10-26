@@ -12,18 +12,18 @@ export default function Info({ content }) {
         <meta name="description" content="Furniture" />
       </Head>
 
-      <div className="flex py-60">
-        <div className="w-3/4 text-grey-dark pr-80 enter-in-1">
+      <div className="flex flex-wrap lg:flex-nowrap py-40 lg:py-60">
+        <div className="w-full lg:w-3/4 text-grey-dark lg:pr-80 pb-20 lg:pb-0 enter-in-1">
           {content.introtext && (
             <div 
-              className="text-md rich-text mb-24" 
+              className="text-md rich-text mb-16 lg:mb-24" 
               dangerouslySetInnerHTML={{ __html: content.introtext }}
             ></div>
           )}
 
           {content.listitems.map((item, index) => (
             <div 
-              className="text-md rich-text border-t border-black pt-6 pb-12" 
+              className="text-md rich-text border-t border-black pt-6 pb-8 lg:pb-12" 
               dangerouslySetInnerHTML={{ __html: item.text }}
               key={index}
             ></div>
@@ -31,7 +31,7 @@ export default function Info({ content }) {
         </div>
 
         {content.contactlinks.length > 0 && (
-          <div className="w-1/4 text-grey-dark pr-32">
+          <div className="w-full lg:w-1/4 text-grey-dark lg:pr-32">
             {content.contactlinks.map((item, index) => (
               <div 
                 className="mb-8 enter-in-1" 
@@ -40,7 +40,7 @@ export default function Info({ content }) {
               >
                 <p className='text-md'>{item.title}</p>
                 <Link href={item.link}>
-                  <a className='text-md'>
+                  <a className='text-md fade'>
                     {item.linkText}
                   </a>
                 </Link>

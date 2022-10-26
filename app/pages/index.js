@@ -46,10 +46,12 @@ export default function Home({ projects }) {
         <meta name="description" content="Furniture" />
       </Head>
 
-      <CategoryFilter />
+      <div className="hidden lg:block">
+        <CategoryFilter />
+      </div>
       
       {filteredProjects ? (
-        <div className="projects mb-20">
+        <div className="projects pt-20 lg:pt-0 mb-20">
           {filteredProjects.map(project => (
             <ProjectItem 
               project={project} 

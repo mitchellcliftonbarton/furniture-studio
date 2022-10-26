@@ -15,7 +15,7 @@ const CharacterGrid = ({ font }) => {
   }
 
   return (
-    <div className={`mb-60`}>
+    <div className={`mb-32 lg:mb-60`}>
       <div className="controls flex mb-10">
         <select 
           className={`${styles.select} text-md w-full lg:w-1/4`} 

@@ -22,6 +22,12 @@
 
 .description-container {
   transition: height .3s;
+  display: none;
+
+  @media screen and (min-width: theme("screens.lg")) {
+    background-color: theme('colors.grey.light');
+    display: block
+  }
 
   & > div {
     opacity: 0;

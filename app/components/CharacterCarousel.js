@@ -27,7 +27,7 @@ const CharacterCarousel = ({ block, font }) => {
   }
 
   return (
-    <div className={`mb-60 flex`}>
+    <div className={`mb-32 lg:mb-60 flex`}>
       <div
         className={`${styles.carousel} bg-grey-med relative w-full`}
         style={{
@@ -55,22 +55,22 @@ const CharacterCarousel = ({ block, font }) => {
             return (
               <SwiperSlide className={`${styles.slide} relative`} key={index}>
                 {slide.description ? (
-                  <div className='flex items-start p-10'>
+                  <div className='flex items-start flex-wrap lg:flex-nowrap p-10 h-full'>
                     <div 
-                      className="w-2/3 flex justify-center items-center" 
+                      className={`${styles['character-slide']} order-2 lg:order-1 w-full lg:w-2/3 flex justify-center items-center h-full flex-1`} 
                       style={{ fontFamily: family }}
                     >
                       {slide.character}
                     </div>
 
                     <div 
-                      className="w-1/3 text-md" 
+                      className="order-1 lg:order-2 w-full lg:w-1/3 text-md flex-0-0 lg:flex-auto" 
                       dangerouslySetInnerHTML={{ __html: slide.description }}
                     ></div>
                   </div>
                 ): (
                   <div 
-                    className="flex justify-center items-center w-full h-full p-6" 
+                    className={`${styles['character-slide']} flex justify-center items-center w-full h-full p-6`} 
                     style={{ fontFamily: family }}
                   >
                     {slide.character}
@@ -81,15 +81,23 @@ const CharacterCarousel = ({ block, font }) => {
           })}
         </Swiper>
 
-        <div className="absolute top-0 left-0 w-full h-full flex z-20">
+        <div className="absolute bottom-0 lg:bottom-auto lg:top-0 left-0 w-full h-auto lg:h-full flex justify-between items-center z-20 p-12 lg:p-0">
           <button 
-            className={`${styles['left-button']} w-1/2 h-full`} 
+            className={`${styles['left-button']} w-auto lg:w-1/2 h-auto lg:h-full`} 
             onClick={handlePrev}
-          ></button>
+          >
+            <svg className={styles['arrow-button']} viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.35355 1.35355C6.54882 1.15829 6.54882 0.841709 6.35355 0.646447C6.15829 0.451184 5.84171 0.451184 5.64645 0.646447L6.35355 1.35355ZM1 6L0.646447 5.64645C0.451184 5.84171 0.451184 6.15829 0.646446 6.35355L1 6ZM5.64645 11.3536C5.84171 11.5488 6.15829 11.5488 6.35355 11.3536C6.54882 11.1583 6.54882 10.8417 6.35355 10.6464L5.64645 11.3536ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447ZM0.646446 6.35355L5.64645 11.3536L6.35355 10.6464L1.35355 5.64645L0.646446 6.35355Z" fill="#323232"/>
+            </svg>
+          </button>
           <button
-            className={`${styles['right-button']} w-1/2 h-full`}
+            className={`${styles['right-button']} w-auto lg:w-1/2 h-auto lg:h-full`}
             onClick={handleNext}
-          ></button>
+          >
+            <svg className={styles['arrow-button']} viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.646447 10.6464C0.451184 10.8417 0.451184 11.1583 0.646447 11.3536C0.841709 11.5488 1.15829 11.5488 1.35355 11.3536L0.646447 10.6464ZM6 6L6.35355 6.35355C6.54882 6.15829 6.54882 5.84171 6.35355 5.64645L6 6ZM1.35355 0.646446C1.15829 0.451184 0.841708 0.451184 0.646446 0.646446C0.451184 0.841709 0.451184 1.15829 0.646446 1.35355L1.35355 0.646446ZM1.35355 11.3536L6.35355 6.35355L5.64645 5.64645L0.646447 10.6464L1.35355 11.3536ZM6.35355 5.64645L1.35355 0.646446L0.646446 1.35355L5.64645 6.35355L6.35355 5.64645Z" fill="#323232"/>
+            </svg>
+          </button>
         </div>
       </div>
     </div>

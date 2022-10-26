@@ -2,9 +2,9 @@ const TextSection = ({ block, font }) => {
   const { fontStyles } = font
 
   return (
-    <div className={`mb-60 flex`}>
+    <div className={`mb-32 lg:mb-60 flex flex-wrap lg:flex-nowrap`}>
       <div 
-        className="w-full lg:w-2/3 text-md lg:pr-20" 
+        className="w-full lg:w-2/3 text-md lg:pr-20 mb-16 lg:mb-0" 
         dangerouslySetInnerHTML={{ __html: block.text }}
       ></div>
 

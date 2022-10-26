@@ -21,7 +21,7 @@ export default function TypefaceDetail({ project, font }) {
   // console.log(project, font)
 
   return (
-    <div className='typeface-project push-nav def-x mt-16'>
+    <div className='typeface-project push-nav def-x mt-8 lg:mt-16'>
       <Head>
         <title>Furniture | {project.title}</title>
         <meta name="description" content="Furniture" />
@@ -29,25 +29,25 @@ export default function TypefaceDetail({ project, font }) {
 
       <link rel="stylesheet" href={font.cssUrl} />
 
-      <div className="flex">
+      <div className="flex flex-wrap lg:flex-nowrap">
         <h1 className='text-md w-full lg:w-1/4'>{project.title}</h1>
 
         {project.fontDueSlug && (
-          <div className="buy-options w-full lg:w-3/4">
+          <div className="buy-options w-full lg:w-3/4 mt-8 lg:mt-0">
             <BuyButton 
               collectionSlug={project.fontDueSlug} 
               label="Buy"
             />
 
             <Link href="/download-trial-fonts">
-              <a className={`${styles.download} text-md ml-16`}>Download trial fonts</a>
+              <a className={`${styles.download} text-md ml-8 lg:ml-16`}>Download trial fonts</a>
             </Link>
           </div>
         )}
       </div>
 
       {project.pagecontent && project.pagecontent.length > 0 && (
-        <div className="block-items mt-32 flex justify-end">
+        <div className="block-items mt-24 lg:mt-32 flex justify-end">
           <div className="w-full lg:w-3/4">
             {project.pagecontent.map((block, index) => {
               switch (block.type) {

@@ -7,10 +7,8 @@ import ThreeQuartersImage from '../../components/ThreeQuartersImage'
 import HalfImage from '../../components/HalfImage'
 
 export default function ProjectDetail({ project }) {
-  // console.log(project)
-
   return (
-    <div className='push-nav def-x mt-16'>
+    <div className='push-nav def-x mt-8 lg:mt-16'>
       <Head>
         <title>Furniture | {project.title}</title>
         <meta name="description" content="Furniture" />

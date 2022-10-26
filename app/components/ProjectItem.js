@@ -58,7 +58,7 @@ const ProjectItem = ({ project }) => {
   }
 
   return (
-    <div className="project-item grid grid-cols-4 gap-4 mb-40 enter-in-1">
+    <div className="project-item grid grid-cols-4 gap-4 mb-28 lg:mb-40 enter-in-1">
       <div
         className={classes}
       >
@@ -118,13 +118,13 @@ const ProjectItem = ({ project }) => {
             {project.shortDescription && (
               <button 
                 onClick={toggleDescription} 
-                className='text-grey-lighter underline mr-6'
+                className='hidden lg:block text-grey-lighter underline mr-6 lg:hover:text-grey-med-dark transition-colors duration-300'
               >
                 More info
               </button>
             )}
             <Link href={project.template === 'brandproject' ? `/projects/${project.slug}` : `/typefaces/${project.slug}`}>
-              <a className="text-grey-lighter underline">See full project</a>
+              <a className="text-grey-lighter underline lg:hover:text-grey-med-dark transition-colors duration-300">See full project</a>
             </Link>
           </div>
 
@@ -140,7 +140,7 @@ const ProjectItem = ({ project }) => {
           >
             <div 
               ref={descriptionRef}
-              className='text-md' 
+              className={`w-full ${project.size === 'large' ? 'lg:w-2/3' : 'lg:w-3/4'} text-md`}
               dangerouslySetInnerHTML={{ __html: project.shortDescription }}
             ></div>
           </div>

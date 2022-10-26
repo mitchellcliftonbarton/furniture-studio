@@ -8,9 +8,9 @@ import classnames from 'classnames'
 
 const TypeImage = ({ block }) => {
   const classes = classnames(
-    'mb-60',
+    'mb-32 lg:mb-60',
     {
-      'flex': block.text
+      'flex flex-wrap lg:flex-nowrap': block.text
     }
   )
 
@@ -30,7 +30,7 @@ const TypeImage = ({ block }) => {
       </div>
 
       {block.text && (
-        <div className="text-md w-full lg:w-1/4" dangerouslySetInnerHTML={{__html: block.text}}></div>
+        <div className="text-md w-full lg:w-1/4 mt-6 lg:mt-0" dangerouslySetInnerHTML={{__html: block.text}}></div>
       )}
     </div>
   )

@@ -1,6 +1,7 @@
 import MainNav from '../MainNav'
 import MainFooter from '../MainFooter'
 import CatalogFooter from '../CatalogFooter'
+import MobileMenu from '../MobileMenu'
 
 import FontdueProvider from 'fontdue-js/FontdueProvider'
 import StoreModal from 'fontdue-js/StoreModal'
@@ -19,6 +20,7 @@ const Layout = ({ children }) => {
 
   const [themes] = useState(themesArray)
   const [currentTheme, setCurrentTheme] = useState(0)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <FontdueProvider url={process.env.NEXT_PUBLIC_FONTDUE_URL}>
@@ -27,7 +29,18 @@ const Layout = ({ children }) => {
           currentTheme={currentTheme}
           setCurrentTheme={setCurrentTheme}
           themes={themes}
+          mobileMenuOpen={mobileMenuOpen}
+          setMobileMenuOpen={setMobileMenuOpen}
         />
+
+        <MobileMenu
+          currentTheme={currentTheme}
+          setCurrentTheme={setCurrentTheme}
+          themes={themes}
+          mobileMenuOpen={mobileMenuOpen}
+          setMobileMenuOpen={setMobileMenuOpen}
+        />
+
         <main role="main">{children}</main>
 
         <CatalogFooter

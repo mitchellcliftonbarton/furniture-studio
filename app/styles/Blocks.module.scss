@@ -13,11 +13,15 @@
   background-color: theme('colors.grey.light');
   border: none;
   padding: 1rem 2rem;
-  transition: background-color .3s;
+  transition: box-shadow .3s;
   color: black;
 
   &:hover {
-    background-color: theme('colors.grey.med');
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px #FFFFFF;
+  }
+
+  &:active {
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1), inset -1px -1px 2px #FFFFFF;
   }
 }
 
@@ -34,26 +38,58 @@
   background-color: theme('colors.grey.light');
   border: none;
   padding: .5rem 2rem;
-  transition: background-color .3s;
+  transition: box-shadow .3s;
   color: black;
   appearance: none;
   outline: none;
   border: none;
   background-image: url('../public/down-arrow.svg');
   background-repeat: no-repeat;
-  background-position: 96% 50%;
+  background-position: 93% 50%;
   background-size: 12px;
   cursor: pointer;
+
+  @media screen and (min-width: theme("screens.lg")) {
+    background-position: 96% 50%;
+  }
+
+  &:hover {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px #FFFFFF;
+  }
 }
 
 .character {
-  width: 4%;
+  width: 10%;
+
+  @media screen and (min-width: theme("screens.lg")) {
+    width: 4%;
+  }
 }
 
 .carousel {
-  padding-bottom: 65%;
+  padding-bottom: 150%;
   border-radius: 12px;
   overflow: hidden;
+
+  @media screen and (min-width: theme("screens.lg")) {
+    padding-bottom: 65%;
+  }
+
+  .character-slide {
+    font-size: 20rem;
+
+    @media screen and (min-width: theme("screens.lg")) {
+      font-size: 32rem;
+    }
+  }
+
+  .arrow-button {
+    width: .9rem;
+
+    @media screen and (min-width: theme("screens.lg")) {
+      display: none;
+    }
+  }
 }
 
 .carousel .carousel-el {
@@ -80,6 +116,11 @@
   appearance: none;
   background-color: transparent;
   cursor: grab;
+  width: 45%;
+
+  @media screen and (min-width: theme("screens.lg")) {
+    width: 130px;
+  }
 
   &::-webkit-slider-thumb {
     appearance: none;
@@ -103,9 +144,18 @@
   button {
     margin-right: 1.5rem;
     opacity: .25;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: 1;
+    }
 
     &.active {
       opacity: 1;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 
@@ -120,13 +170,26 @@
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
       background: #F3F5F3;
     }
+
+    &:hover {
+      .inner {
+        &:hover {
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px #FFFFFF;
+        }
+      }
+    }
   }
 
   .inner {
-    min-height: 370px;
+    min-height: 260px;
     background: #F8F9F8;
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -3px -3px 4px #FFFFFF;
     border-radius: 20px;
+    transition: box-shadow .3s;
+
+    @media screen and (min-width: theme("screens.lg")) {
+      min-height: 370px;
+    }
   }
 
   .emoji {

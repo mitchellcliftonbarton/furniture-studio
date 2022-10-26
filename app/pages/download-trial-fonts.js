@@ -13,7 +13,7 @@ export default function DownloadTrialFonts() {
       </Head>
 
       <div>
-        <h1 className='text-md mb-20'>Download trial fonts</h1>
+        <h1 className='text-md mb-16 lg:mb-20'>Download trial fonts</h1>
         <div className="w-full lg:w-1/2">
           <TestFontsForm downloadLabel='Download trial fonts' />
         </div>

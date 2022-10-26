@@ -40,3 +40,8 @@ Contactlinks:
   link: https://www.instagram.com/furniture.xyz/
   linktext: @furniture.xyz
   showinfooter: 'true'
+- 
+  title: 'Twitter:'
+  link: twitter.com
+  linktext: @furniture
+  showinfooter: 'false'

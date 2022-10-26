@@ -7,8 +7,6 @@ import styles from '../styles/Blocks.module.scss'
 import { LeftAlignment, CenterAlignment, OneColumn, TwoColumn, ThreeColumn } from "./icons/Icons"
 
 const TypeTester = ({ block, font }) => {
-  // console.log(block)
-
   const { fontStyles } = font
   const alignmentOptions = [
     'left',
@@ -37,10 +35,10 @@ const TypeTester = ({ block, font }) => {
   }
 
   return (
-    <div className={`mb-60`}>
-      <div className="controls flex mb-10">
+    <div className={`mb-32 lg:mb-60`}>
+      <div className="controls flex items-start lg:items-center justify-between lg:justify-start flex-wrap lg:flex-nowrap mb-10">
         <select 
-          className={`${styles.select} text-md w-full lg:w-1/4 mr-8`} 
+          className={`${styles.select} text-md w-1/2 lg:w-1/4 lg:mr-8 mb-8 lg:mb-0`} 
           name="weight" 
           id="weight"
           onChange={handleFontChange}
@@ -55,7 +53,7 @@ const TypeTester = ({ block, font }) => {
         </select>
 
         <input 
-          className={`${styles.range} mr-12`}
+          className={`${styles.range} lg:mr-12`}
           type="range" 
           min="10" 
           max="300"
@@ -63,7 +61,7 @@ const TypeTester = ({ block, font }) => {
           value={currentFontSize}
         />
 
-        <div className={`${styles.alignment} flex items-center mr-12`}>
+        <div className={`${styles.alignment} flex items-center lg:mr-12`}>
           {alignmentOptions.map((option, index) => {
             switch (option) {
               case 'left':
@@ -90,7 +88,7 @@ const TypeTester = ({ block, font }) => {
           })}
         </div>
 
-        <div className={`${styles.columns} flex items-center mr-12`}>
+        <div className={`${styles.columns} flex items-center lg:mr-12`}>
           {columnOptions.map((option, index) => {
             switch (option) {
               case 1:

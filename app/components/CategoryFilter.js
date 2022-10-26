@@ -96,11 +96,11 @@ const CategoryFilter = () => {
   }, [router.query])
 
   return (
-    <nav className={`${styles.filters} mb-40 hidden lg:block`}>
+    <nav className={`${styles.filters} mb-4 lg:mb-40 w-full lg:w-1/2`}>
       <ul className="flex h-full items-center">
-        <li className="w-1/4">
+        <li className="w-1/2">
           <Link href={brandLink}>
-            <a className='text-md flex items-center'>
+            <a className='text-md flex items-center fade'>
               <div className={`${styles.checkbox} mr-4 relative flex items-center justify-center`}>
                 {brandActive && (
                   <Check/>
@@ -111,9 +111,9 @@ const CategoryFilter = () => {
             </a>
           </Link>
         </li>
-        <li className="w-1/4">
+        <li className="w-1/2">
           <Link href={typeLink}>
-            <a className='text-md flex items-center'>
+            <a className='text-md flex items-center fade'>
               <div className={`${styles.checkbox} mr-4 relative flex items-center justify-center`}>
                 {typeActive && (
                   <Check/>
