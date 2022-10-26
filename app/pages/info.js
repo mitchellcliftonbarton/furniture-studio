@@ -16,14 +16,14 @@ export default function Info({ content }) {
         <div className="w-full lg:w-3/4 text-grey-dark lg:pr-80 pb-20 lg:pb-0 enter-in-1">
           {content.introtext && (
             <div 
-              className="text-md rich-text mb-16 lg:mb-24" 
+              className="text-base rich-text mb-16 lg:mb-24" 
               dangerouslySetInnerHTML={{ __html: content.introtext }}
             ></div>
           )}
 
           {content.listitems.map((item, index) => (
             <div 
-              className="text-md rich-text border-t border-black pt-6 pb-8 lg:pb-12" 
+              className="text-base rich-text border-t border-black pt-6 pb-8 lg:pb-12" 
               dangerouslySetInnerHTML={{ __html: item.text }}
               key={index}
             ></div>
@@ -38,9 +38,9 @@ export default function Info({ content }) {
                 key={index}
                 style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >
-                <p className='text-md'>{item.title}</p>
+                <p className='text-base'>{item.title}</p>
                 <Link href={item.link}>
-                  <a className='text-md fade'>
+                  <a className='text-base fade'>
                     {item.linkText}
                   </a>
                 </Link>

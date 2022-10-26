@@ -64,7 +64,7 @@ const CharacterCarousel = ({ block, font }) => {
                     </div>
 
                     <div 
-                      className="order-1 lg:order-2 w-full lg:w-1/3 text-md flex-0-0 lg:flex-auto" 
+                      className="order-1 lg:order-2 w-full lg:w-1/3 text-base flex-0-0 lg:flex-auto" 
                       dangerouslySetInnerHTML={{ __html: slide.description }}
                     ></div>
                   </div>

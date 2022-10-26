@@ -18,7 +18,7 @@ const HalfImage = ({ block }) => {
 
       {block.description && (
         <div
-          className="text-md w-full lg:w-1/4 mt-6 lg:mt-0"
+          className="text-base w-full lg:w-1/4 mt-6 lg:mt-0"
           dangerouslySetInnerHTML={{ __html: block.description }}
         ></div>
       )}

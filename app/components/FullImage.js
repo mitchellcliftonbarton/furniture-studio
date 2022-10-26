@@ -14,7 +14,7 @@ const FullImage = ({ block }) => {
         className={styles.image}
       />
       {block.caption && (
-        <p className="text-md mt-6">{block.caption}</p>
+        <p className="text-base mt-6">{block.caption}</p>
       )}
     </div>
   )

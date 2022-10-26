@@ -123,7 +123,8 @@ body {
     font-family: theme('fontFamily.primary');
   }
 
-  .text-base {
+  .text-base,
+  .cart-button {
     font-size: 1.4rem;
     line-height: 1.6;
   }
@@ -141,11 +142,12 @@ body {
 
 .main-wrapper.theme-2 {
   *:not(.ignore-global-fonts) {
-    // font-family: theme('fontFamily.primary');
-    font-family: 'Times New Roman', Times, serif;
+    font-family: theme('fontFamily.primary');
+    // font-family: 'Times New Roman', Times, serif;
   }
 
-  .text-base {
+  .text-base,
+  .cart-button {
     font-size: 2.4rem;
     line-height: 1.6;
   }
@@ -166,7 +168,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  .text-base {
+  .text-base,
+  .cart-button {
     font-size: 1.9rem;
     line-height: 1.6;
   }
@@ -209,7 +212,7 @@ body {
 // }
 
 .cart-button {
-  @apply text-md ml-8 lg:ml-16;
+  @apply ml-8 lg:ml-16;
   transition: opacity .3s;
 
   &:hover {

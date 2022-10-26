@@ -18,7 +18,7 @@ const CharacterGrid = ({ font }) => {
     <div className={`mb-32 lg:mb-60`}>
       <div className="controls flex mb-10">
         <select 
-          className={`${styles.select} text-md w-full lg:w-1/4`} 
+          className={`${styles.select} text-base w-full lg:w-1/4`} 
           name="weight" 
           id="weight"
           onChange={handleChange}

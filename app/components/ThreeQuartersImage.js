@@ -18,7 +18,7 @@ const ThreeQuartersImage = ({ block }) => {
 
       {block.description && (
         <div
-          className="text-md w-full lg:w-1/2 mt-6"
+          className="text-base w-full lg:w-1/2 mt-6"
           dangerouslySetInnerHTML={{ __html: block.description }}
         ></div>
       )}

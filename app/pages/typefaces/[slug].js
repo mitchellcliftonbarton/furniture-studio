@@ -29,8 +29,8 @@ export default function TypefaceDetail({ project, font }) {
 
       <link rel="stylesheet" href={font.cssUrl} />
 
-      <div className="flex flex-wrap lg:flex-nowrap">
-        <h1 className='text-md w-full lg:w-1/4'>{project.title}</h1>
+      <div className="flex flex-wrap lg:flex-nowrap items-start lg:items-center">
+        <h1 className='text-base w-full lg:w-1/4'>{project.title}</h1>
 
         {project.fontDueSlug && (
           <div className="buy-options w-full lg:w-3/4 mt-8 lg:mt-0">
@@ -40,7 +40,7 @@ export default function TypefaceDetail({ project, font }) {
             />
 
             <Link href="/download-trial-fonts">
-              <a className={`${styles.download} text-md ml-8 lg:ml-16`}>Download trial fonts</a>
+              <a className={`${styles.download} text-base ml-8 lg:ml-16`}>Download trial fonts</a>
             </Link>
           </div>
         )}

@@ -113,7 +113,7 @@ const ProjectItem = ({ project }) => {
         </div>
 
         <div className="titles flex justify-between">
-          <div className="flex items-center text-md">
+          <div className="flex items-center text-base">
             <h2 className="text-grey-med-dark mr-6">{project.title}</h2>
             {project.shortDescription && (
               <button 
@@ -129,7 +129,7 @@ const ProjectItem = ({ project }) => {
           </div>
 
           {project.images.length > 0 && (
-            <p className="text-md text-grey-dark">{carouselIndex}/{project.images.length}</p>
+            <p className="text-base text-grey-dark">{carouselIndex}/{project.images.length}</p>
           )}
         </div>
 
@@ -140,7 +140,7 @@ const ProjectItem = ({ project }) => {
           >
             <div 
               ref={descriptionRef}
-              className={`w-full ${project.size === 'large' ? 'lg:w-2/3' : 'lg:w-3/4'} text-md`}
+              className={`w-full ${project.size === 'large' ? 'lg:w-2/3' : 'lg:w-3/4'} text-base`}
               dangerouslySetInnerHTML={{ __html: project.shortDescription }}
             ></div>
           </div>

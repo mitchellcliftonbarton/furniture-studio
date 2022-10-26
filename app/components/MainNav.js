@@ -45,14 +45,14 @@ const MainNav = ({ currentTheme, setCurrentTheme, themes, mobileMenuOpen, setMob
       className={`fixed top-0 left-0 w-full def-x flex justify-between items-center`}
     >
       <Link href="/">
-        <a className={`${styles['home-link']} text-md fade hidden lg:inline-block`}>Furniture</a>
+        <a className={`${styles['home-link']} text-base fade hidden lg:inline-block`}>Furniture</a>
       </Link>
 
       <div 
         className={`flex lg:hidden items-center`}
       >
         <Link href="/">
-          <a className='mr-3 text-md'>Furniture</a>
+          <a className='mr-3 text-base'>Furniture</a>
         </Link>
 
         <button onClick={() => toggleMenu()} className={`${styles['mobile-button']} ${mobileMenuOpen ? styles.open : null}`}>
@@ -64,7 +64,7 @@ const MainNav = ({ currentTheme, setCurrentTheme, themes, mobileMenuOpen, setMob
 
       <div className="flex items-center">
         <Link href="/info">
-          <a className="text-md ml-8 lg:ml-16 fade">Info</a>
+          <a className="text-base ml-8 lg:ml-16 fade">Info</a>
         </Link>
 
         <CartButton label="Cart" />
@@ -72,7 +72,7 @@ const MainNav = ({ currentTheme, setCurrentTheme, themes, mobileMenuOpen, setMob
         <div className="ml-16 hidden lg:flex items-center">
           {themes.map((theme, index) => (
             <button
-              className={`${styles['font-button']} ${currentTheme === index ? styles.active : null} font-button text-md flex justify-center items-center`}
+              className={`${styles['font-button']} ${currentTheme === index ? styles.active : null} font-button text-base flex justify-center items-center`}
               key={`${theme}-${index}`}
               onClick={() => setCurrentTheme(index)}
             ></button>

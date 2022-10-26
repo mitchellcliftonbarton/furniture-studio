@@ -25,12 +25,12 @@ const TypeImage = ({ block }) => {
           className={styles.image}
         />
         {block.caption && (
-          <p className="text-md mt-6">{block.caption}</p>
+          <p className="text-base mt-6">{block.caption}</p>
         )}
       </div>
 
       {block.text && (
-        <div className="text-md w-full lg:w-1/4 mt-6 lg:mt-0" dangerouslySetInnerHTML={{__html: block.text}}></div>
+        <div className="text-base w-full lg:w-1/4 mt-6 lg:mt-0" dangerouslySetInnerHTML={{__html: block.text}}></div>
       )}
     </div>
   )

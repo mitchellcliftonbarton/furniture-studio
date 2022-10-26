@@ -19,7 +19,7 @@ const MobileMenu = ({ currentTheme, setCurrentTheme, themes, mobileMenuOpen, set
         <div className="flex items-center">
           {themes.map((theme, index) => (
             <button
-              className={`${styles['font-button']} ${currentTheme === index ? styles.active : null} font-button text-md flex justify-center items-center`}
+              className={`${styles['font-button']} ${currentTheme === index ? styles.active : null} font-button text-base flex justify-center items-center`}
               key={`${theme}-${index}`}
               onClick={() => setCurrentTheme(index)}
             ></button>

@@ -100,7 +100,7 @@ const CategoryFilter = () => {
       <ul className="flex h-full items-center">
         <li className="w-1/2">
           <Link href={brandLink}>
-            <a className='text-md flex items-center fade'>
+            <a className='text-base flex items-center fade'>
               <div className={`${styles.checkbox} mr-4 relative flex items-center justify-center`}>
                 {brandActive && (
                   <Check/>
@@ -113,7 +113,7 @@ const CategoryFilter = () => {
         </li>
         <li className="w-1/2">
           <Link href={typeLink}>
-            <a className='text-md flex items-center fade'>
+            <a className='text-base flex items-center fade'>
               <div className={`${styles.checkbox} mr-4 relative flex items-center justify-center`}>
                 {typeActive && (
                   <Check/>

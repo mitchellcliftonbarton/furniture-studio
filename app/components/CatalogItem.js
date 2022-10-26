@@ -22,9 +22,9 @@ export default function CatalogItem({ item, allFonts }) {
       <link rel="stylesheet" href={selectedFont.cssUrl} />
 
       {isActive ? (
-        <h2 className='text-md mb-6'>{item.title}</h2>
+        <h2 className='text-base mb-6'>{item.title}</h2>
       ): (
-        <h2 className='text-md mb-6'>(Coming Soon)</h2>
+        <h2 className='text-base mb-6'>(Coming Soon)</h2>
       )}
       
       {isActive ? (

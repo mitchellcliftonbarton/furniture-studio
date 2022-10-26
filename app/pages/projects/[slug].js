@@ -14,7 +14,7 @@ export default function ProjectDetail({ project }) {
         <meta name="description" content="Furniture" />
       </Head>
 
-      <h1 className='text-md'>{project.pretitle ? `${project.pretitle} - ` : ''}{project.title}</h1>
+      <h1 className='text-base'>{project.pretitle ? `${project.pretitle} - ` : ''}{project.title}</h1>
 
       {project.pagecontent && project.pagecontent.length > 0 && (
         <div className="block-items mt-32">

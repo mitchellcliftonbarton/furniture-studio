@@ -4,7 +4,7 @@ const TextSection = ({ block, font }) => {
   return (
     <div className={`mb-32 lg:mb-60 flex flex-wrap lg:flex-nowrap`}>
       <div 
-        className="w-full lg:w-2/3 text-md lg:pr-20 mb-16 lg:mb-0" 
+        className="w-full lg:w-2/3 text-base lg:pr-20 mb-16 lg:mb-0" 
         dangerouslySetInnerHTML={{ __html: block.text }}
       ></div>
 
