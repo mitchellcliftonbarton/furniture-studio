@@ -4,7 +4,7 @@ import Head from 'next/head'
 import DefaultLayout from '../components/layouts/DefaultLayout'
 import TestFontsForm from 'fontdue-js/TestFontsForm'
 
-export default function DownloadTrialFonts() {
+export default function DownloadTrialFonts({ data }) {
   return (
     <div className='typeface-project push-nav def-x mt-16'>
       <Head>
@@ -13,7 +13,7 @@ export default function DownloadTrialFonts() {
       </Head>
 
       <div>
-        <h1 className='text-md mb-16 lg:mb-20'>Download trial fonts</h1>
+        <h1 className='text-base mb-16 lg:mb-20'>{data.title}</h1>
         <div className="w-full lg:w-1/2">
           <TestFontsForm downloadLabel='Download trial fonts' />
         </div>
@@ -28,4 +28,15 @@ DownloadTrialFonts.getLayout = function getLayout(page) {
       {page}
     </DefaultLayout>
   )
+}
+
+// For some reason, I have to include this for thepage to work. Has something to do with get initial props in app.js i think
+export async function getStaticProps() {
+  const data = {
+    title: 'Download trial fonts'
+  }
+
+  return {
+    props: {data: data},
+  }
 }

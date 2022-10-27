@@ -5,7 +5,6 @@ import fetchGraphql from '../lib/fetchGraphql'
 
 // MyApp
 function MyApp({ Component, pageProps, infoData, catalogData, allFonts }) {
-  // console.log(allFonts)
   const getLayout = Component.getLayout || ((page) => page)
 
   return getLayout(<Component {...pageProps} infoData={infoData} catalogData={catalogData} allFonts={allFonts} />)

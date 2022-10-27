@@ -70,7 +70,7 @@ const ProjectItem = ({ project }) => {
                 spaceBetween={0}
                 slidesPerView={1}
                 loop={true}
-                allowTouchMove={false}
+                allowTouchMove={true}
                 onSlideChange={(swiper) => handleSlideChange(swiper.realIndex + 1, swiper)}
                 className={styles['carousel-el']}
               >
@@ -98,7 +98,7 @@ const ProjectItem = ({ project }) => {
                 ))}
               </Swiper>
 
-              <div className="absolute top-0 left-0 w-full h-full flex z-20">
+              <div className="absolute top-0 left-0 w-full h-full hidden lg:flex z-20">
                 <button 
                   className={`${styles['left-button']} w-1/2 h-full`} 
                   onClick={handlePrev}
