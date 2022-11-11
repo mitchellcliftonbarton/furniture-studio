@@ -39,7 +39,7 @@ export default function Info({ content }) {
               <h2 className="text-base mr-12 lg:mr-20">Licensing Information</h2>
 
               {content.licensingpdftext && content.licensingpdf.length > 0 && (
-                <a href={content.licensingpdf[0].url} download className='def-button text-base' target="_blank">{content.licensingpdftext}</a>
+                <a href={content.licensingpdf[0].url} download className='def-button text-base' target="_blank" rel="noreferrer">{content.licensingpdftext}</a>
               )}
             </div>
 
