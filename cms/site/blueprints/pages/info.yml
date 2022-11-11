@@ -12,10 +12,30 @@ columns:
             type: textarea
             size: large
             help: This text will show as the first text on the information page.
-          listItems:
-            label: List Items
+          studioInfoItems:
+            label: Studio Info Items
             type: structure
-            help: These items will show as pieces of text underneath the intro text.
+            help: These items will show as pieces of text underneath the intro text. 3 maximum
+            max: 3
+            fields:
+              text:
+                label: Text
+                type: textarea
+                size: small
+          licensingPdf:
+            label: Licensing PDF
+            type: files
+            max: 1
+            help: This should be a pdf file that will be downloadable in the licensing section.
+          licensingPdfText:
+            label: Licensing PDF Text
+            type: text
+            help: This text will show up on the download button for the licensing PDF.
+          licensingInfoItems:
+            label: Licensing Info Items
+            type: structure
+            help: These items will show as pieces of text underneath the studio info section. 3 maximum
+            max: 3
             fields:
               text:
                 label: Text
@@ -44,3 +64,8 @@ columns:
                 label: Show in Footer?
                 type: toggle
                 help: If true, this will show in the global footer
+          contactText:
+            label: Contact Text
+            type: textarea
+            size: small
+            help: This text will appear under the contact links on the right side of the page.

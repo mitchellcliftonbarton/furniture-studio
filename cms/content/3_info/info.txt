@@ -2,11 +2,65 @@ Title: Info Page
 
 ----
 
-Introtext:
+Introtext: Brand design, Identity Systems, Type Design, Art Direction
 
-Brand design and typography.
+----
 
-The studio was founded by Regan Johnson, with past and present collaborators: Raphael Wicki, Ruggero Magrì, Evan Chang, Colin Pinegar, Zack Robbins and more.
+Studioinfoitems:
+
+- 
+  text: 'The studio was founded by Regan Johnson, with past and present collaborators: Raphael Wicki, Ruggero Magrì, Evan Chang, Colin Pinegar, Zack Robbins and more.'
+- 
+  text: 'Select Clients: Apple, Get Well, Google, Life360, Work & Co'
+- 
+  text: 'Our fonts have been purchased by designers at: Collins, MadeThought, Porto Rocha, Two Times Elliot, OKRM, Spotify, and Nike.'
+
+----
+
+Licensingpdf: - cold-rice-maintenance.pdf
+
+----
+
+Licensingpdftext: Download EULA
+
+----
+
+Licensinginfoitems:
+
+- 
+  text: >
+    Our licensing prices are based on the
+    size of your business, rather than the
+    number of people using the fonts.
+- 
+  text: >
+    Our licenses cover all usage across all
+    media, rather than specific licenses for
+    desktop, web, etc.
+- 
+  text: >
+    Please contact us for custom licensing
+    arrangements (such as for companies with
+    more than 250 employees).
+
+----
+
+Contactlinks:
+
+- 
+  title: 'Email:'
+  link: mailto:hello@furniture.xyz
+  linktext: hello@furniture.xyz
+  showinfooter: 'true'
+- 
+  title: 'Instagram:'
+  link: https://www.instagram.com/furniture.xyz/
+  linktext: @furniture.xyz
+  showinfooter: 'true'
+
+----
+
+Contacttext: (In typesetting, furniture is a term for pieces of wood that are shorter than the height of the type. These pieces are used to lay out type by blocking out white space in a layout.)
 
 ----
 
@@ -25,23 +79,3 @@ Listitems:
     height of the type. These pieces are
     used to lay out type by blocking out
     white space in a layout.)
-
-----
-
-Contactlinks:
-
-- 
-  title: 'Email:'
-  link: mailto:hello@furniture.xyz
-  linktext: hello@furniture.xyz
-  showinfooter: 'true'
-- 
-  title: 'Instagram:'
-  link: https://www.instagram.com/furniture.xyz/
-  linktext: @furniture.xyz
-  showinfooter: 'true'
-- 
-  title: 'Twitter:'
-  link: twitter.com
-  linktext: @furniture
-  showinfooter: 'false'
