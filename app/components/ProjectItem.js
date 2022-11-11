@@ -112,13 +112,13 @@ const ProjectItem = ({ project }) => {
           )}
         </div>
 
-        <div className="titles flex justify-between">
+        <div className="titles project-item-title flex justify-between">
           <div className="flex items-center text-base">
-            <h2 className="text-grey-med-dark mr-6">{project.title}</h2>
+            <h2 className="text-grey-med-dark">{project.title}</h2>
             {project.shortDescription && (
               <button 
                 onClick={toggleDescription} 
-                className='hidden lg:block text-grey-lighter underline mr-6 lg:hover:text-grey-med-dark transition-colors duration-300'
+                className='hidden lg:block text-grey-lighter underline lg:hover:text-grey-med-dark transition-colors duration-300'
               >
                 More info
               </button>

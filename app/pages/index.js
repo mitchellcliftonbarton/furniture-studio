@@ -2,17 +2,22 @@ import Head from 'next/head'
 
 // Components
 import DefaultLayout from '../components/layouts/DefaultLayout'
+import CatalogFooter from '../components/CatalogFooter'
 import CategoryFilter from '../components/CategoryFilter'
 import ProjectItem from '../components/ProjectItem'
+import Link from "next/link";
 
 // React
 import { useRouter } from 'next/router'
 import { useMemo } from 'react'
 
+// Styles
+import styles from '../styles/Blocks.module.scss'
+
 // Lib
 import _ from 'lodash'
 
-export default function Home({ projects }) {
+export default function Home({ catalogData, allFonts, projects }) {
   const router = useRouter()
 
   const [filteredProjects] = useMemo(() => {
@@ -40,31 +45,46 @@ export default function Home({ projects }) {
   }, [router.query])
 
   return (
-    <div className='push-nav def-x'>
-      <Head>
-        <title>Furniture | Home</title>
-        <meta name="description" content="Furniture" />
-      </Head>
+    <>
+      <div className={`${styles['page-title']} page-title text-base relative def-x`}>
+        <Link href="/">
+          <a>
+            <h1>Furniture</h1>
+          </a>
+        </Link>
+      </div>
 
-      <div className="hidden lg:block">
+      <div className={`${styles['categories-container']} categories-container hidden lg:block def-x`}>
         <CategoryFilter />
       </div>
       
-      {filteredProjects ? (
-        <div className="projects pt-20 lg:pt-0 mb-20">
-          {filteredProjects.map(project => (
-            <ProjectItem 
-              project={project} 
-              key={project.slug}
-            />
-          ))}
-        </div>
-      ): (
-        <div className="mb-20">
-          <h2>No projects</h2>  
-        </div>
-      )}
-    </div>
+      <div className='def-x'>
+        <Head>
+          <title>Furniture | Home</title>
+          <meta name="description" content="Furniture" />
+        </Head>
+        
+        {filteredProjects ? (
+          <div className="projects pt-40 lg:pt-60 mb-20">
+            {filteredProjects.map(project => (
+              <ProjectItem 
+                project={project} 
+                key={project.slug}
+              />
+            ))}
+          </div>
+        ): (
+          <div className="mb-20">
+            <h2>No projects</h2>  
+          </div>
+        )}
+      </div>
+
+      <CatalogFooter
+        catalogData={catalogData}
+        allFonts={allFonts}
+      />
+    </>
   )
 }
 

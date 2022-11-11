@@ -5,32 +5,54 @@ import DefaultLayout from '../../components/layouts/DefaultLayout'
 import FullImage from '../../components/FullImage'
 import ThreeQuartersImage from '../../components/ThreeQuartersImage'
 import HalfImage from '../../components/HalfImage'
+import CatalogFooter from '../../components/CatalogFooter'
+import Link from "next/link";
 
-export default function ProjectDetail({ project }) {
+// Styles
+import styles from '../../styles/Blocks.module.scss'
+
+export default function ProjectDetail({ catalogData, allFonts, project }) {
   return (
-    <div className='push-nav def-x mt-8 lg:mt-16'>
-      <Head>
-        <title>Furniture | {project.title}</title>
-        <meta name="description" content="Furniture" />
-      </Head>
+    <>
+      <div className={`${styles['page-title']} page-title text-base relative def-x`}>
+        <Link href="/">
+          <a>Furniture</a>
+        </Link>
+      </div>
 
-      <h1 className='text-base'>{project.pretitle ? `${project.pretitle} - ` : ''}{project.title}</h1>
+      <div className={`${styles['categories-container']} categories-container def-x`}>
+        <h1 className='text-base'>{project.pretitle ? `${project.pretitle} - ` : ''}{project.title}</h1>
+      </div>
 
-      {project.pagecontent && project.pagecontent.length > 0 && (
-        <div className="block-items mt-32">
-          {project.pagecontent.map((block, index) => {
-            switch (block.type) {
-              case 'fullImage':
-                return <FullImage block={block} key={index} />
-              case 'threeQuartersImage':
-                return <ThreeQuartersImage block={block} key={index} />
-              case 'halfImage':
-                return <HalfImage block={block} key={index} />
-            }
-          })}
-        </div>
-      )}
-    </div>
+      <div className='def-x mt-8 lg:mt-16'>
+        <Head>
+          <title>Furniture | {project.title}</title>
+          <meta name="description" content="Furniture" />
+        </Head>
+
+        <h1 className='pt-40 text-base lg:hidden'>{project.pretitle ? `${project.pretitle} - ` : ''}{project.title}</h1>
+
+        {project.pagecontent && project.pagecontent.length > 0 && (
+          <div className="block-items mt-32">
+            {project.pagecontent.map((block, index) => {
+              switch (block.type) {
+                case 'fullImage':
+                  return <FullImage block={block} key={index} />
+                case 'threeQuartersImage':
+                  return <ThreeQuartersImage block={block} key={index} />
+                case 'halfImage':
+                  return <HalfImage block={block} key={index} />
+              }
+            })}
+          </div>
+        )}
+      </div>
+
+      <CatalogFooter
+        catalogData={catalogData}
+        allFonts={allFonts}
+      />
+    </>
   )
 }
 

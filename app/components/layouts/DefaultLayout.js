@@ -1,16 +1,18 @@
 import MainNav from '../MainNav'
 import MainFooter from '../MainFooter'
-import CatalogFooter from '../CatalogFooter'
 import MobileMenu from '../MobileMenu'
 
 import FontdueProvider from 'fontdue-js/FontdueProvider'
 import StoreModal from 'fontdue-js/StoreModal'
 import 'fontdue-js/fontdue.css'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 const Layout = ({ children }) => {
-  // console.log(children)
+  const router = useRouter()
+
+  console.log(router)
   
   const themesArray = [
     'theme-1',
@@ -21,6 +23,20 @@ const Layout = ({ children }) => {
   const [themes] = useState(themesArray)
   const [currentTheme, setCurrentTheme] = useState(0)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setMobileMenuOpen(false)
+    }
+
+    router.events.on('routeChangeStart', handleRouteChange)
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange)
+    }
+  }, [])
 
   return (
     <FontdueProvider url={process.env.NEXT_PUBLIC_FONTDUE_URL}>
@@ -43,10 +59,6 @@ const Layout = ({ children }) => {
 
         <main role="main">{children}</main>
 
-        <CatalogFooter
-          catalogData={children.props.catalogData}
-          allFonts={children.props.allFonts}
-        />
         <MainFooter infoData={children.props.infoData} />
 
         <StoreModal />

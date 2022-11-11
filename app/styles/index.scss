@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --nav-height: 54px;
+  --nav-height: 74px;
+  --nav-height-theme-2: 94px;
   --mobile-nav-height: 40x;
   --curve: cubic-bezier(0, 0.84, 0.24, 1);
 }

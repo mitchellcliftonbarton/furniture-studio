@@ -7,6 +7,7 @@ import CartButton from 'fontdue-js/CartButton'
 
 // React
 // import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 const MainNav = ({ currentTheme, setCurrentTheme, themes, mobileMenuOpen, setMobileMenuOpen }) => {
   // const [scrolled, setScrolled] = useState(false)
@@ -35,18 +36,24 @@ const MainNav = ({ currentTheme, setCurrentTheme, themes, mobileMenuOpen, setMob
   //   window.addEventListener('scroll', scrollWatch)
   // }
 
+  const router = useRouter()
+
   const toggleMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
   }
 
+  const showLogo = router.route === '/info' || router.route === '/download-trial-fonts'
+
   return (
     <header 
       id={styles.nav} 
-      className={`fixed top-0 left-0 w-full def-x flex justify-between items-center`}
+      className={`${showLogo ? 'justify-between' : 'lg:justify-end'} main-nav fixed top-0 left-0 w-full def-x flex justify-between items-center`}
     >
-      <Link href="/">
-        <a className={`${styles['home-link']} text-base fade hidden lg:inline-block`}>Furniture</a>
-      </Link>
+      {showLogo && (
+        <Link href="/">
+          <a className={`${styles['home-link']} text-base fade hidden lg:inline-block`}>Furniture</a>
+        </Link>
+      )}
 
       <div 
         className={`flex lg:hidden items-center`}

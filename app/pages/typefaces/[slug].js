@@ -12,28 +12,30 @@ import TextSection from '../../components/TextSection'
 import TypeTester from '../../components/TypeTester'
 import CharacterGrid from '../../components/CharacterGrid'
 import CharacterCarousel from '../../components/CharacterCarousel'
+import CatalogFooter from '../../components/CatalogFooter'
 // import TypeTesters from 'fontdue-js/TypeTesters'
 
 // Lib
 import { getStaticQuery, fetchGraphql } from '../../lib/graphql'
 
-export default function TypefaceDetail({ project, font }) {
+export default function TypefaceDetail({ catalogData, allFonts, project, font }) {
   // console.log(project, font)
 
   return (
-    <div className='typeface-project push-nav def-x mt-8 lg:mt-16'>
-      <Head>
-        <title>Furniture | {project.title}</title>
-        <meta name="description" content="Furniture" />
-      </Head>
-
+    <>
       <link rel="stylesheet" href={font.cssUrl} />
 
-      <div className="flex flex-wrap lg:flex-nowrap items-start lg:items-center">
-        <h1 className='text-base w-full lg:w-1/4'>{project.title}</h1>
+      <div className={`${styles['page-title']} page-title text-base relative def-x`}>
+        <Link href="/">
+          <a>Furniture</a>
+        </Link>
+      </div>
+
+      <div className={`${styles['categories-container']} categories-container pl-def hidden lg:flex`}>
+        <h1 className='text-base w-full lg:w-1/2'>{project.title}</h1>
 
         {project.fontDueSlug && (
-          <div className="buy-options w-full lg:w-3/4 mt-8 lg:mt-0">
+          <div className="buy-options w-full lg:w-1/2 mt-8 lg:mt-0 flex items-center">
             <BuyButton 
               collectionSlug={project.fontDueSlug} 
               label="Buy"
@@ -46,27 +48,56 @@ export default function TypefaceDetail({ project, font }) {
         )}
       </div>
 
-      {project.pagecontent && project.pagecontent.length > 0 && (
-        <div className="block-items mt-24 lg:mt-32 flex justify-end">
-          <div className="w-full lg:w-3/4">
-            {project.pagecontent.map((block, index) => {
-              switch (block.type) {
-                case 'image':
-                  return <TypeImage key={index} block={block} />
-                case 'textSection':
-                  return <TextSection key={index} block={block} font={font} />
-                case 'typeTester':
-                  return <TypeTester key={index} block={block} font={font} />
-                case 'characterCarousel':
-                  return <CharacterCarousel key={index} block={block} font={font} />
-                case 'characterGrid':
-                  return <CharacterGrid key={index} font={font} />
-              }
-            })}
-          </div>
+      <div className='typeface-project def-x mt-8 lg:mt-16'>
+        <Head>
+          <title>Furniture | {project.title}</title>
+          <meta name="description" content="Furniture" />
+        </Head>
+
+        <div className="pt-40 flex lg:hidden flex-wrap lg:flex-nowrap items-start lg:items-center">
+          <h1 className='text-base w-full lg:w-1/4'>{project.title}</h1>
+
+          {project.fontDueSlug && (
+            <div className="buy-options w-full lg:w-3/4 mt-8 lg:mt-0 flex items-center">
+              <BuyButton 
+                collectionSlug={project.fontDueSlug} 
+                label="Buy"
+              />
+
+              <Link href="/download-trial-fonts">
+                <a className={`${styles.download} text-base ml-8 lg:ml-16`}>Download trial fonts</a>
+              </Link>
+            </div>
+          )}
         </div>
-      )}
-    </div>
+
+        {project.pagecontent && project.pagecontent.length > 0 && (
+          <div className="block-items mt-24 lg:mt-32 flex justify-end">
+            <div className="w-full lg:w-3/4">
+              {project.pagecontent.map((block, index) => {
+                switch (block.type) {
+                  case 'image':
+                    return <TypeImage key={index} block={block} />
+                  case 'textSection':
+                    return <TextSection key={index} block={block} font={font} />
+                  case 'typeTester':
+                    return <TypeTester key={index} block={block} font={font} />
+                  case 'characterCarousel':
+                    return <CharacterCarousel key={index} block={block} font={font} />
+                  case 'characterGrid':
+                    return <CharacterGrid key={index} font={font} />
+                }
+              })}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <CatalogFooter
+        catalogData={catalogData}
+        allFonts={allFonts}
+      />
+    </>
   )
 }
 

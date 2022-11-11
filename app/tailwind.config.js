@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'primary': ['Art Company Mono', 'serif'],
+      'secondary': ['Lifted', 'sans-serif'],
     },
     colors: {
       grey: {
@@ -19,13 +20,14 @@ module.exports = {
       black: '#000',
       transparent: 'transparent'
     },
-    // fontSize: {
-    //   base: ['1.4rem', '1.6'],
-    //   lg: ['2.3rem', '1.6'],
-    //   md: ['1.6rem', '1.8'],
-    // },
     flex: {
       '0-0': '0 0 auto',
+    },
+    extend: {
+      spacing: {
+        'def': '2.5rem',
+        'def-mobile': '1.5rem',
+      },
     },
   },
   plugins: [],
