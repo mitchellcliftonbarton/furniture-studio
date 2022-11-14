@@ -1,35 +1,33 @@
 @layer utilities {
-  @variants responsive {
-    .push-nav {
+  .push-nav {
+    padding-top: var(--nav-height);
+
+    @media screen and (min-width: theme("screens.lg")) {
       padding-top: var(--nav-height);
-
-      @media screen and (min-width: theme("screens.lg")) {
-        padding-top: var(--nav-height);
-      }
     }
+  }
 
-    .def-x {
-      @apply px-def-mobile;
+  .def-x {
+    @apply px-def-mobile;
 
-      @media screen and (min-width: theme("screens.lg")) {
-        @apply px-def;
-      }
+    @media screen and (min-width: theme("screens.lg")) {
+      @apply px-def;
     }
+  }
 
-    .def-y {
-      @apply py-def-mobile;
+  .def-y {
+    @apply py-def-mobile;
 
-      @media screen and (min-width: theme("screens.lg")) {
-        @apply py-def;
-      }
+    @media screen and (min-width: theme("screens.lg")) {
+      @apply py-def;
     }
+  }
 
-    .def-padding {
-      @apply p-def-mobile;
+  .def-padding {
+    @apply p-def-mobile;
 
-      @media screen and (min-width: theme("screens.lg")) {
-        @apply p-def;
-      }
+    @media screen and (min-width: theme("screens.lg")) {
+      @apply p-def;
     }
   }
 }
