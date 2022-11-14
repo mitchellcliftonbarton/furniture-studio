@@ -5,7 +5,7 @@ import DefaultLayout from '../components/layouts/DefaultLayout'
 import Link from "next/link";
 
 export default function Info({ content }) {
-  console.log(content)
+  // console.log(content)
   return (
     <div className='push-nav def-x'>
       <Head>
