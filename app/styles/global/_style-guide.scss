@@ -478,6 +478,8 @@ body {
       display: flex;
       align-items: center;
       position: relative;
+      padding: 20px 0px;
+      box-shadow: none;
       
       &:before {
         content: '';
@@ -492,17 +494,21 @@ body {
         flex: 0 0 auto;
       }
 
-      &:after {
-        content: "";
-        width: 6px;
-        height: 6px;
-        background-color: #323232;
-        position: absolute;
-        border-radius: 50%;
-        top: 50%;
-        left: 10px;
-        transform: translateY(-50%);
-        flex: 0 0 auto;
+      &[data-selected="true"] {
+        background-color: transparent;
+
+        &:after {
+          content: "";
+          width: 6px;
+          height: 6px;
+          background-color: #323232;
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          flex: 0 0 auto;
+        }
       }
     }
   }
@@ -590,7 +596,7 @@ body {
   }
 
   .store-modal__page__sticky-footer {
-    background-color: transparent;
+    background-color: #F3F5F3;
   }
 
   .store-modal__license-selection__license-button {
