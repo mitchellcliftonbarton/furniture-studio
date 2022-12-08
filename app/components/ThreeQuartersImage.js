@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import DefImage from './DefImage'
 
 // Styles
 import styles from '../styles/Blocks.module.scss'
@@ -7,7 +7,7 @@ const ThreeQuartersImage = ({ block }) => {
   return (
     <div className="mb-32">
       <div className={`${styles['three-quarters-image']} w-full lg:w-3/4`}>
-        <Image
+        <DefImage
           src={block.image.url}
           width={block.image.width}
           height={block.image.height}

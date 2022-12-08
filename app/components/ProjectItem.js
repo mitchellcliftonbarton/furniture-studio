@@ -8,7 +8,7 @@ import styles from '../styles/ProjectItem.module.scss'
 import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import Image from 'next/image'
+import DefImage from './DefImage'
 
 // Lib
 import classnames from 'classnames'
@@ -87,7 +87,7 @@ const ProjectItem = ({ project }) => {
                         preload="true"
                       ></video>
                     ) : (
-                      <Image
+                      <DefImage
                         src={image.url}
                         layout="fill"
                         objectFit={image.height > image.width ? 'contain' : 'cover'}

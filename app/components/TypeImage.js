@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import DefImage from './DefImage'
 
 // Styles
 import styles from '../styles/Blocks.module.scss'
@@ -17,7 +17,7 @@ const TypeImage = ({ block }) => {
   return (
     <div className={`${styles['type-image']} ${classes}`}>
       <div className={block.text ? 'w-full lg:w-3/4 lg:pr-20' : 'w-full'}>
-        <Image
+        <DefImage
           src={block.image.url}
           width={block.image.width}
           height={block.image.height}
