@@ -66,10 +66,11 @@ export default function Home({ catalogData, allFonts, projects }) {
         
         {filteredProjects ? (
           <div className="projects pt-40 lg:pt-60 mb-20">
-            {filteredProjects.map(project => (
+            {filteredProjects.map((project, index) => (
               <ProjectItem 
                 project={project} 
                 key={project.slug}
+                priority={index < 2 ? true : false}
               />
             ))}
           </div>

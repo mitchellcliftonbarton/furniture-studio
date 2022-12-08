@@ -13,7 +13,7 @@ import DefImage from './DefImage'
 // Lib
 import classnames from 'classnames'
 
-const ProjectItem = ({ project }) => {
+const ProjectItem = ({ project, priority }) => {
   const swiperRef = useRef(null)
   const descriptionRef = useRef(null)
 
@@ -92,6 +92,7 @@ const ProjectItem = ({ project }) => {
                         layout="fill"
                         objectFit={image.height > image.width ? 'contain' : 'cover'}
                         alt={image.alt}
+                        priority={priority}
                       />
                     )}
                   </SwiperSlide>
