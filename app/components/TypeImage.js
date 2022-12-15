@@ -17,13 +17,15 @@ const TypeImage = ({ block }) => {
   return (
     <div className={`${styles['type-image']} ${classes}`}>
       <div className={block.text ? 'w-full lg:w-3/4 lg:pr-20' : 'w-full'}>
-        <DefImage
-          src={block.image.url}
-          width={block.image.width}
-          height={block.image.height}
-          alt={block.image.alt}
-          className={styles.image}
-        />
+        {block.image && block.image.url && (
+          <DefImage
+            src={block.image.url}
+            width={block.image.width}
+            height={block.image.height}
+            alt={block.image.alt}
+            className={styles.image}
+          />
+        )}
         {block.caption && (
           <p className="text-base mt-6">{block.caption}</p>
         )}
