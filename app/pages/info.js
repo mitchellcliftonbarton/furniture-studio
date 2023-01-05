@@ -2,15 +2,16 @@ import Head from 'next/head'
 
 // Components
 import DefaultLayout from '../components/layouts/DefaultLayout'
-import Link from "next/link";
+import Link from "next/link"
+import CopyPasteLink from '../components/CopyPasteLink'
 
 export default function Info({ content }) {
-  // console.log(content)
   return (
     <div className='push-nav def-x'>
       <Head>
         <title>Furniture | Info</title>
         <meta name="description" content="Furniture" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <div className="flex flex-wrap lg:flex-nowrap py-40 lg:py-60">
@@ -63,11 +64,14 @@ export default function Info({ content }) {
                   style={{ animationDelay: `${(index + 1) * 100}ms` }}
                 >
                   <p className='text-base'>{item.title}</p>
-                  <Link href={item.link}>
-                    <a className='text-base fade'>
-                      {item.linkText}
-                    </a>
-                  </Link>
+                  {item.link.includes('mailto')
+                    ? <CopyPasteLink link={item} />
+                    : <Link href={item.link}>
+                        <a className='text-base fade'>
+                          {item.linkText}
+                        </a>
+                      </Link>
+                  }
                 </div>
               ))}
             </div>

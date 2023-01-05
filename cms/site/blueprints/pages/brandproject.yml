@@ -16,14 +16,20 @@ columns:
       home-page-display:
         type: fields
         fields:
+          detailPageAvailable:
+            label: Detail Page Available
+            type: toggle
+            default: true
+            help: If checked, a link that says 'See full project' will show up under its carousel on the home page and a detail page will be available. If not checked, it will only exist on the home page.
           homePageSize:
             label: Home Page Size
             type: select
-            default: large
+            default: medium
             required: true
             help: This will determine how big the project block should be on the home page.
             options:
               small: Small
+              medium: Medium
               large: Large
           carouselImages:
             label: Home Carousel Images

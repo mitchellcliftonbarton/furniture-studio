@@ -10,7 +10,7 @@ module.exports = {
     },
     colors: {
       grey: {
-        lighter: '#D7D7D7',
+        lighter: '#B8BCB8',
         light: '#F3F5F3',
         med: '#E7E7E7',
         'med-dark': '#3A3A3A',

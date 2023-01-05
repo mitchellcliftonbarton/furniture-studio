@@ -5,7 +5,7 @@ import styles from '../styles/Blocks.module.scss'
 
 const ThreeQuartersImage = ({ block }) => {
   return (
-    <div className="mb-32">
+    <div className="mb-32 lg:mb-80">
       <div className={`${styles['three-quarters-image']} w-full lg:w-3/4`}>
         <DefImage
           src={block.image.url}

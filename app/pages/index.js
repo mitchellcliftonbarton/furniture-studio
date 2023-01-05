@@ -62,6 +62,7 @@ export default function Home({ catalogData, allFonts, projects }) {
         <Head>
           <title>Furniture | Home</title>
           <meta name="description" content="Furniture" />
+          <link rel="icon" href="/favicon.png" />
         </Head>
         
         {filteredProjects ? (
@@ -75,8 +76,8 @@ export default function Home({ catalogData, allFonts, projects }) {
             ))}
           </div>
         ): (
-          <div className="mb-20">
-            <h2>No projects</h2>  
+          <div className="pt-40 mb-60 pb-60">
+            <h2 className='text-base'>No projects</h2>  
           </div>
         )}
       </div>
@@ -112,6 +113,7 @@ export async function getStaticProps() {
               title: true,
               slug: true,
               template: true,
+              detailPageAvailable: 'page.detailPageAvailable.toBool',
               size: "page.homePageSize",
               images: {
                 query: "page.carouselImages.toFiles",

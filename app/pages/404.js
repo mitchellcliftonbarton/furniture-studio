@@ -9,7 +9,7 @@ export default function NotFound() {
       <Head>
         <title>Furniture | 404!</title>
         <meta name="description" content="Furniture" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <h1 className='text-base'>404</h1>

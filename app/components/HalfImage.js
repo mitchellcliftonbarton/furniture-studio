@@ -5,7 +5,7 @@ import styles from '../styles/Blocks.module.scss'
 
 const HalfImage = ({ block }) => {
   return (
-    <div className="mb-20 lg:mb-32 flex flex-wrap lg:flex-nowrap justify-between items-start">
+    <div className="mb-20 lg:mb-80 flex flex-wrap lg:flex-nowrap justify-between items-start">
       <div className={`${styles['half-image']} w-full lg:w-1/2`}>
         <DefImage
           src={block.image.url}

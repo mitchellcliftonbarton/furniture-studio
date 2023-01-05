@@ -14,6 +14,7 @@ import DefImage from './DefImage'
 import classnames from 'classnames'
 
 const ProjectItem = ({ project, priority }) => {
+  console.log(project)
   const swiperRef = useRef(null)
   const descriptionRef = useRef(null)
 
@@ -24,7 +25,8 @@ const ProjectItem = ({ project, priority }) => {
   const classes = classnames(
     'project-item-inner',
     {
-      'col-span-4 lg:col-span-3': project.size === 'large',
+      'col-span-4': project.size === 'large',
+      'col-span-4 lg:col-span-3': project.size === 'medium',
       'col-span-4 lg:col-span-2': project.size === 'small',
       'lg:col-start-2': project.template === 'typefaceproject'
     }
@@ -124,9 +126,11 @@ const ProjectItem = ({ project, priority }) => {
                 More info
               </button>
             )}
-            <Link href={project.template === 'brandproject' ? `/projects/${project.slug}` : `/typefaces/${project.slug}`}>
-              <a className="text-grey-lighter underline lg:hover:text-grey-med-dark transition-colors duration-300">See full project</a>
-            </Link>
+            {project.detailPageAvailable && (
+              <Link href={project.template === 'brandproject' ? `/projects/${project.slug}` : `/typefaces/${project.slug}`}>
+                <a className="text-grey-lighter underline lg:hover:text-grey-med-dark transition-colors duration-300">See full project</a>
+              </Link>
+            )}
           </div>
 
           {project.images.length > 0 && (

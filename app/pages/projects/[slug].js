@@ -12,8 +12,16 @@ import Link from "next/link";
 import styles from '../../styles/Blocks.module.scss'
 
 export default function ProjectDetail({ catalogData, allFonts, project }) {
+  const pageTitle = `Furniture | ${project.title}`
+
   return (
     <>
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="description" content="Furniture" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      
       <div className={`${styles['page-title']} page-title text-base relative def-x`}>
         <Link href="/">
           <a>Furniture</a>
@@ -25,11 +33,6 @@ export default function ProjectDetail({ catalogData, allFonts, project }) {
       </div>
 
       <div className='def-x mt-8 lg:mt-16'>
-        <Head>
-          <title>Furniture | {project.title}</title>
-          <meta name="description" content="Furniture" />
-        </Head>
-
         <h1 className='pt-40 text-base lg:hidden'>{project.pretitle ? `${project.pretitle} - ` : ''}{project.title}</h1>
 
         {project.pagecontent && project.pagecontent.length > 0 && (

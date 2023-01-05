@@ -2,7 +2,11 @@ Title: Art Company Mono
 
 ----
 
-Homepagesize: large
+Detailpageavailable: true
+
+----
+
+Homepagesize: medium
 
 ----
 

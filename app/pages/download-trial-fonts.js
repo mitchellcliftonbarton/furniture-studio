@@ -10,6 +10,7 @@ export default function DownloadTrialFonts({ data }) {
       <Head>
         <title>Furniture | Download Trial Fonts</title>
         <meta name="description" content="Furniture" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <div>

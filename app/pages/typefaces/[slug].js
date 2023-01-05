@@ -13,16 +13,22 @@ import TypeTester from '../../components/TypeTester'
 import CharacterGrid from '../../components/CharacterGrid'
 import CharacterCarousel from '../../components/CharacterCarousel'
 import CatalogFooter from '../../components/CatalogFooter'
-// import TypeTesters from 'fontdue-js/TypeTesters'
 
 // Lib
 import { getStaticQuery, fetchGraphql } from '../../lib/graphql'
 
 export default function TypefaceDetail({ catalogData, allFonts, project, font }) {
   // console.log(project, font)
+  const pageTitle = `Furniture | ${project.title}`
 
   return (
     <>
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="description" content="Furniture" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      
       <link rel="stylesheet" href={font.cssUrl} />
 
       <div className={`${styles['page-title']} page-title text-base relative def-x`}>
@@ -49,11 +55,6 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
       </div>
 
       <div className='typeface-project def-x mt-8 lg:mt-16'>
-        <Head>
-          <title>Furniture | {project.title}</title>
-          <meta name="description" content="Furniture" />
-        </Head>
-
         <div className="pt-40 flex lg:hidden flex-wrap lg:flex-nowrap items-start lg:items-center">
           <h1 className='text-base w-full lg:w-1/4'>{project.title}</h1>
 

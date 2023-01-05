@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CopyPasteLink from "./CopyPasteLink";
 
 export default function MainFooter({ infoData }) {
   const links = infoData.contactlinks.filter(link => link.showInFooter)
@@ -7,13 +8,16 @@ export default function MainFooter({ infoData }) {
     <footer className="def-padding flex flex-wrap lg:flex-nowrap">
       <div className="w-full lg:w-1/3 flex flex-wrap">
         {links.map((item, index) => (
-          <div className="text-base w-1/2 mb-8" key={index}>
+          <div className="text-base text-left w-full lg:w-1/2 mb-8" key={index}>
             <p>{item.title}</p>
-            <Link href={item.link}>
-              <a className="fade">
-                {item.linkText}
-              </a>
-            </Link>
+            {item.link.includes('mailto')
+              ? <CopyPasteLink link={item} />
+              : <Link href={item.link}>
+                  <a className="fade text-left">
+                    {item.linkText}
+                  </a>
+                </Link>
+            }
           </div>
         ))}
       </div>

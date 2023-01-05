@@ -5,7 +5,7 @@ import styles from '../styles/Blocks.module.scss'
 
 const FullImage = ({ block }) => {
   return (
-    <div className={`${styles['full-image']} mb-20 lg:mb-32`}>
+    <div className={`${styles['full-image']} mb-20 lg:mb-80`}>
       <DefImage
         src={block.image.url}
         width={block.image.width}

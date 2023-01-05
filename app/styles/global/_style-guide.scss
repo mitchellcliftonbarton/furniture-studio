@@ -118,6 +118,8 @@ body {
     background-color: transparent;
     border: none;
     outline: none;
+    appearance: none;
+    -webkit-appearance: none;
   }
 
   button[type='submit'] {
@@ -252,14 +254,16 @@ body {
     @apply text-base;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
     border-radius: 999px;
-    background-color: theme('colors.grey.light');
-    border: none;
+    background-color: theme('colors.grey.light') !important;
+    border: none !important;
     padding: 1rem 2rem;
     color: black;
     transition: box-shadow .3s;
 
     &:hover {
       box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px #FFFFFF;
+      border: none;
+      background-color: theme('colors.grey.light');
     }
 
     &:active {
