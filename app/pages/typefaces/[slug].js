@@ -73,7 +73,7 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
         </div>
 
         {project.pagecontent && project.pagecontent.length > 0 && (
-          <div className="block-items mt-24 lg:mt-32 flex justify-end">
+          <div className="block-items mt-24 lg:mt-32 mb-40 lg:mb-0 flex justify-end">
             <div className="w-full lg:w-3/4">
               {project.pagecontent.map((block, index) => {
                 switch (block.type) {

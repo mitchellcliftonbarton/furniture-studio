@@ -38,10 +38,9 @@ export default function CatalogItem({ item, allFonts }) {
               return (
                 <p
                   key={index}
+                  className={styles['text-line']}
                   style={{
-                    fontFamily: family,
-                    lineHeight: '1.6',
-                    fontSize: '2.4rem'
+                    fontFamily: family
                   }}
                 >{selectedFont.name} {style.name}</p>
               )

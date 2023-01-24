@@ -32,7 +32,7 @@ export default function ProjectDetail({ catalogData, allFonts, project }) {
         <h1 className='text-base'>{project.pretitle ? `${project.pretitle} - ` : ''}{project.title}</h1>
       </div>
 
-      <div className='def-x mt-8 lg:mt-16'>
+      <div className='def-x mt-8 lg:mt-16 mb-40 lg:mb-0'>
         <h1 className='pt-40 text-base lg:hidden'>{project.pretitle ? `${project.pretitle} - ` : ''}{project.title}</h1>
 
         {project.pagecontent && project.pagecontent.length > 0 && (

@@ -116,7 +116,7 @@ const ProjectItem = ({ project, priority }) => {
         </div>
 
         <div className="titles project-item-title flex justify-between">
-          <div className="flex items-center text-base">
+          <div className="flex items-start text-base">
             <h2 className="text-grey-med-dark">{project.title}</h2>
             {project.shortDescription && (
               <button 

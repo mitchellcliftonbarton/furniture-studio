@@ -59,7 +59,7 @@ const Layout = ({ children }) => {
 
         <main role="main">{children}</main>
 
-        <MainFooter infoData={children.props.infoData} />
+        <MainFooter infoData={children.props.infoData} currentTheme={currentTheme} />
 
         <StoreModal />
       </div>

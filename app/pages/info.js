@@ -36,8 +36,8 @@ export default function Info({ content }) {
           )}
 
           <div className="border-t grid grid-cols-3 gap-8 lg:gap-24 pt-def pb-16 lg:pb-40">
-            <div className="col-span-3 flex items-center justify-start">
-              <h2 className="text-base mr-12 lg:mr-20">Licensing Information</h2>
+            <div className="col-span-3 flex flex-wrap lg:flex-nowrap items-center justify-start mb-4 lg:mb-0">
+              <h2 className="text-base lg:mr-20 w-full lg:w-auto mb-8 lg:mb-0">Licensing Information</h2>
 
               {content.licensingpdftext && content.licensingpdf.length > 0 && (
                 <a href={content.licensingpdf[0].url} download className='def-button text-base' target="_blank" rel="noreferrer">{content.licensingpdftext}</a>

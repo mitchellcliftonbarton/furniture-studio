@@ -1,7 +1,7 @@
 import Link from "next/link";
 import CopyPasteLink from "./CopyPasteLink";
 
-export default function MainFooter({ infoData }) {
+export default function MainFooter({ infoData, currentTheme }) {
   const links = infoData.contactlinks.filter(link => link.showInFooter)
 
   return (
@@ -36,7 +36,7 @@ export default function MainFooter({ infoData }) {
             <div id="mc_embed_signup_scroll" className="flex">
               <div className="email-field mc-field-group flex-1 w-full">
                 <label htmlFor="mce-EMAIL" className="hidden">Email Address  <span className="asterisk">*</span></label>
-                <input type="email" defaultValue="" name="EMAIL" className="required email text-base text-grey-dark w-full py-4 px-6" id="mce-EMAIL" required placeholder="Email address"/>
+                <input type="email" defaultValue="" name="EMAIL" className={`${currentTheme === 2 ? 'text-center' : 'text-left'} required email text-base text-grey-dark w-full py-4 px-6`} id="mce-EMAIL" required placeholder="Email address"/>
                 <span id="mce-EMAIL-HELPERTEXT" className="helper_text"></span>
               </div>
 
