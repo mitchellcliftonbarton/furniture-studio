@@ -46,6 +46,12 @@ export default function Home({ catalogData, allFonts, projects }) {
 
   return (
     <>
+      <Head>
+        <title>Furniture | Home</title>
+        <meta name="description" content="Furniture" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      
       <div className={`${styles['page-title']} page-title text-base relative def-x`}>
         <Link href="/">
           <a>
@@ -59,12 +65,6 @@ export default function Home({ catalogData, allFonts, projects }) {
       </div>
       
       <div className='def-x'>
-        <Head>
-          <title>Furniture | Home</title>
-          <meta name="description" content="Furniture" />
-          <link rel="icon" href="/favicon.png" />
-        </Head>
-        
         {filteredProjects ? (
           <div className="projects pt-40 lg:pt-60 mb-20">
             {filteredProjects.map((project, index) => (

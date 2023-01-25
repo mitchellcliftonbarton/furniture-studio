@@ -187,6 +187,12 @@ body {
     button {
       margin-right: 5rem;
     }
+
+    button,
+    a {
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
   }
 
   .main-nav,
