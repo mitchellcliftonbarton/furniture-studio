@@ -20,11 +20,6 @@ export default async (req, res) => {
     server: DATACENTER,
   })
 
-  // async function callPing() {
-  //   const response = await mailchimp.ping.get();
-  //   console.log(response);
-  // }
-
   async function subscribeUser() {
     const response = await mailchimp.lists.setListMember(
       AUDIENCE_ID,
@@ -46,10 +41,9 @@ export default async (req, res) => {
     }
   }
 
-  // await callPing()
   subscribeUser().catch(errors => {
     return res.status(400).json({
-      error: errors.response.body.detail,
+      error: errors,
     })
   })
 };
