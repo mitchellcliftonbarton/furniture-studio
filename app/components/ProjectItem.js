@@ -14,7 +14,6 @@ import DefImage from './DefImage'
 import classnames from 'classnames'
 
 const ProjectItem = ({ project, priority }) => {
-  console.log(project)
   const swiperRef = useRef(null)
   const descriptionRef = useRef(null)
 

@@ -11,8 +11,6 @@ import { useRouter } from 'next/router'
 
 const Layout = ({ children }) => {
   const router = useRouter()
-
-  // console.log(router)
   
   const themesArray = [
     'theme-1',
@@ -59,7 +57,7 @@ const Layout = ({ children }) => {
 
         <main role="main">{children}</main>
 
-        <MainFooter infoData={children.props.infoData} currentTheme={currentTheme} />
+        <MainFooter infoData={children.props.children[1].props.infoData} currentTheme={currentTheme} />
 
         <StoreModal />
       </div>

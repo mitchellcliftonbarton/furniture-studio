@@ -2,12 +2,18 @@ import '../styles/index.scss'
 
 // Lib
 import fetchGraphql from '../lib/fetchGraphql'
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 // MyApp
 function MyApp({ Component, pageProps, infoData, catalogData, allFonts }) {
   const getLayout = Component.getLayout || ((page) => page)
 
-  return getLayout(<Component {...pageProps} infoData={infoData} catalogData={catalogData} allFonts={allFonts} />)
+  return getLayout(
+    <>
+      <GoogleAnalytics trackPageViews />
+      <Component {...pageProps} infoData={infoData} catalogData={catalogData} allFonts={allFonts} />
+    </>
+  )
 }
 
 MyApp.getInitialProps = async () => {
