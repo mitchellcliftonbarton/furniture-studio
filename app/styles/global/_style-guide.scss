@@ -111,31 +111,31 @@ body {
   }
 }
 
-#mc_embed_signup {
-  .email-field input {
-    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -3px -3px 4px #FFFFFF;
-    border-radius: 999px;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    appearance: none;
-    -webkit-appearance: none;
-  }
+// #mc_embed_signup {
+//   .email-field input {
+//     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -3px -3px 4px #FFFFFF;
+//     border-radius: 999px;
+//     background-color: transparent;
+//     border: none;
+//     outline: none;
+//     appearance: none;
+//     -webkit-appearance: none;
+//   }
 
-  button[type='submit'] {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
-    border-radius: 999px;
-    transition: box-shadow .3s;
+//   button[type='submit'] {
+//     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
+//     border-radius: 999px;
+//     transition: box-shadow .3s;
 
-    &:hover {
-      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px #FFFFFF;
-    }
+//     &:hover {
+//       box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px #FFFFFF;
+//     }
 
-    &:active {
-      box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1), inset -1px -1px 2px #FFFFFF;
-    }
-  }
-}
+//     &:active {
+//       box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1), inset -1px -1px 2px #FFFFFF;
+//     }
+//   }
+// }
 
 /* --------------- */
 /* THEMES */
