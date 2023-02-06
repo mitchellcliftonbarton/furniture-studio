@@ -168,6 +168,7 @@ export async function getStaticProps(context) {
               fontSize: true,
               description: "block.description.markdown",
               backgroundColor: true,
+              defaultWeight: true,
               image: {
                 query: "block.image.toFile",
                 select: {

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 // Styles
 import styles from '../styles/Blocks.module.scss'
@@ -23,6 +23,13 @@ const TypeTester = ({ block, font }) => {
   const [currentFontSize, setCurrentFontSize] = useState(block.fontSize)
   const [currentAlignment, setCurrentAlignment] = useState(block.alignment)
   const [currentColumns, setCurrentColumns] = useState(parseInt(block.columns))
+
+  useEffect(() => {
+    if (block.defaultWeight) {
+      const weight = fontStyles.findIndex(style => style.name === block.defaultWeight)
+      setCurrentFont(weight)
+    }
+  }, [block])
 
   const handleFontChange = (event) => {
     const fontIndex = fontStyles.findIndex(font => font.name === event.target.value)

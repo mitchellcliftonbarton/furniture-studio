@@ -18,13 +18,19 @@ const TypeImage = ({ block }) => {
     <div className={`${styles['type-image']} ${classes}`}>
       <div className={block.text ? 'w-full lg:w-3/4 lg:pr-20' : 'w-full'}>
         {block.image && block.image.url && (
-          <DefImage
-            src={block.image.url}
-            width={block.image.width}
-            height={block.image.height}
-            alt={block.image.alt}
-            className={styles.image}
-          />
+          <>
+            {block.image.type === 'image' ? (
+              <DefImage
+                src={block.image.url}
+                width={block.image.width}
+                height={block.image.height}
+                alt={block.image.alt}
+                className={styles.image}
+              />
+            ) : (
+              <video src={block.image.url} className={styles.image} autoPlay playsInline loop preload="auto" muted></video>
+            )}
+          </>
         )}
         {block.caption && (
           <p className="text-base mt-6">{block.caption}</p>

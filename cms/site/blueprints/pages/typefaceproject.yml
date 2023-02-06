@@ -105,6 +105,10 @@ columns:
                     min: 10
                     max: 300
                     help: A value between 10 and 300
+                  defaultWeight:
+                    label: Default Weight
+                    type: text
+                    help: Must match the name of a weight for this typeface.
               characterCarousel:
                 name: Character Carousel
                 icon: document
