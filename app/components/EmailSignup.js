@@ -53,7 +53,7 @@ const EmailSignup = ({currentTheme}) => {
       }, 1200)
     } else {
       console.error(subscribeConfirm.error)
-      alert('There was an error subscribing to the newsletter. Hit me up at hello@furniture.xyz and I\'ll add you the old fashioned way.')
+      alert('There was an error subscribing to the newsletter. Hit us up at info@furniture.xyz and we’ll add you the old fashioned way.')
       setButtonText('Submit')
       setInputValue('')
     }
