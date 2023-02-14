@@ -43,10 +43,11 @@ const CharacterCarousel = ({ block, font }) => {
           className={styles['carousel-el']}
         >
           {slides.map((slide, index) => {
-            const selectedWeight = fontStyles.find(style => style.name === slide.weight)
+            let selectedWeight = fontStyles.find(style => style.name === slide.weight)
 
             if (!selectedWeight) {
-              alert('No weight selected')
+              // default to first font style if there isnt one chosen
+              selectedWeight = fontStyles[0]
               return
             }
 
