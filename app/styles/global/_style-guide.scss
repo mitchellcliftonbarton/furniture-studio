@@ -40,6 +40,11 @@
 html {
   height: 100%;
   background-color: theme('colors.grey.light');
+  -webkit-font-smoothing: antialiased;
+
+  * {
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 body {
