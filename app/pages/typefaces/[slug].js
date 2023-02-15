@@ -48,7 +48,7 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
             />
 
             <Link href="/download-trial-fonts">
-              <a className={`${styles.download} text-base ml-8 lg:ml-16`}>Download trial fonts</a>
+              <a className={`${styles.download} whitespace-nowrap text-base ml-8 lg:ml-16`}>Download trial fonts</a>
             </Link>
           </div>
         )}

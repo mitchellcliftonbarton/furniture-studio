@@ -1,6 +1,7 @@
 .carousel {
   padding-bottom: 56.25%;
   border-radius: 12px;
+  -webkit-border-radius: 12px;
   overflow: hidden;
 }
 
@@ -13,11 +14,11 @@
 }
 
 .left-button {
-  cursor: url('../public/left-arrow.png') 4 12, auto;
+  cursor: url('../public/left-arrow.png') 4 12, pointer;
 }
 
 .right-button {
-  cursor: url('../public/right-arrow.png') 4 12, auto;
+  cursor: url('../public/right-arrow.png') 4 12, pointer;
 }
 
 .description-container {
