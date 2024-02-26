@@ -1,0 +1,14 @@
+title: Alt Home Page
+icon: home
+
+columns:
+  - width: 1/2
+    sections:
+      projects:
+        type: fields
+        fields:
+          activeProjects:
+            label: Active Projects
+            type: pages
+            multiple: true
+            query: site.find('BrandProjects', 'TypefaceProjects')

@@ -18,24 +18,24 @@ function MyApp({ Component, pageProps, infoData, catalogData, allFonts }) {
 
 MyApp.getInitialProps = async () => {
   const infoData = await fetch(process.env.API_HOST, {
-      method: "POST",
-      headers: {
-          Authorization: `Basic ${process.env.AUTH}`,
-      },
-      body: JSON.stringify({
-          query: "page('info')",
+    method: "POST",
+    headers: {
+      Authorization: `Basic ${process.env.AUTH}`,
+    },
+    body: JSON.stringify({
+      query: "page('info')",
+      select: {
+        contactlinks: {
+          query: "page.contactLinks.toStructure",
           select: {
-            contactlinks: {
-              query: "page.contactLinks.toStructure",
-              select: {
-                title: true,
-                link: true,
-                linkText: true,
-                showInFooter: true
-              }
-            }
-          },
-      }),
+            title: true,
+            link: true,
+            linkText: true,
+            showInFooter: true
+          }
+        }
+      },
+    }),
   })
 
   const infoJson = await infoData.json()

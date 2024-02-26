@@ -1,0 +1,24 @@
+title: Alternate Home Pages
+icon: bold
+
+options:
+  changeStatus: false
+  changeSlug: true
+  changeTemplate: false
+  changeTitle: false
+  create: false
+  delete: false
+  duplicate: false
+
+sections:
+  published:
+    status: listed
+    headline: Published Alternate Home Pages
+    type: pages
+    layout: cardlets
+    template: althome
+  draft:
+    status: draft
+    headline: New Alternate Home Pages (Draft)
+    type: pages
+    template: althome

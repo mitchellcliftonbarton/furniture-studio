@@ -9,16 +9,13 @@ import { Check } from './icons/Icons'
 import { useRouter } from 'next/router'
 import { useMemo } from 'react'
 
-// Lib
-import _ from 'lodash'
-
-const CategoryFilter = () => {
+const CategoryFilter = ({ baseURL = '/' }) => {
   const router = useRouter()
 
   const [brandActive] = useMemo(() => {
     let value = false
 
-    if (_.isEmpty(router.query)) {
+    if (!router.query.filter) {
       value = true
     }
 
@@ -34,7 +31,7 @@ const CategoryFilter = () => {
   const [typeActive] = useMemo(() => {
     let value = false
 
-    if (_.isEmpty(router.query)) {
+    if (!router.query.filter) {
       value = true
     }
 
@@ -48,22 +45,22 @@ const CategoryFilter = () => {
   }, [router.query])
 
   const [brandLink] = useMemo(() => {
-    let value = '/'
+    let value = baseURL
 
-    if (_.isEmpty(router.query)) {
-      value = '/?filter=type'
+    if (!router.query.filter) {
+      value = `${baseURL}?filter=type`
     }
 
     if (router.query.filter === 'type') {
-      value = '/'
+      value = baseURL
     }
 
     if (router.query.filter === 'brand') {
-      value = '/?filter=none'
+      value = `${baseURL}?filter=none`
     }
 
     if (router.query.filter === 'none') {
-      value = '/?filter=brand'
+      value = `${baseURL}?filter=brand`
     }
 
     return [
@@ -72,22 +69,22 @@ const CategoryFilter = () => {
   }, [router.query])
 
   const [typeLink] = useMemo(() => {
-    let value = '/'
+    let value = baseURL
 
-    if (_.isEmpty(router.query)) {
-      value = '/?filter=brand'
+    if (!router.query.filter) {
+      value = `${baseURL}?filter=brand`
     }
 
     if (router.query.filter === 'brand') {
-      value = '/'
+      value = baseURL
     }
 
     if (router.query.filter === 'type') {
-      value = '/?filter=none'
+      value = `${baseURL}?filter=none`
     }
 
     if (router.query.filter === 'none') {
-      value = '/?filter=type'
+      value = `${baseURL}?filter=type`
     }
 
     return [
