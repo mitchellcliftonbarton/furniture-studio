@@ -14,31 +14,35 @@
 }
 
 .left-button {
-  cursor: url('../public/left-arrow.png') 4 12, pointer;
+  cursor:
+    url('../public/left-arrow.png') 4 12,
+    pointer;
 }
 
 .right-button {
-  cursor: url('../public/right-arrow.png') 4 12, pointer;
+  cursor:
+    url('../public/right-arrow.png') 4 12,
+    pointer;
 }
 
 .description-container {
-  transition: height .3s;
+  transition: height 0.3s;
   display: none;
 
-  @media screen and (min-width: theme("screens.lg")) {
-    background-color: theme('colors.grey.light');
-    display: block
+  @media screen and (min-width: theme('screens.lg')) {
+    background-color: white;
+    display: block;
   }
 
   & > div {
     opacity: 0;
-    transition: opacity .3s;
+    transition: opacity 0.3s;
   }
 
   &.description-open {
     & > div {
       opacity: 1;
-      transition-delay: .3s;
+      transition-delay: 0.3s;
     }
   }
 }

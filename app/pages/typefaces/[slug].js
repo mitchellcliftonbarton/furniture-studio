@@ -25,25 +25,34 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
     <>
       <Head>
         <title>{pageTitle}</title>
-        <meta name="description" content="Furniture" />
-        <link rel="icon" href="/favicon.png" />
+        <meta
+          name="description"
+          content="Furniture"
+        />
+        <link
+          rel="icon"
+          href="/favicon.png"
+        />
       </Head>
-      
-      <link rel="stylesheet" href={font.cssUrl} />
 
-      <div className={`${styles['page-title']} page-title text-base relative def-x`}>
+      <link
+        rel="stylesheet"
+        href={font.cssUrl}
+      />
+
+      <div className={`${styles['page-title']} page-title text-base relative def-x pt-def-half`}>
         <Link href="/">
           <a>Furniture</a>
         </Link>
       </div>
 
-      <div className={`${styles['categories-container']} categories-container pl-def hidden lg:flex`}>
-        <h1 className='text-base w-full lg:w-1/2'>{project.title}</h1>
+      <div className={`${styles['categories-container']} categories-container pl-def pt-def-half hidden lg:flex`}>
+        <h1 className="text-base w-full lg:w-1/2">{project.title}</h1>
 
         {project.fontDueSlug && (
           <div className="buy-options w-full lg:w-1/2 mt-8 lg:mt-0 flex items-center">
-            <BuyButton 
-              collectionSlug={project.fontDueSlug} 
+            <BuyButton
+              collectionSlug={project.fontDueSlug}
               label="Buy"
             />
 
@@ -54,14 +63,14 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
         )}
       </div>
 
-      <div className='typeface-project def-x mt-8 lg:mt-16'>
+      <div className="typeface-project def-x mt-8 lg:mt-16">
         <div className="pt-40 flex lg:hidden flex-wrap lg:flex-nowrap items-start lg:items-center">
-          <h1 className='text-base w-full lg:w-1/4'>{project.title}</h1>
+          <h1 className="text-base w-full lg:w-1/4">{project.title}</h1>
 
           {project.fontDueSlug && (
             <div className="buy-options w-full lg:w-3/4 mt-8 lg:mt-0 flex items-center">
-              <BuyButton 
-                collectionSlug={project.fontDueSlug} 
+              <BuyButton
+                collectionSlug={project.fontDueSlug}
                 label="Buy"
               />
 
@@ -78,15 +87,43 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
               {project.pagecontent.map((block, index) => {
                 switch (block.type) {
                   case 'image':
-                    return <TypeImage key={index} block={block} />
+                    return (
+                      <TypeImage
+                        key={index}
+                        block={block}
+                      />
+                    )
                   case 'textSection':
-                    return <TextSection key={index} block={block} font={font} />
+                    return (
+                      <TextSection
+                        key={index}
+                        block={block}
+                        font={font}
+                      />
+                    )
                   case 'typeTester':
-                    return <TypeTester key={index} block={block} font={font} />
+                    return (
+                      <TypeTester
+                        key={index}
+                        block={block}
+                        font={font}
+                      />
+                    )
                   case 'characterCarousel':
-                    return <CharacterCarousel key={index} block={block} font={font} />
+                    return (
+                      <CharacterCarousel
+                        key={index}
+                        block={block}
+                        font={font}
+                      />
+                    )
                   case 'characterGrid':
-                    return <CharacterGrid key={index} font={font} />
+                    return (
+                      <CharacterGrid
+                        key={index}
+                        font={font}
+                      />
+                    )
                 }
               })}
             </div>
@@ -103,42 +140,38 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
 }
 
 TypefaceDetail.getLayout = function getLayout(page) {
-  return (
-    <DefaultLayout>
-      {page}
-    </DefaultLayout>
-  )
+  return <DefaultLayout>{page}</DefaultLayout>
 }
 
 export async function getStaticPaths() {
   const pagesData = await fetch(process.env.API_HOST, {
-    method: "POST",
+    method: 'POST',
     headers: {
       Authorization: `Basic ${process.env.AUTH}`,
     },
     body: JSON.stringify({
       query: "page('TypefaceProjects').children",
       select: {
-        slug: true
+        slug: true,
       },
     }),
-  });
+  })
 
-  const jsonData = await pagesData.json();
+  const jsonData = await pagesData.json()
   const { result } = jsonData
 
   const paths = result.map((page) => {
     return {
       params: {
-        slug: page.slug
+        slug: page.slug,
       },
-    };
-  });
+    }
+  })
 
   return {
-      paths: paths,
-      fallback: false,
-  };
+    paths: paths,
+    fallback: false,
+  }
 }
 
 export async function getStaticProps(context) {
@@ -146,67 +179,66 @@ export async function getStaticProps(context) {
 
   // Get data from Kirby CMS
   const projectData = await fetch(process.env.API_HOST, {
-      method: "POST",
-      headers: {
-        Authorization: `Basic ${process.env.AUTH}`,
-      },
-      body: JSON.stringify({
-        query: `page('TypefaceProjects').children.find('${slug}')`,
-        select: {
-          title: true,
-          fontDueSlug: true,
-          pagecontent: {
-            query: "page.pageContent.toBlocks",
-            select: {
-              type: true,
-              caption: true,
-              text: "block.text.markdown",
-              placeholder: true,
-              showWeights: true,
-              alignment: true,
-              columns: true,
-              fontSize: true,
-              description: "block.description.markdown",
-              backgroundColor: true,
-              defaultWeight: true,
-              image: {
-                query: "block.image.toFile",
-                select: {
-                  url: true,
-                  width: true,
-                  height: true,
-                  alt: true,
-                  type: true
-                }
+    method: 'POST',
+    headers: {
+      Authorization: `Basic ${process.env.AUTH}`,
+    },
+    body: JSON.stringify({
+      query: `page('TypefaceProjects').children.find('${slug}')`,
+      select: {
+        title: true,
+        fontDueSlug: true,
+        pagecontent: {
+          query: 'page.pageContent.toBlocks',
+          select: {
+            type: true,
+            caption: true,
+            text: 'block.text.markdown',
+            placeholder: true,
+            showWeights: true,
+            alignment: true,
+            columns: true,
+            fontSize: true,
+            description: 'block.description.markdown',
+            backgroundColor: true,
+            defaultWeight: true,
+            image: {
+              query: 'block.image.toFile',
+              select: {
+                url: true,
+                width: true,
+                height: true,
+                alt: true,
+                type: true,
               },
-              slides: {
-                query: "block.slides.toStructure",
-                select: {
-                  character: true,
-                  description: "structureItem.description.markdown",
-                  weight: true
-                }
-              }
-            }
-          }
-        }
-      }),
+            },
+            slides: {
+              query: 'block.slides.toStructure',
+              select: {
+                character: true,
+                description: 'structureItem.description.markdown',
+                weight: true,
+              },
+            },
+          },
+        },
+      },
+    }),
   })
 
   const jsonData = await projectData.json()
   const { result } = jsonData
 
-  
   // Get data from FontDue
   const fontdueQuery = await getStaticQuery('Font.graphql')
   const data = await fetchGraphql(fontdueQuery, {
-    slug: result.fontDueSlug
+    slug: result.fontDueSlug,
   })
 
   return {
     props: {
       project: result,
-      font: data.viewer.slug.fontCollection
+      font: data.viewer.slug.fontCollection,
     },
   }
 }

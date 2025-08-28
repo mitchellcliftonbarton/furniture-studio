@@ -2,10 +2,12 @@ Title: Home Page
 
 ----
 
+Modules: [{"content":{"images":["andrew-cranston-one-day-1050x1400.jpg","consulting-with-shadows-1050x1400.jpg","untitled.mp4"]},"id":"b7fce06b-59e0-4e38-816c-c2646f17c93a","isHidden":false,"type":"carousel"},{"content":{"project":["BrandProjects\/retro-stuff"]},"id":"db4502a5-667b-4d7a-b07b-6780488f0f51","isHidden":false,"type":"featuredProject"}]
+
+----
+
 Activeprojects:
 
 - BrandProjects/retro-stuff
 - TypefaceProjects/art-company-mono
-- TypefaceProjects/glossy-display
-- TypefaceProjects/everett
 - BrandProjects/Modern

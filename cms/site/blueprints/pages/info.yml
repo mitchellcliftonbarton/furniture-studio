@@ -7,6 +7,46 @@ columns:
       text:
         type: fields
         fields:
+          modules:
+            label: Modules
+            type: blocks
+            fieldsets:
+              centeredText:
+                name: Centered Text
+                fields:
+                  text:
+                    label: Text
+                    type: textarea
+                    size: small
+                    help: This text will show as the first text on the information page.
+              twoColumnText:
+                name: Two Column Text
+                fields:
+                  column1Text:
+                    label: Text
+                    type: textarea
+                    size: small
+                  column2Text:
+                    label: Text
+                    type: textarea
+                    size: small
+              twoColumnList:
+                name: Two Column List
+                fields:
+                  column1ListTitle:
+                    label: List Title
+                    type: text
+                  column1ListItems:
+                    label: List Items
+                    type: textarea
+                    size: medium
+                  column2ListTitle:
+                    label: List Title
+                    type: text
+                  column2ListItems:
+                    label: List Items
+                    type: textarea
+                    size: medium
           introText:
             label: Intro Text
             type: textarea

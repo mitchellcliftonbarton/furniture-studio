@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from 'react'
 
 // Styles
 import styles from '../styles/Blocks.module.scss'
@@ -9,17 +9,17 @@ const CharacterGrid = ({ font }) => {
   const [currentFont, setCurrentFont] = useState(0)
 
   const handleChange = (event) => {
-    const fontIndex = fontStyles.findIndex(font => font.name === event.target.value)
+    const fontIndex = fontStyles.findIndex((font) => font.name === event.target.value)
 
     setCurrentFont(fontIndex)
   }
 
   return (
     <div className={`mb-32 lg:mb-60`}>
-      <div className="controls flex mb-10">
-        <select 
-          className={`${styles.select} text-base w-full lg:w-1/4`} 
-          name="weight" 
+      <div className="controls flex mb-10 bg-grey-1 p-def-half rounded-2xl">
+        <select
+          className={`${styles.select} text-base w-full lg:w-1/4`}
+          name="weight"
           id="weight"
           onChange={handleChange}
           value={fontStyles[currentFont].name}
@@ -28,7 +28,9 @@ const CharacterGrid = ({ font }) => {
             <option
               value={style.name}
               key={index}
-            >{style.name}</option>
+            >
+              {style.name}
+            </option>
           ))}
         </select>
       </div>
@@ -37,8 +39,8 @@ const CharacterGrid = ({ font }) => {
         {fontStyles.map((style, index) => {
           const allCharacters = []
 
-          style.characterBlocks.forEach(block => {
-            block.characters.forEach(character => {
+          style.characterBlocks.forEach((block) => {
+            block.characters.forEach((character) => {
               allCharacters.push(character)
             })
           })
@@ -46,20 +48,22 @@ const CharacterGrid = ({ font }) => {
           const family = `${style.cssFamily} ${style.name}`
 
           return (
-            <div 
-              className={`${currentFont === index ? 'flex flex-wrap' : 'hidden'}`} 
+            <div
+              className={`${currentFont === index ? 'flex flex-wrap' : 'hidden'}`}
               key={index}
             >
               {allCharacters.map((character, idx) => (
-                <span 
-                  key={idx} 
-                  className={`${styles.character} mb-3 flex justify-center items-start`} 
+                <span
+                  key={idx}
+                  className={`${styles.character} mb-3 flex justify-center items-start`}
                   style={{
                     fontFamily: family,
                     lineHeight: '1.2',
-                    fontSize: '2.4rem'
+                    fontSize: '2.4rem',
                   }}
-                >{character}</span>
+                >
+                  {character}
+                </span>
               ))}
             </div>
           )

@@ -7,6 +7,24 @@ columns:
       projects:
         type: fields
         fields:
+          modules:
+            label: Modules
+            type: blocks
+            fieldsets:
+              featuredProject:
+                name: Featured Project
+                fields:
+                  project:
+                    type: pages
+                    multiple: false
+                    query: site.find('BrandProjects', 'TypefaceProjects')
+              carousel:
+                name: Carousel
+                fields:
+                  images:
+                    type: files
+                    multiple: true
+                    layout: cards
           activeProjects:
             label: Active Projects
             type: pages

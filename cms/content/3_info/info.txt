@@ -2,6 +2,10 @@ Title: Info Page
 
 ----
 
+Modules: [{"content":{"text":"Typography as Brand"},"id":"00a31637-c5cf-40b0-983c-147610477af2","isHidden":false,"type":"centeredText"},{"content":{"column1text":"Email:\u2028\n(link: mailto:info@furniture.xyz\u2028 text: info@furniture.xyz\u2028)\u2028\n\nInstagram:\u2028\n(link: https:\/\/www.instagram.com\/furniture.xyz\/ text: @furniture.xyz)","column2text":"Furniture creates identity systems and typefaces that give brands the tools to show up with clarity, consistency, and feeling. Typography is the most scalable form of brand expression\u2014a well-crafted typeface makes everything feel on-brand by default. We design identities where type isn\u2019t just a detail\u2014it\u2019s the structure, the tone, the brand itself. In parallel with client work, we publish a growing library of retail fonts shaped by the same ideas that guide our brand practice, offering tools for others to build meaning and expression through typography."},"id":"e225cce4-c273-4f1a-a943-d10e3ab1d1b6","isHidden":false,"type":"twoColumnText"},{"content":{"column1listtitle":"What We Do:","column1listitems":"Brand Identity Systems\u2028\nCustom Typography\u2028\nFont Development\u2028\nVisual Language Exploration","column2listtitle":"Select Clients:","column2listitems":"Anthropic\u2028\nApple\u2028\nGatorade\u2028\nGoogle\u2028\nLululemon\u2028\nNike\u2028\nTile"},"id":"d660d833-aac5-4316-8973-35bfc113f60e","isHidden":false,"type":"twoColumnList"},{"content":{"column1text":"Our licensing prices are based on the size of your business, rather than the number of people using the fonts. Our licenses cover all usage across all media, rather than specific licenses for desktop, web, etc. Please contact us for custom licensing arrangements (such as for companies with more than 250 employees). Download our EULA here.","column2text":"(In old school typesetting, furniture is the unseen structure that shapes the page.)"},"id":"03b6b0d6-c318-489c-bd24-861dcede08c4","isHidden":false,"type":"twoColumnText"}]
+
+----
+
 Introtext: Brand design, Identity Systems, Type Design, Art Direction
 
 ----

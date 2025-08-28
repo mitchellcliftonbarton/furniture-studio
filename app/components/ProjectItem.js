@@ -21,15 +21,12 @@ const ProjectItem = ({ project, priority }) => {
   const [descriptionOpen, setDescriptionOpen] = useState(false)
   const [descriptionHeight, setDescriptionHeight] = useState(0)
 
-  const classes = classnames(
-    'project-item-inner',
-    {
-      'col-span-4': project.size === 'large',
-      'col-span-4 lg:col-span-3': project.size === 'medium',
-      'col-span-4 lg:col-span-2': project.size === 'small',
-      'lg:col-start-2': project.template === 'typefaceproject'
-    }
-  )
+  const classes = classnames('project-item-inner', {
+    'col-span-4': project.size === 'large',
+    'col-span-4 lg:col-span-3': project.size === 'medium',
+    'col-span-4 lg:col-span-2': project.size === 'small',
+    'lg:col-start-2': project.template === 'typefaceproject',
+  })
 
   const handleSlideChange = (index, swiper) => {
     setCarouselIndex(index)
@@ -60,9 +57,7 @@ const ProjectItem = ({ project, priority }) => {
 
   return (
     <div className="project-item grid grid-cols-4 gap-4 mb-28 lg:mb-40 enter-in-1">
-      <div
-        className={classes}
-      >
+      <div className={classes}>
         <div className={`${styles.carousel} bg-grey-med mb-6 relative`}>
           {project.images.length > 0 && (
             <>
@@ -78,8 +73,8 @@ const ProjectItem = ({ project, priority }) => {
                 {project.images.map((image, index) => (
                   <SwiperSlide key={index}>
                     {image.type === 'video' ? (
-                      <video 
-                        src={image.url} 
+                      <video
+                        src={image.url}
                         className="object-cover object-center w-full h-full"
                         autoPlay
                         muted
@@ -101,8 +96,8 @@ const ProjectItem = ({ project, priority }) => {
               </Swiper>
 
               <div className="absolute top-0 left-0 w-full h-full hidden lg:flex z-20">
-                <button 
-                  className={`${styles['left-button']} w-1/2 h-full`} 
+                <button
+                  className={`${styles['left-button']} w-1/2 h-full`}
                   onClick={handlePrev}
                 ></button>
                 <button
@@ -118,31 +113,37 @@ const ProjectItem = ({ project, priority }) => {
           <div className="flex items-start text-base">
             <h2 className="text-grey-med-dark">{project.title}</h2>
             {project.shortDescription && (
-              <button 
-                onClick={toggleDescription} 
-                className='hidden lg:block text-grey-lighter underline lg:hover:text-grey-med-dark transition-colors duration-300'
+              <button
+                onClick={toggleDescription}
+                className="hidden lg:block text-grey-lighter underline lg:hover:text-grey-med-dark transition-colors duration-300"
               >
                 More info
               </button>
             )}
             {project.detailPageAvailable && (
-              <Link href={project.template === 'brandproject' ? `/projects/${project.slug}` : `/typefaces/${project.slug}`}>
-                <a className="text-grey-lighter underline lg:hover:text-grey-med-dark transition-colors duration-300">See full project</a>
+              <Link
+                href={project.template === 'brandproject' ? `/projects/${project.slug}` : `/typefaces/${project.slug}`}
+              >
+                <a className="text-grey-lighter underline lg:hover:text-grey-med-dark transition-colors duration-300">
+                  See full project
+                </a>
               </Link>
             )}
           </div>
 
           {project.images.length > 0 && (
-            <p className="text-base text-grey-dark">{carouselIndex}/{project.images.length}</p>
+            <p className="text-base text-grey-dark">
+              {carouselIndex}/{project.images.length}
+            </p>
           )}
         </div>
 
         {project.shortDescription && (
-          <div 
-            className={`${styles['description-container']} ${descriptionOpen ? styles['description-open'] : null} mt-12`} 
+          <div
+            className={`${styles['description-container']} ${descriptionOpen ? styles['description-open'] : null} mt-12`}
             style={{ height: `${descriptionHeight}px` }}
           >
-            <div 
+            <div
               ref={descriptionRef}
               className={`w-full ${project.size === 'large' ? 'lg:w-2/3' : 'lg:w-3/4'} text-base`}
               dangerouslySetInnerHTML={{ __html: project.shortDescription }}
