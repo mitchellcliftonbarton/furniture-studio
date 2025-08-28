@@ -115,7 +115,7 @@ const ProjectItem = ({ project, priority }) => {
             {project.shortDescription && (
               <button
                 onClick={toggleDescription}
-                className="hidden lg:block text-grey-lighter underline lg:hover:text-grey-med-dark transition-colors duration-300"
+                className="hidden lg:block text-grey-lighter text-base underline lg:hover:text-grey-med-dark transition-colors duration-300"
               >
                 More info
               </button>
@@ -124,7 +124,7 @@ const ProjectItem = ({ project, priority }) => {
               <Link
                 href={project.template === 'brandproject' ? `/projects/${project.slug}` : `/typefaces/${project.slug}`}
               >
-                <a className="text-grey-lighter underline lg:hover:text-grey-med-dark transition-colors duration-300">
+                <a className="text-grey-lighter underline text-base lg:hover:text-grey-med-dark transition-colors duration-300">
                   See full project
                 </a>
               </Link>
