@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
 
         <main
           role="main"
-          class="pt-[70px] lg:pt-0"
+          className="pt-[70px] lg:pt-0"
         >
           {children}
         </main>
