@@ -11,12 +11,8 @@ import { useRouter } from 'next/router'
 
 const Layout = ({ children }) => {
   const router = useRouter()
-  
-  const themesArray = [
-    'theme-1',
-    'theme-2',
-    'theme-3'
-  ]
+
+  const themesArray = ['theme-1', 'theme-2', 'theme-3']
 
   const [themes] = useState(themesArray)
   const [currentTheme, setCurrentTheme] = useState(0)
@@ -55,9 +51,17 @@ const Layout = ({ children }) => {
           setMobileMenuOpen={setMobileMenuOpen}
         />
 
-        <main role="main">{children}</main>
+        <main
+          role="main"
+          class="pt-[70px] lg:pt-0"
+        >
+          {children}
+        </main>
 
-        <MainFooter infoData={children.props.children[1].props.infoData} currentTheme={currentTheme} />
+        <MainFooter
+          infoData={children.props.children[1].props.infoData}
+          currentTheme={currentTheme}
+        />
 
         <StoreModal />
       </div>

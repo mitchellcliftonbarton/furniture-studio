@@ -26,6 +26,7 @@ module.exports = {
       spacing: {
         'def-half': '1.25rem',
         def: '2.5rem',
+        'def-2': '5rem',
         'def-mobile': '1.5rem',
       },
     },

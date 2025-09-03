@@ -40,10 +40,12 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
         href={font.cssUrl}
       />
 
-      <div className={`${styles['page-title']} page-title text-base relative def-x pt-def-half`}>
-        <Link href="/">
-          <a>Furniture</a>
-        </Link>
+      <div>
+        <div className={`${styles['page-title']} page-title text-base relative def-x pt-def-half`}>
+          <Link href="/">
+            <a>Furniture</a>
+          </Link>
+        </div>
       </div>
 
       <div className={`${styles['categories-container']} categories-container pl-def pt-def-half hidden lg:flex`}>

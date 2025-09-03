@@ -18,7 +18,14 @@ import styles from '../styles/Blocks.module.scss'
 // Lib
 import _ from 'lodash'
 
-export default function Home({ catalogData, allFonts, modules }) {
+export default function Home({
+  catalogData,
+  allFonts,
+  modules,
+  heroCarouselImages,
+  heroCarouselTitle,
+  heroAutoplayDuration,
+}) {
   const router = useRouter()
 
   const [filteredModules] = useMemo(() => {
@@ -57,12 +64,25 @@ export default function Home({ catalogData, allFonts, modules }) {
         />
       </Head>
 
-      <div className={`${styles['page-title']} page-title text-base relative px-def pt-def-half`}>
-        <Link href="/">
-          <a>
-            <h1>Furniture</h1>
-          </a>
-        </Link>
+      <div>
+        <div className={`${styles['page-title']} page-title text-base relative px-def pt-def-half`}>
+          <Link href="/">
+            <a>
+              <h1>Furniture</h1>
+            </a>
+          </Link>
+        </div>
+
+        {heroCarouselImages.length > 0 && (
+          <div className="def-x mt-def">
+            <Carousel
+              images={heroCarouselImages}
+              title={heroCarouselTitle}
+              noMargin={true}
+              autoplayDuration={heroAutoplayDuration}
+            />
+          </div>
+        )}
       </div>
 
       <div className={`${styles['categories-container']} categories-container hidden lg:block def-x pt-def-half`}>
@@ -86,6 +106,7 @@ export default function Home({ catalogData, allFonts, modules }) {
                   return (
                     <Carousel
                       images={module.carouselImages}
+                      title={module.carouselTitle}
                       key={index}
                     />
                   )
@@ -120,6 +141,22 @@ export async function getStaticProps() {
     body: JSON.stringify({
       query: "page('home')",
       select: {
+        heroCarouselImages: {
+          query: 'page.heroCarouselImages.toFiles',
+          select: {
+            url: true,
+            width: true,
+            height: true,
+            alt: true,
+            type: true,
+          },
+        },
+        heroCarouselTitle: {
+          query: 'page.heroCarouselTitle',
+        },
+        heroAutoplayDuration: {
+          query: 'page.heroAutoplayDuration',
+        },
         modules: {
           query: 'page.modules.toBlocks',
           select: {
@@ -155,6 +192,9 @@ export async function getStaticProps() {
                 type: true,
               },
             },
+            carouselTitle: {
+              query: 'block.title',
+            },
           },
         },
         activeprojects: {
@@ -189,6 +229,11 @@ export async function getStaticProps() {
   // const projectsWithImages = result.activeprojects.filter((project) => project.images.length > 0)
 
   return {
-    props: { modules: result.modules },
+    props: {
+      modules: result.modules,
+      heroCarouselImages: result.heroCarouselImages,
+      heroCarouselTitle: result.heroCarouselTitle,
+      heroAutoplayDuration: result.heroAutoplayDuration,
+    },
   }
 }

@@ -9,18 +9,16 @@ import { useRouter } from 'next/router'
 
 const MobileMenu = ({ currentTheme, setCurrentTheme, themes, mobileMenuOpen, setMobileMenuOpen }) => {
   const router = useRouter()
-  
+
   return (
     <div className={`${styles['mobile-menu']} ${mobileMenuOpen ? styles.open : null} fixed top-0 left-0 w-full h-full`}>
-      <div 
-        onClick={() => setMobileMenuOpen(false)} 
+      <div
+        onClick={() => setMobileMenuOpen(false)}
         className={`${styles['menu-closer']} absolute top-0 left-0 w-full h-full`}
       ></div>
 
-      <div className={`${styles.menu} def-x pb-6 pt-40`}>
-        {router.route === '/' && (
-          <CategoryFilter />
-        )}
+      <div className={`${styles.menu} px-def pb-6 pt-40`}>
+        {router.route === '/' && <CategoryFilter />}
 
         <div className="flex items-center">
           {themes.map((theme, index) => (

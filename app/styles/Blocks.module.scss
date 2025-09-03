@@ -1,12 +1,14 @@
 .page-title {
   display: none;
   z-index: 500;
+  position: sticky;
+  top: 0px;
   // height: var(--nav-height);
   align-items: center;
   justify-content: flex-start;
   width: 50%;
 
-  @media screen and (min-width: theme("screens.lg")) {
+  @media screen and (min-width: theme('screens.lg')) {
     display: flex;
   }
 }
@@ -21,7 +23,7 @@
   top: 0px;
   // height: var(--nav-height);
 
-  @media screen and (min-width: theme("screens.lg")) {
+  @media screen and (min-width: theme('screens.lg')) {
     display: flex;
   }
 }
@@ -36,20 +38,26 @@
 }
 
 .download {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
+  box-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.1),
+    -3px -3px 4px #ffffff;
   border-radius: 999px;
   background-color: theme('colors.grey.light');
   border: none;
   padding: 1rem 2rem;
-  transition: box-shadow .3s;
+  transition: box-shadow 0.3s;
   color: black;
 
   &:hover {
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px #FFFFFF;
+    box-shadow:
+      1px 1px 3px rgba(0, 0, 0, 0.1),
+      -1px -1px 3px #ffffff;
   }
 
   &:active {
-    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1), inset -1px -1px 2px #FFFFFF;
+    box-shadow:
+      inset 1px 1px 2px rgba(0, 0, 0, 0.1),
+      inset -1px -1px 2px #ffffff;
   }
 }
 
@@ -61,12 +69,14 @@
 }
 
 .select {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
+  box-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.1),
+    -3px -3px 4px #ffffff;
   border-radius: 999px;
   background-color: theme('colors.grey.light');
   border: none;
-  padding: .5rem 2rem;
-  transition: box-shadow .3s;
+  padding: 0.5rem 2rem;
+  transition: box-shadow 0.3s;
   color: black;
   appearance: none;
   outline: none;
@@ -77,19 +87,21 @@
   background-size: 12px;
   cursor: pointer;
 
-  @media screen and (min-width: theme("screens.lg")) {
+  @media screen and (min-width: theme('screens.lg')) {
     background-position: 96% 50%;
   }
 
   &:hover {
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px #FFFFFF;
+    box-shadow:
+      1px 1px 3px rgba(0, 0, 0, 0.1),
+      -1px -1px 3px #ffffff;
   }
 }
 
 .character {
   width: 10%;
 
-  @media screen and (min-width: theme("screens.lg")) {
+  @media screen and (min-width: theme('screens.lg')) {
     width: 4%;
   }
 }
@@ -99,22 +111,22 @@
   border-radius: 12px;
   overflow: hidden;
 
-  @media screen and (min-width: theme("screens.lg")) {
+  @media screen and (min-width: theme('screens.lg')) {
     padding-bottom: 56.25%;
   }
 
   .character-slide {
     font-size: 20rem;
 
-    @media screen and (min-width: theme("screens.lg")) {
+    @media screen and (min-width: theme('screens.lg')) {
       font-size: 32rem;
     }
   }
 
   .arrow-button {
-    width: .9rem;
+    width: 0.9rem;
 
-    @media screen and (min-width: theme("screens.lg")) {
+    @media screen and (min-width: theme('screens.lg')) {
       display: none;
     }
   }
@@ -133,11 +145,15 @@
 }
 
 .left-button {
-  cursor: url('../public/left-arrow.png') 4 12, pointer;
+  cursor:
+    url('../public/left-arrow.png') 4 12,
+    pointer;
 }
 
 .right-button {
-  cursor: url('../public/right-arrow.png') 4 12, pointer;
+  cursor:
+    url('../public/right-arrow.png') 4 12,
+    pointer;
 }
 
 .range {
@@ -146,7 +162,7 @@
   cursor: grab;
   width: 45%;
 
-  @media screen and (min-width: theme("screens.lg")) {
+  @media screen and (min-width: theme('screens.lg')) {
     width: 130px;
   }
 
@@ -160,8 +176,10 @@
 
   &::-webkit-slider-runnable-track {
     appearance: none;
-    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -3px -3px 4px #FFFFFF;
-    background: #F8F9F8;
+    box-shadow:
+      inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+      inset -3px -3px 4px #ffffff;
+    background: #f8f9f8;
     border-radius: 23px;
     padding: 1rem;
   }
@@ -171,8 +189,8 @@
 .columns {
   button {
     margin-right: 1.5rem;
-    opacity: .25;
-    transition: opacity .3s;
+    opacity: 0.25;
+    transition: opacity 0.3s;
 
     &:hover {
       opacity: 1;
@@ -195,14 +213,18 @@
 .catalog-item {
   &.active {
     .inner {
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -3px -3px 4px #FFFFFF;
-      background: #F3F5F3;
+      box-shadow:
+        2px 2px 4px rgba(0, 0, 0, 0.1),
+        -3px -3px 4px #ffffff;
+      background: #f3f5f3;
     }
 
     &:hover {
       .inner {
         &:hover {
-          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1), -1px -1px 3px #FFFFFF;
+          box-shadow:
+            1px 1px 3px rgba(0, 0, 0, 0.1),
+            -1px -1px 3px #ffffff;
         }
       }
     }
@@ -210,12 +232,14 @@
 
   .inner {
     min-height: 260px;
-    background: #F8F9F8;
-    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -3px -3px 4px #FFFFFF;
+    background: #f8f9f8;
+    box-shadow:
+      inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+      inset -3px -3px 4px #ffffff;
     border-radius: 20px;
-    transition: box-shadow .3s;
+    transition: box-shadow 0.3s;
 
-    @media screen and (min-width: theme("screens.lg")) {
+    @media screen and (min-width: theme('screens.lg')) {
       min-height: 370px;
     }
   }
@@ -228,7 +252,7 @@
     font-size: 1.4rem;
     line-height: 1.6;
 
-    @media screen and (min-width: theme("screens.lg")) {
+    @media screen and (min-width: theme('screens.lg')) {
       font-size: 2.4rem;
     }
   }

@@ -7,6 +7,21 @@ columns:
       projects:
         type: fields
         fields:
+          heroCarouselImages:
+            type: files
+            multiple: true
+            layout: cards
+            help: These are the images that will appear in the hero carousel on the home page.
+            label: Hero Carousel Images
+          heroCarouselTitle:
+            type: text
+            help: This text will overlay on the hero carousel images.
+            label: Hero Carousel Title
+          heroAutoplayDuration:
+            type: number
+            help: The amount of time in milliseconds that the hero carousel will autoplay.
+            label: Hero Autoplay Duration
+            default: 5000
           modules:
             label: Modules
             type: blocks
@@ -25,6 +40,9 @@ columns:
                     type: files
                     multiple: true
                     layout: cards
+                  title:
+                    type: text
+                    help: This text will overlay on the carousel images.
           activeProjects:
             label: Active Projects
             type: pages

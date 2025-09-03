@@ -5,21 +5,17 @@ import { useState, useRef } from 'react'
 import styles from '../styles/ProjectItem.module.scss'
 
 // Components
-import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { EffectFade, Autoplay } from 'swiper'
 import 'swiper/css'
+import 'swiper/css/effect-fade'
+import 'swiper/css/autoplay'
 import DefImage from './DefImage'
 
-// Lib
-import classnames from 'classnames'
-
-const Carousel = ({ images, priority }) => {
+const Carousel = ({ images, priority, title, noMargin, autoplayDuration }) => {
   const swiperRef = useRef(null)
-  const descriptionRef = useRef(null)
 
   const [carouselIndex, setCarouselIndex] = useState(1)
-  const [descriptionOpen, setDescriptionOpen] = useState(false)
-  const [descriptionHeight, setDescriptionHeight] = useState(0)
 
   const handleSlideChange = (index, swiper) => {
     setCarouselIndex(index)
@@ -37,19 +33,8 @@ const Carousel = ({ images, priority }) => {
     swiperRef.current.swiper.slideNext()
   }
 
-  const toggleDescription = () => {
-    if (descriptionOpen) {
-      setDescriptionHeight(0)
-    } else {
-      const height = descriptionRef.current.clientHeight
-      setDescriptionHeight(height)
-    }
-
-    setDescriptionOpen(!descriptionOpen)
-  }
-
   return (
-    <div className="project-item grid grid-cols-4 gap-4 mb-28 lg:mb-40 enter-in-1">
+    <div className={`project-item grid grid-cols-4 gap-4 ${noMargin ? '' : 'mb-28 lg:mb-40'} enter-in-1`}>
       <div className="project-item-inner col-span-4">
         <div className={`${styles.carousel} bg-grey-med mb-6 relative`}>
           {images.length > 0 && (
@@ -62,6 +47,12 @@ const Carousel = ({ images, priority }) => {
                 allowTouchMove={true}
                 onSlideChange={(swiper) => handleSlideChange(swiper.realIndex + 1, swiper)}
                 className={styles['carousel-el']}
+                modules={[EffectFade, Autoplay]}
+                effect="fade"
+                autoplay={{
+                  delay: autoplayDuration ?? 5000,
+                  disableOnInteraction: false,
+                }}
               >
                 {images.map((image, index) => (
                   <SwiperSlide key={index}>
@@ -86,13 +77,20 @@ const Carousel = ({ images, priority }) => {
                     )}
                   </SwiperSlide>
                 ))}
+
+                {title && (
+                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-20">
+                    <h2 className="text-base text-black">{title}</h2>
+                  </div>
+                )}
               </Swiper>
 
-              <div className="absolute top-0 left-0 w-full h-full hidden lg:flex z-20">
+              <div className="absolute top-0 left-0 w-full h-full hidden z-20">
                 <button
                   className={`${styles['left-button']} w-1/2 h-full`}
                   onClick={handlePrev}
                 ></button>
+
                 <button
                   className={`${styles['right-button']} w-1/2 h-full`}
                   onClick={handleNext}

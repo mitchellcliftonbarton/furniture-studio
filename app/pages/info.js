@@ -23,7 +23,7 @@ export default function Info({ content }) {
         />
       </Head>
 
-      <div className="pt-[200px] lg:pb-40 lg:pt-[350px] lg:pb-60">
+      <div className="pt-[200px] lg:pb-40 lg:pt-[375px] lg:pb-60">
         {content.modules.map((module, index) => {
           switch (module.type) {
             case 'centeredText':
@@ -45,11 +45,11 @@ export default function Info({ content }) {
                   key={index}
                 >
                   <div
-                    className="col-span-1 text-base rich-text lg:pr-40"
+                    className="col-span-2 lg:col-span-1 text-base rich-text lg:pr-40"
                     dangerouslySetInnerHTML={{ __html: module.column1Text }}
                   ></div>
                   <div
-                    className="col-span-1 text-base rich-text lg:pr-40"
+                    className="col-span-2 lg:col-span-1 text-base rich-text lg:pr-40"
                     dangerouslySetInnerHTML={{ __html: module.column2Text }}
                   ></div>
                 </section>
@@ -60,7 +60,7 @@ export default function Info({ content }) {
                   className={`${styles.infosection} grid grid-cols-2 gap-def`}
                   key={index}
                 >
-                  <div className="col-span-1 text-base">
+                  <div className="col-span-2 lg:col-span-1 text-base">
                     {module.column1ListTitle && <h2 className="text-base">{module.column1ListTitle}</h2>}
 
                     {module.column1ListItems && (
@@ -70,7 +70,7 @@ export default function Info({ content }) {
                       ></div>
                     )}
                   </div>
-                  <div className="col-span-1 text-base">
+                  <div className="col-span-2 lg:col-span-1 text-base">
                     {module.column2ListTitle && <h2 className="text-base">{module.column2ListTitle}</h2>}
 
                     {module.column2ListItems && (

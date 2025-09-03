@@ -19,13 +19,11 @@ const CategoryFilter = ({ baseURL = '/' }) => {
       value = true
     }
 
-    if (router.query.filter === 'brand') {
+    if (router.query.filter === 'client') {
       value = true
     }
 
-    return [
-      value
-    ]
+    return [value]
   }, [router.query])
 
   const [typeActive] = useMemo(() => {
@@ -39,9 +37,7 @@ const CategoryFilter = ({ baseURL = '/' }) => {
       value = true
     }
 
-    return [
-      value
-    ]
+    return [value]
   }, [router.query])
 
   const [brandLink] = useMemo(() => {
@@ -55,27 +51,25 @@ const CategoryFilter = ({ baseURL = '/' }) => {
       value = baseURL
     }
 
-    if (router.query.filter === 'brand') {
+    if (router.query.filter === 'client') {
       value = `${baseURL}?filter=none`
     }
 
     if (router.query.filter === 'none') {
-      value = `${baseURL}?filter=brand`
+      value = `${baseURL}?filter=client`
     }
 
-    return [
-      value
-    ]
+    return [value]
   }, [router.query])
 
   const [typeLink] = useMemo(() => {
     let value = baseURL
 
     if (!router.query.filter) {
-      value = `${baseURL}?filter=brand`
+      value = `${baseURL}?filter=client`
     }
 
-    if (router.query.filter === 'brand') {
+    if (router.query.filter === 'client') {
       value = baseURL
     }
 
@@ -87,9 +81,7 @@ const CategoryFilter = ({ baseURL = '/' }) => {
       value = `${baseURL}?filter=type`
     }
 
-    return [
-      value
-    ]
+    return [value]
   }, [router.query])
 
   return (
@@ -97,24 +89,20 @@ const CategoryFilter = ({ baseURL = '/' }) => {
       <ul className="flex h-full items-center">
         <li className="w-1/2">
           <Link href={brandLink}>
-            <a className='text-base flex items-center fade'>
+            <a className="text-base flex items-center fade">
               <div className={`${styles.checkbox} mr-4 relative flex items-center justify-center`}>
-                {brandActive && (
-                  <Check/>
-                )}
+                {brandActive && <Check />}
               </div>
-              <span>Brand identity</span>
+              <span>Client Projects</span>
               <span>{brandActive}</span>
             </a>
           </Link>
         </li>
         <li className="w-1/2">
           <Link href={typeLink}>
-            <a className='text-base flex items-center fade'>
+            <a className="text-base flex items-center fade">
               <div className={`${styles.checkbox} mr-4 relative flex items-center justify-center`}>
-                {typeActive && (
-                  <Check/>
-                )}
+                {typeActive && <Check />}
               </div>
               <span>Type catalog</span>
             </a>
