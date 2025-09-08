@@ -42,7 +42,7 @@
     2px 2px 4px rgba(0, 0, 0, 0.1),
     -3px -3px 4px #ffffff;
   border-radius: 999px;
-  background-color: theme('colors.grey.light');
+  background-color: theme('colors.grey.1');
   border: none;
   padding: 1rem 2rem;
   transition: box-shadow 0.3s;
@@ -73,7 +73,7 @@
     2px 2px 4px rgba(0, 0, 0, 0.1),
     -3px -3px 4px #ffffff;
   border-radius: 999px;
-  background-color: theme('colors.grey.light');
+  background-color: theme('colors.grey.1');
   border: none;
   padding: 0.5rem 2rem;
   transition: box-shadow 0.3s;
@@ -179,7 +179,7 @@
     box-shadow:
       inset 2px 2px 4px rgba(0, 0, 0, 0.1),
       inset -3px -3px 4px #ffffff;
-    background: #f8f9f8;
+    background: theme('colors.grey.1');
     border-radius: 23px;
     padding: 1rem;
   }
@@ -216,7 +216,7 @@
       box-shadow:
         2px 2px 4px rgba(0, 0, 0, 0.1),
         -3px -3px 4px #ffffff;
-      background: #f3f5f3;
+      background: theme('colors.grey.1');
     }
 
     &:hover {
@@ -232,7 +232,7 @@
 
   .inner {
     min-height: 260px;
-    background: #f8f9f8;
+    background: theme('colors.grey.1');
     box-shadow:
       inset 2px 2px 4px rgba(0, 0, 0, 0.1),
       inset -3px -3px 4px #ffffff;

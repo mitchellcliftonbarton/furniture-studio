@@ -1,8 +1,16 @@
 .carousel {
-  padding-bottom: 56.25%;
+  aspect-ratio: 16/9;
   border-radius: 12px;
   -webkit-border-radius: 12px;
   overflow: hidden;
+
+  &.skinny {
+    aspect-ratio: 1/1;
+
+    @media screen and (min-width: theme('screens.lg')) {
+      aspect-ratio: 2/1;
+    }
+  }
 }
 
 .carousel .carousel-el {

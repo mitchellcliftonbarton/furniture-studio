@@ -12,7 +12,7 @@ import 'swiper/css/effect-fade'
 import 'swiper/css/autoplay'
 import DefImage from './DefImage'
 
-const Carousel = ({ images, priority, title, noMargin, autoplayDuration }) => {
+const Carousel = ({ images, priority, title, noMargin, autoplayDuration, skinny }) => {
   const swiperRef = useRef(null)
 
   const [carouselIndex, setCarouselIndex] = useState(1)
@@ -36,7 +36,7 @@ const Carousel = ({ images, priority, title, noMargin, autoplayDuration }) => {
   return (
     <div className={`project-item grid grid-cols-4 gap-4 ${noMargin ? '' : 'mb-28 lg:mb-40'} enter-in-1`}>
       <div className="project-item-inner col-span-4">
-        <div className={`${styles.carousel} bg-grey-med mb-6 relative`}>
+        <div className={`${styles.carousel} ${skinny ? styles.skinny : null} bg-grey-med mb-6 relative`}>
           {images.length > 0 && (
             <>
               <Swiper

@@ -80,6 +80,7 @@ export default function Home({
               title={heroCarouselTitle}
               noMargin={true}
               autoplayDuration={heroAutoplayDuration}
+              skinny={true}
             />
           </div>
         )}
