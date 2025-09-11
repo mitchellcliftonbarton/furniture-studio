@@ -104,7 +104,7 @@ const CategoryFilter = ({ baseURL = '/' }) => {
               <div className={`${styles.checkbox} mr-4 relative flex items-center justify-center`}>
                 {typeActive && <Check />}
               </div>
-              <span>Type catalog</span>
+              <span>Type Catalog</span>
             </a>
           </Link>
         </li>
