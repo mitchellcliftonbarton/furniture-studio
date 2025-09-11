@@ -50,15 +50,17 @@ const MainNav = ({ currentTheme, setCurrentTheme, themes, mobileMenuOpen, setMob
       className={`main-nav fixed top-0 left-0 w-full px-def-half pt-def-half`}
     >
       <div
-        className={`${showLogo ? 'justify-between' : 'justify-between lg:justify-end'} rounded-2xl bg-grey-1 flex items-center w-full h-full px-def-half`}
+        className={`${showLogo ? 'justify-between bg-grey-1' : 'justify-between lg:justify-end bg-grey-1 lg:bg-transparent'} flex items-center w-full h-full px-def-half`}
       >
         {showLogo && (
           <Link href="/">
-            <a className={`${styles['home-link']} text-base fade hidden lg:inline-block`}>Furniture</a>
+            <a className={`${styles['home-link']} text-base fade hidden lg:inline-block pointer-events-auto`}>
+              Furniture
+            </a>
           </Link>
         )}
 
-        <div className={`flex lg:hidden items-center`}>
+        <div className={`flex lg:hidden items-center pointer-events-auto`}>
           <Link href="/">
             <a className="mr-3 text-base">Furniture</a>
           </Link>
@@ -81,7 +83,7 @@ const MainNav = ({ currentTheme, setCurrentTheme, themes, mobileMenuOpen, setMob
           </button>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center pointer-events-auto">
           <Link href="/info">
             <a className="text-base ml-8 lg:ml-16 fade">Info</a>
           </Link>

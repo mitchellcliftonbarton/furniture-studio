@@ -41,28 +41,34 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
       />
 
       <div>
-        <div className={`${styles['page-title']} page-title text-base relative def-x pt-def-half`}>
-          <Link href="/">
-            <a>Furniture</a>
-          </Link>
+        <div className={`${styles['page-title']} page-title text-base relative px-def-half pt-def-half`}>
+          <div className="inner bg-grey-1 h-full w-full flex items-center px-def-half">
+            <Link href="/">
+              <a>
+                <h1>Furniture</h1>
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
 
-      <div className={`${styles['categories-container']} categories-container pl-def pt-def-half hidden lg:flex`}>
-        <h1 className="text-base w-full lg:w-1/2">{project.title}</h1>
+      <div className={`${styles['categories-container']} categories-container relative px-def-half pt-def-half`}>
+        <div className="inner bg-grey-1 h-full w-full flex items-center px-def-half">
+          <h1 className="text-base w-full lg:w-1/4">{project.title}</h1>
 
-        {project.fontDueSlug && (
-          <div className="buy-options w-full lg:w-1/2 mt-8 lg:mt-0 flex items-center">
-            <BuyButton
-              collectionSlug={project.fontDueSlug}
-              label="Buy"
-            />
+          {project.fontDueSlug && (
+            <div className="buy-options w-full lg:w-3/4 mt-8 lg:mt-0 flex items-center">
+              <BuyButton
+                collectionSlug={project.fontDueSlug}
+                label="Buy"
+              />
 
-            <Link href="/download-trial-fonts">
-              <a className={`${styles.download} whitespace-nowrap text-base ml-8 lg:ml-16`}>Download trial fonts</a>
-            </Link>
-          </div>
-        )}
+              <Link href="/download-trial-fonts">
+                <a className={`${styles.download} whitespace-nowrap text-base ml-8 lg:ml-16`}>Download trial fonts</a>
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="typeface-project def-x mt-8 lg:mt-16">

@@ -7,7 +7,7 @@ export default function CatalogFooter({ catalogData, allFonts }) {
 
   return (
     <div className="px-def-half">
-      <div className="bg-grey-1 grid grid-cols-3 gap-12 px-def-half py-def rounded-2xl">
+      <div className="bg-grey-1 grid grid-cols-3 gap-12 px-def-half py-def">
         {catalogFooter.map((item, index) => (
           <CatalogItem
             item={item}

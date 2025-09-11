@@ -36,7 +36,7 @@ const TypeTester = ({ block, font }) => {
 
   return (
     <div className={`mb-32 lg:mb-60`}>
-      <div className="controls flex items-start lg:items-center justify-between lg:justify-start flex-wrap lg:flex-nowrap mb-10 bg-grey-1 p-def-half rounded-2xl">
+      <div className="controls flex items-start lg:items-center justify-between lg:justify-start flex-wrap lg:flex-nowrap mb-10 bg-grey-1 p-def-half">
         <select
           className={`${styles.select} text-base w-1/2 lg:w-1/4 lg:mr-8 mb-8 lg:mb-0`}
           name="weight"

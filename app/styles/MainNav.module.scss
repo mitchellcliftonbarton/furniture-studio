@@ -1,6 +1,8 @@
 #nav {
   z-index: 500;
   transition: background-color 0.3s;
+  pointer-events: none;
+  height: var(--nav-height);
 
   .home-link {
     transition:

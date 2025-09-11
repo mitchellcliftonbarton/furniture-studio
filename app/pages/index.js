@@ -65,12 +65,14 @@ export default function Home({
       </Head>
 
       <div>
-        <div className={`${styles['page-title']} page-title text-base relative px-def pt-def-half`}>
-          <Link href="/">
-            <a>
-              <h1>Furniture</h1>
-            </a>
-          </Link>
+        <div className={`${styles['page-title']} page-title text-base relative px-def-half pt-def-half`}>
+          <div className="inner bg-grey-1 h-full w-full flex items-center px-def-half">
+            <Link href="/">
+              <a>
+                <h1>Furniture</h1>
+              </a>
+            </Link>
+          </div>
         </div>
 
         {heroCarouselImages.length > 0 && (
@@ -86,7 +88,7 @@ export default function Home({
         )}
       </div>
 
-      <div className={`${styles['categories-container']} categories-container hidden lg:block def-x pt-def-half`}>
+      <div className={`${styles['categories-container']} categories-container relative px-def-half pt-def-half`}>
         <CategoryFilter />
       </div>
 

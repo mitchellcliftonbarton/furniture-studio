@@ -7,7 +7,7 @@ export default function MainFooter({ infoData, currentTheme }) {
 
   return (
     <footer className="p-def-half">
-      <div className="bg-grey-1 flex flex-wrap lg:flex-nowrap rounded-2xl p-def-half">
+      <div className="bg-grey-1 flex flex-wrap lg:flex-nowrap p-def-half">
         <div className="w-full lg:w-1/3 flex flex-wrap">
           {links.map((item, index) => (
             <div

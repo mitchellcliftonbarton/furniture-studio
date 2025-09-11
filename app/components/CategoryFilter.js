@@ -85,9 +85,9 @@ const CategoryFilter = ({ baseURL = '/' }) => {
   }, [router.query])
 
   return (
-    <nav className={`${styles.filters} filters mb-4 lg:mb-0 w-full`}>
-      <ul className="flex h-full items-center">
-        <li className="w-1/2">
+    <nav className={`${styles.filters} filters mb-4 lg:mb-0 w-full bg-grey-1 lg:px-def-half h-full`}>
+      <ul className="grid grid-cols-4 gap-4 h-full items-center pb-def-half lg:pb-0">
+        <li className="col-span-2 lg:col-span-1">
           <Link href={brandLink}>
             <a className="text-base flex items-center fade">
               <div className={`${styles.checkbox} mr-4 relative flex items-center justify-center`}>
@@ -98,7 +98,7 @@ const CategoryFilter = ({ baseURL = '/' }) => {
             </a>
           </Link>
         </li>
-        <li className="w-1/2">
+        <li className="col-span-2 lg:col-span-1">
           <Link href={typeLink}>
             <a className="text-base flex items-center fade">
               <div className={`${styles.checkbox} mr-4 relative flex items-center justify-center`}>
