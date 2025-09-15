@@ -243,10 +243,14 @@ export async function getStaticProps(context) {
     slug: result.fontDueSlug,
   })
 
+  // Ensure font data is serializable
+  const fontData = data?.viewer?.slug?.fontCollection
+  const serializedFont = fontData ? JSON.parse(JSON.stringify(fontData)) : null
+
   return {
     props: {
       project: result,
-      font: data?.viewer?.slug?.fontCollection,
+      font: serializedFont,
     },
   }
 }
