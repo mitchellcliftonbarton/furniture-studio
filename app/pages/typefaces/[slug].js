@@ -246,7 +246,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       project: result,
-      font: data.viewer.slug.fontCollection,
+      font: data?.viewer?.slug?.fontCollection,
     },
   }
 }
