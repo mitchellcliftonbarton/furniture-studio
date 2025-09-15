@@ -59,6 +59,16 @@ MyApp.getInitialProps = async () => {
             title: true,
             isActive: true,
             fontDueSlug: true,
+            placeholderImage: {
+              query: 'structureItem.placeholderImage.toFiles',
+              select: {
+                url: true,
+                width: true,
+                height: true,
+                alt: true,
+                type: true,
+              },
+            },
             inactiveEmoji: true,
             link: {
               query: 'structureItem.link.toPage',

@@ -3,6 +3,7 @@ import styles from '../styles/Blocks.module.scss'
 
 // Components
 import Link from 'next/link'
+import DefImage from './DefImage'
 
 export default function CatalogItem({ item, allFonts }) {
   const isActive = item.isActive === 'true'
@@ -10,29 +11,39 @@ export default function CatalogItem({ item, allFonts }) {
   let fontStyles = false
 
   if (isActive) {
-    selectedFont = allFonts.find(font => font.node.slug.name === item.fontDueSlug).node
+    selectedFont = allFonts.find((font) => font.node.slug.name === item.fontDueSlug).node
   }
 
-  if (selectedFont) {
-    fontStyles = selectedFont.fontStyles
-  }
+  const placeholderImage = item?.placeholderImage[0]
+
+  console.log(placeholderImage)
+
+  // if (selectedFont) {
+  //   fontStyles = selectedFont.fontStyles
+  // }
 
   return (
     <div className={`${styles['catalog-item']} ${isActive ? styles.active : null} col-span-3 lg:col-span-1`}>
-      <link rel="stylesheet" href={selectedFont.cssUrl} />
+      {/* <link
+        rel="stylesheet"
+        href={selectedFont.cssUrl}
+      /> */}
 
-      {isActive ? (
-        <h2 className='text-base mb-6'>{item.title}</h2>
-      ): (
-        <h2 className='text-base mb-6'>(Coming Soon)</h2>
-      )}
-      
-      {isActive ? (
+      {isActive ? <h2 className="text-base mb-6">{item.title}</h2> : <h2 className="text-base mb-6">(Coming Soon)</h2>}
+
+      {isActive && placeholderImage ? (
         <Link
-          href={item.link.template === 'typefaceproject' ? `/typefaces/${item.link.slug}` : `/projects/${item.link.slug}`}
+          href={
+            item.link.template === 'typefaceproject' ? `/typefaces/${item.link.slug}` : `/projects/${item.link.slug}`
+          }
         >
           <a className={`${styles.inner} p-8 block`}>
-            {fontStyles.map((style, index) => {
+            <img
+              src={placeholderImage.url}
+              className="w-full"
+            />
+
+            {/* {fontStyles.map((style, index) => {
               const family = `${style.cssFamily} ${style.name}`
 
               return (
@@ -40,14 +51,16 @@ export default function CatalogItem({ item, allFonts }) {
                   key={index}
                   className={styles['text-line']}
                   style={{
-                    fontFamily: family
+                    fontFamily: family,
                   }}
-                >{selectedFont.name} {style.name}</p>
+                >
+                  {selectedFont.name} {style.name}
+                </p>
               )
-            })}
+            })} */}
           </a>
         </Link>
-      ): (
+      ) : (
         <div className={`${styles.inner} flex justify-center items-center`}>
           <p className={styles.emoji}>{item.inactiveEmoji}</p>
         </div>

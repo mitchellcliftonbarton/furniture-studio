@@ -39,6 +39,13 @@ sections:
             help: The page that this item should link to (if active)
             max: 1
             query: site.find('BrandProjects', 'TypefaceProjects')
+          placeholderImage:
+            label: Placeholder Image
+            type: files
+            help: This image will show up if the item is inactive.
+            max: 1
+            accept:
+              - image/*
           inactiveEmoji:
             label: Inactive Emoji
             type: text
