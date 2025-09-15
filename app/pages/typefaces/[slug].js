@@ -35,10 +35,12 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
         />
       </Head>
 
-      <link
-        rel="stylesheet"
-        href={font.cssUrl}
-      />
+      {font?.cssUrl && (
+        <link
+          rel="stylesheet"
+          href={font.cssUrl}
+        />
+      )}
 
       <div>
         <div className={`${styles['page-title']} page-title text-base relative px-def-half pt-def-half`}>
@@ -106,7 +108,7 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
                       <TextSection
                         key={index}
                         block={block}
-                        font={font}
+                        font={font || {}}
                       />
                     )
                   case 'typeTester':
@@ -114,7 +116,7 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
                       <TypeTester
                         key={index}
                         block={block}
-                        font={font}
+                        font={font || {}}
                       />
                     )
                   case 'characterCarousel':
@@ -122,14 +124,14 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
                       <CharacterCarousel
                         key={index}
                         block={block}
-                        font={font}
+                        font={font || {}}
                       />
                     )
                   case 'characterGrid':
                     return (
                       <CharacterGrid
                         key={index}
-                        font={font}
+                        font={font || {}}
                       />
                     )
                 }
