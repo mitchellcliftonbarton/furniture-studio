@@ -6,17 +6,21 @@ import Link from 'next/link'
 import DefImage from './DefImage'
 
 export default function CatalogItem({ item, allFonts }) {
+  // Add safety checks for item
+  if (!item) {
+    return null
+  }
+
   const isActive = item.isActive === 'true'
   let selectedFont = false
   let fontStyles = false
 
-  if (isActive) {
-    selectedFont = allFonts.find((font) => font.node.slug.name === item.fontDueSlug).node
+  if (isActive && allFonts && Array.isArray(allFonts) && item.fontDueSlug) {
+    const foundFont = allFonts.find((font) => font?.node?.slug?.name === item.fontDueSlug)
+    selectedFont = foundFont ? foundFont.node : null
   }
 
-  const placeholderImage = item?.placeholderImage[0]
-
-  console.log(placeholderImage)
+  const placeholderImage = item?.placeholderImage?.[0]
 
   // if (selectedFont) {
   //   fontStyles = selectedFont.fontStyles
@@ -34,7 +38,7 @@ export default function CatalogItem({ item, allFonts }) {
       {isActive && placeholderImage ? (
         <Link
           href={
-            item.link.template === 'typefaceproject' ? `/typefaces/${item.link.slug}` : `/projects/${item.link.slug}`
+            item.link?.template === 'typefaceproject' ? `/typefaces/${item.link?.slug}` : `/projects/${item.link?.slug}`
           }
         >
           <a className={`${styles.inner} p-8 block`}>

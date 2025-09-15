@@ -8,7 +8,7 @@ sections:
         type: button
         label: Build Site
         text: Build Site
-        url: https://api.vercel.com/v1/integrations/deploy/prj_QZl6UxmApkPBs930hHpzJ5T5SC9z/nWJv4j52ZU
+        url: https://api.vercel.com/v1/integrations/deploy/prj_QZl6UxmApkPBs930hHpzJ5T5SC9z/h3fR1AZuyd
         theme: positive
         reload: true # trigger a page refresh on success to display updated data
   pages:
