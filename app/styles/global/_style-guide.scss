@@ -131,7 +131,8 @@ body {
   .cart-button,
   .buy-button,
   .test-fonts__form,
-  .test-fonts__form input {
+  .test-fonts__form input,
+  .store-modal__container__container {
     font-size: 1.25rem;
     line-height: 1.5;
     font-variation-settings:
@@ -167,7 +168,8 @@ body {
   .cart-button,
   .buy-button,
   .test-fonts__form,
-  .test-fonts__form input {
+  .test-fonts__form input,
+  .store-modal__container__container {
     font-size: 2.2rem;
     line-height: 1.4;
   }
@@ -202,7 +204,8 @@ body {
   .cart-button,
   .buy-button,
   .test-fonts__form,
-  .test-fonts__form input {
+  .test-fonts__form input,
+  .store-modal__container__container {
     font-size: 2.2rem;
     line-height: 1.4;
     font-variation-settings:
@@ -636,7 +639,7 @@ body {
   }
 
   .store-modal__page__sticky-footer {
-    background-color: #f3f5f3;
+    background-color: #f9f9f9;
   }
 
   .store-modal__license-selection__license-button {
