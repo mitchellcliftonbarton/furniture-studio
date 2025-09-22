@@ -697,7 +697,7 @@ body {
         2px 2px 4px rgba(0, 0, 0, 0.1),
         -3px -3px 4px #ffffff;
       border-radius: 23px;
-      background-color: theme('colors.grey.light');
+      background-color: theme('colors.grey.1');
       border: none;
       padding: 1rem 2rem;
       transition: background-color 0.3s;
@@ -743,7 +743,7 @@ body {
       2px 2px 4px rgba(0, 0, 0, 0.1),
       -3px -3px 4px #ffffff;
     border-radius: 23px;
-    background-color: theme('colors.grey.light');
+    background-color: theme('colors.grey.1');
     border: none;
     padding: 1rem 2rem;
     transition: background-color 0.3s;
@@ -786,7 +786,7 @@ body {
             2px 2px 4px rgba(0, 0, 0, 0.1),
             -3px -3px 4px #ffffff;
           border-radius: 23px;
-          background-color: theme('colors.grey.light');
+          background-color: theme('colors.grey.1');
           border: none;
           padding: 1rem 2rem;
           transition: box-shadow 0.3s;
@@ -816,7 +816,7 @@ body {
             2px 2px 4px rgba(0, 0, 0, 0.1),
             -3px -3px 4px #ffffff;
           border-radius: 23px;
-          background-color: theme('colors.grey.light');
+          background-color: theme('colors.grey.1');
           border: none;
           padding: 1rem 2rem;
           transition: background-color 0.3s;
@@ -838,7 +838,7 @@ body {
       2px 2px 4px rgba(0, 0, 0, 0.1),
       -3px -3px 4px #ffffff;
     border-radius: 23px;
-    background-color: theme('colors.grey.light');
+    background-color: theme('colors.grey.1');
     border: none;
     padding: 1rem 2rem;
     transition: box-shadow 0.3s;
@@ -852,7 +852,7 @@ body {
       box-shadow:
         1px 1px 3px rgba(0, 0, 0, 0.1),
         -1px -1px 3px #ffffff;
-      background-color: theme('colors.grey.light');
+      background-color: theme('colors.grey.1');
     }
   }
 
@@ -872,7 +872,7 @@ body {
       2px 2px 4px rgba(0, 0, 0, 0.1),
       -3px -3px 4px #ffffff;
     border-radius: 23px;
-    background-color: theme('colors.grey.light');
+    background-color: theme('colors.grey.1');
     border: none;
     padding: 1rem 2rem;
     transition: box-shadow 0.3s;
@@ -887,7 +887,7 @@ body {
       box-shadow:
         1px 1px 3px rgba(0, 0, 0, 0.1),
         -1px -1px 3px #ffffff;
-      background-color: theme('colors.grey.light') !important;
+      background-color: theme('colors.grey.1') !important;
     }
   }
 
@@ -906,7 +906,7 @@ body {
       @apply text-md;
 
       &:placeholder {
-        color: theme('colors.grey.light');
+        color: theme('colors.grey.1');
       }
     }
 
