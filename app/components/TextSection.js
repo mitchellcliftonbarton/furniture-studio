@@ -1,27 +1,29 @@
 const TextSection = ({ block, font }) => {
-  const { fontStyles } = font
+  const { fontStyles } = font || {}
 
   return (
-    <div className={`mb-32 lg:mb-60 flex flex-wrap lg:flex-nowrap`}>
-      <div 
-        className="w-full lg:w-2/3 text-base lg:pr-20 mb-16 lg:mb-0" 
+    <div className={`mb-32 lg:mb-60 grid grid-cols-3 gap-x-20 gap-y-16`}>
+      <div
+        className="col-span-3 lg:col-span-2 text-base"
         dangerouslySetInnerHTML={{ __html: block.text }}
       ></div>
 
-      {block.showWeights && (
-        <div className="w-full lg:w-1/3">
+      {block.showWeights && fontStyles && fontStyles.length > 0 && (
+        <div className={`${fontStyles.length > 12 ? 'grid grid-cols-2 col-span-3' : 'col-span-3 lg:col-span-1'}`}>
           {fontStyles.map((style, index) => {
-            const family = `${style.cssFamily} ${style.name}`
+            const family = `"${style.cssFamily} ${style.name}"`
 
             return (
-              <p 
-                key={index} 
+              <p
+                key={index}
                 style={{
                   fontFamily: family,
                   fontSize: '2.5rem',
-                  lineHeight: '1.2'
+                  lineHeight: '1.2',
                 }}
-              >{style.name}</p>
+              >
+                {style.name}
+              </p>
             )
           })}
         </div>

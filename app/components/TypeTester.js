@@ -7,7 +7,7 @@ import styles from '../styles/Blocks.module.scss'
 import { LeftAlignment, CenterAlignment, OneColumn, TwoColumn, ThreeColumn } from './icons/Icons'
 
 const TypeTester = ({ block, font }) => {
-  const { fontStyles } = font
+  const { fontStyles } = font || {}
   const alignmentOptions = ['left', 'center']
 
   const columnOptions = [1, 2, 3]
@@ -15,44 +15,55 @@ const TypeTester = ({ block, font }) => {
   const [currentFont, setCurrentFont] = useState(0)
   const [currentFontSize, setCurrentFontSize] = useState(block.fontSize)
   const [currentAlignment, setCurrentAlignment] = useState(block.alignment)
-  const [currentColumns, setCurrentColumns] = useState(parseInt(block.columns))
+  const [currentColumns, setCurrentColumns] = useState(block?.columns ? parseInt(block.columns) : 1)
 
   useEffect(() => {
-    if (block.defaultWeight) {
+    if (block.defaultWeight && fontStyles && fontStyles.length > 0) {
       const weight = fontStyles.findIndex((style) => style.name === block.defaultWeight)
-      setCurrentFont(weight)
+      if (weight !== -1) {
+        setCurrentFont(weight)
+      }
     }
-  }, [block])
+  }, [block, fontStyles])
 
   const handleFontChange = (event) => {
-    const fontIndex = fontStyles.findIndex((font) => font.name === event.target.value)
-
-    setCurrentFont(fontIndex)
+    if (fontStyles && fontStyles.length > 0) {
+      const fontIndex = fontStyles.findIndex((font) => font.name === event.target.value)
+      if (fontIndex !== -1) {
+        setCurrentFont(fontIndex)
+      }
+    }
   }
 
   const handleSizeChange = (event) => {
     setCurrentFontSize(event.target.value)
   }
 
+  useEffect(() => {
+    console.log(font?.name && fontStyles?.[currentFont] ? `${font.name} ${fontStyles[currentFont].name}` : 'inherit')
+  }, [currentFont])
+
   return (
     <div className={`mb-32 lg:mb-60`}>
       <div className="controls flex items-start lg:items-center justify-between lg:justify-start flex-wrap lg:flex-nowrap mb-10 bg-grey-1 p-def-half">
-        <select
-          className={`${styles.select} text-base w-1/2 lg:w-1/4 lg:mr-8 mb-8 lg:mb-0`}
-          name="weight"
-          id="weight"
-          onChange={handleFontChange}
-          value={fontStyles[currentFont].name}
-        >
-          {fontStyles.map((style, index) => (
-            <option
-              value={style.name}
-              key={index}
-            >
-              {style.name}
-            </option>
-          ))}
-        </select>
+        {fontStyles && fontStyles.length > 0 && (
+          <select
+            className={`${styles.select} text-base w-1/2 lg:w-1/4 lg:mr-8 mb-8 lg:mb-0`}
+            name="weight"
+            id="weight"
+            onChange={handleFontChange}
+            value={fontStyles[currentFont]?.name || ''}
+          >
+            {fontStyles.map((style, index) => (
+              <option
+                value={style.name}
+                key={index}
+              >
+                {style.name}
+              </option>
+            ))}
+          </select>
+        )}
 
         <input
           className={`${styles.range} lg:mr-12`}
@@ -131,7 +142,8 @@ const TypeTester = ({ block, font }) => {
       <div
         className={`${styles.textarea} ignore-global-fonts`}
         style={{
-          fontFamily: `${font.name} ${fontStyles[currentFont].name}`,
+          fontFamily:
+            font?.name && fontStyles?.[currentFont] ? `"${font.name} ${fontStyles[currentFont].name}"` : 'inherit',
           fontSize: `${currentFontSize}px`,
           textAlign: currentAlignment,
           columnCount: currentColumns,

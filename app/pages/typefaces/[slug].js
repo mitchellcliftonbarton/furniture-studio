@@ -21,8 +21,6 @@ export default function TypefaceDetail({ catalogData, allFonts, project, font })
   // console.log(project, font)
   const pageTitle = `Furniture | ${project.title}`
 
-  console.log(font)
-
   return (
     <>
       <Head>
