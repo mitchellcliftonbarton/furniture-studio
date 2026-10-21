@@ -28,6 +28,9 @@ export default function Home({
 }) {
   const router = useRouter()
 
+  // hide the filter nav and project list entirely when the CMS has no modules
+  const hasModules = modules?.length > 0
+
   const [filteredModules] = useMemo(() => {
     let value = modules
 
@@ -88,40 +91,44 @@ export default function Home({
         )}
       </div>
 
-      <div className={`${styles['categories-container']} categories-container relative px-def-half pt-def-half`}>
-        <CategoryFilter />
-      </div>
+      {hasModules && (
+        <>
+          <div className={`${styles['categories-container']} categories-container relative px-def-half pt-def-half`}>
+            <CategoryFilter />
+          </div>
 
-      <div className="def-x">
-        {filteredModules && filteredModules.length > 0 ? (
-          <div className="projects pt-40 lg:pt-60 mb-20">
-            {filteredModules.map((module, index) => {
-              switch (module.type) {
-                case 'featuredProject':
-                  return (
-                    <ProjectItem
-                      project={module.project}
-                      key={module.project.slug}
-                      priority={index < 2 ? true : false}
-                    />
-                  )
-                case 'carousel':
-                  return (
-                    <Carousel
-                      images={module.carouselImages}
-                      title={module.carouselTitle}
-                      key={index}
-                    />
-                  )
-              }
-            })}
+          <div className="def-x">
+            {filteredModules && filteredModules.length > 0 ? (
+              <div className="projects pt-40 lg:pt-60 mb-20">
+                {filteredModules.map((module, index) => {
+                  switch (module.type) {
+                    case 'featuredProject':
+                      return (
+                        <ProjectItem
+                          project={module.project}
+                          key={module.project.slug}
+                          priority={index < 2 ? true : false}
+                        />
+                      )
+                    case 'carousel':
+                      return (
+                        <Carousel
+                          images={module.carouselImages}
+                          title={module.carouselTitle}
+                          key={index}
+                        />
+                      )
+                  }
+                })}
+              </div>
+            ) : (
+              <div className="pt-40 mb-60 pb-60">
+                <h2 className="text-base">No projects</h2>
+              </div>
+            )}
           </div>
-        ) : (
-          <div className="pt-40 mb-60 pb-60">
-            <h2 className="text-base">No projects</h2>
-          </div>
-        )}
-      </div>
+        </>
+      )}
 
       <CatalogFooter
         catalogData={catalogData}
